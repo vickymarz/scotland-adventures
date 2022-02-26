@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="This is a story telling web application that provides a platform for story tellers who want to share and document their adventures about several locations in Scotland, to post stories which may include text, photos, and multimedia about their experience."
+		/>
+		<!-- google font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- fontawesome -->
+		<script src="https://kit.fontawesome.com/d31edfa6bf.js" crossorigin="anonymous"></script>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		></script>
+		<title>Scotland Adventure</title>
+	</head>
+	<body>
+		<header>
+			<ul class="socials">
+				<li>
+					<input type="search" name="search" id="search">
+				</li>
+				<li class="favourite"></li>
+				<li class="avatar"></li>
+				<li>
+					<a href="index.html" class="icon" target="_blank" rel="noopener noreferrer"> Login </a>
+				</li>
+				<li>
+					<a href="#" class="icon">Logout</a>
+				</li>
+			</ul>
+			<div class="navbar">
+				<a href="index.html" class="logo-desktop">TY Conference <br />2022</a>
+				<nav class="hamburger">
+					<div class="menu-bar bars">
+						<i class="fa fa-bars fa-1x"></i>
+					</div>
+					<!-- Mobile Menu Bar -->
+					<div class="mobile-menu">
+						<div class="menu-bar times">
+							<i class="fa fa-times fa-1x"></i>
+						</div>
+						<ul class="nav-list">
+							<li>
+								<a href="#home" class="menu-bar" id="home-link">Home</a>
+							</li>
+							<li>
+								<a href="about.html" class="menu-bar" id="about-link">About</a>
+							</li>
+							<li>
+								<a href="#program" class="menu-bar" id="program-link">Program</a>
+							</li>
+							<li>
+								<a href="#program" class="menu-bar" id="sponsors-link">Sponsors</a>
+							</li>
+							<li>
+								<a href="#program" class="menu-bar" id="news-link">News</a>
+							</li>
+							<li>
+								<a href="#program" class="menu-bar" id="campaign-link">Campaign</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<!-- Carousel -->
+			<section>
+				<div id="demo" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-indicators">
+						<button
+							type="button"
+							data-bs-target="#demo"
+							data-bs-slide-to="0"
+							class="active"
+						></button>
+						<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+						<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="la.jpg" alt="Los Angeles" class="d-block" style="width: 100%" />
+							<div class="carousel-caption">
+								<h3>Los Angeles</h3>
+								<p>We had such a great time in LA!</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="chicago.jpg" alt="Chicago" class="d-block" style="width: 100%" />
+							<div class="carousel-caption">
+								<h3>Chicago</h3>
+								<p>Thank you, Chicago!</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="ny.jpg" alt="New York" class="d-block" style="width: 100%" />
+							<div class="carousel-caption">
+								<h3>New York</h3>
+								<p>We love the Big Apple!</p>
+							</div>
+						</div>
+					</div>
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#demo"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon"></span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#demo"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon"></span>
+					</button>
+				</div>
+			</section>
+			<section>
+				<div class="stories-title">
+					<h2>FIND POPULAR STORIES</h2>
+					<i class="fab fa-arrow-alt-right"></i>
+				</div>
+				<div class="stories">
+					<div class="story">
+						<img src="" alt="" />
+						<h3>ICE LAND</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+					<div class="story">
+						<img src="" alt="" />
+						<h3>ICE LAND</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+					<div class="story">
+						<img src="" alt="" />
+						<h3>ICE LAND</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</section>
+			<section class="adventures">
+				<div class="adventure-title">
+					<h2>HISTORICAL ADVENTURES</h2>
+					<ul class="adventure-btns">
+						<li><a href="#">All</a></li>
+						<li><a href="#">All</a></li>
+						<li><a href="#">All</a></li>
+					</ul>
+				</div>
+				<div class="adventure-places">
+					<div class="adventure-imgs">
+						<img src="" alt="" />
+					</div>
+					<div class="adventure-imgs">
+						<img src="" alt="" />
+					</div>
+					<div class="adventure-imgs">
+						<img src="" alt="" />
+					</div>
+					<div class="adventure-imgs">
+						<img src="" alt="" />
+					</div>
+					<div class="adventure-imgs">
+						<img src="" alt="" />
+					</div>
+					<div class="adventure-imgs">
+						<img src="" alt="" />
+					</div>
+				</div>
+				<button type="button">Show More</button>
+			</section>
+			<section class="about">
+				<h2>About SCOTLAND TOURISM</h2>
+				<p
+					>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, repellat velit natus
+					exercitationem dicta corporis eius possimus cum alias tenetur!</p
+				>
+			</section>
+		</main>
+		<footer>
+			<div class="footer-container">
+				<div class="img">
+					<img src="" alt="" />
+				</div>
+				<ul class="information">
+					<li>Infornation</li>
+					<li> <a href="#">Adventure</a> </li>
+					<li> <a href="#">About</a> </li>
+					<li> <a href="#">Blogs</a></li>
+				</ul>
+				<ul class="links">
+					<li>Quick Links</li>
+					<li> <a href="#">Tours</a></li>
+					<li> <a href="#">Support</a></li>
+					<li> <a href="#">Privacy</a></li>
+				</ul>
+				<ul class="links">
+					<li>Contact</li>
+					<li> <a href="#">No 23, Lorem, ipsum.</a></li>
+					<li> <a href="#">08033664484</a></li>
+					<li> <a href="emmybalance2003@gmail.com">emmybalance2003@gmail.com</a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
