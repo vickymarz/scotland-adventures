@@ -1,11 +1,18 @@
 import './style.css'
-import favIcon from './images/favourite.png'
-import avatarIcon from './images/avatar.png'
+import * as home from './home.js'
 
-const favourite = document.createElement('img')
-favourite.setAttribute('src', favIcon)
-document.querySelector('.favourite').appendChild(favourite)
 
-const avatar = document.createElement('img')
-avatar.setAttribute('src', avatarIcon)
-document.querySelector('.avatar').appendChild(avatar)
+
+document.querySelector('.logo-desktop').innerHTML = home.carousel()
+document.querySelector('.stories-container').innerHTML = home.stories()
+window.addEventListener('load', home.createElement)
+
+function toggleMenu() {
+	document.querySelectorAll('.menu-bar').forEach(element =>
+		element.addEventListener('click', () => {
+			document.querySelector('.mobile-menu').classList.toggle('active')
+		}),
+	)
+}
+
+toggleMenu()
