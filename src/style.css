@@ -35,10 +35,6 @@ a {
 	text-decoration: none;
 }
 
-li {
-	list-style-type: none;
-}
-
 img {
 	width: 100%;
 	height: 100%;
@@ -141,7 +137,7 @@ img {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
+	gap: 20px;
 	margin: 20px 0;
 }
 
@@ -154,7 +150,7 @@ img {
 
 .story img {
 	display: block;
-  height: 200px;
+	height: 200px;
 }
 
 .story h3 {
@@ -172,9 +168,9 @@ img {
 
 /* adventure styling starts here */
 
-.adventures{
-  background-color: var(--navy-blue);
-  padding: 20px 40px;
+.adventures {
+	background-color: var(--navy-blue);
+	padding: 20px 40px;
 }
 
 .adventure-title {
@@ -185,50 +181,84 @@ img {
 }
 
 .adventure-btns {
-  display: none;
+	display: none;
 }
 
 .adventure-places {
 	display: grid;
 	grid-template-columns: 1fr;
-  gap: 20px;
-  margin-top: 20px;
-  padding: 20px 0;
+	gap: 20px;
+	margin-top: 20px;
+	padding: 20px 0;
 }
 
 .adventure-imgs {
-  max-width: 400px;
-  height:200px;
-  position: relative;
+	max-width: 400px;
+	height: 200px;
+	position: relative;
 }
 
 .adventure-imgs p {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color:var(--white)
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	color: var(--white);
+}
+
+.adventure-btn button {
+	padding: 10px 20px;
+	margin: 10px 0;
+	border: none;
+	outline: none;
+	background-color: var(--navy-blue);
+	color: var(--white);
 }
 
 #more-stories {
-  display: none;
+	display: none;
 }
 
-.description {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.description,
+.adventure-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-#arrow, #arrow-back {
-  cursor: pointer;
+#arrow,
+#arrow-back {
+	cursor: pointer;
 }
 
 .description button {
-  padding: 10px 20px;
-  border: none;
-  outline: none;
-  background-color: var(--navy-blue);
-  color: var(--white);
+	padding: 10px 20px;
+	border: none;
+	outline: none;
+	background-color: var(--navy-blue);
+	color: var(--white);
+}
+
+/* about section starts here */
+
+.about {
+	padding: 20px 40px;
+}
+
+.about h2 {
+	padding: 20px 0;
+  color: var(--navy-blue);
+}
+
+.about h3 {
+	color: var(--navy-blue);
+}
+
+.about-intro {
+  margin: 15px 0;
+}
+
+.tour-package {
+   margin: 25px 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -344,16 +374,15 @@ img {
 	.stories-container {
 		padding: 20px 60px;
 	}
-  
-  .story-title {
-    padding: 0 40px;
-  }
+
+	.story-title {
+		padding: 0 40px;
+	}
 	.story {
 		justify-content: center;
 		align-items: center;
 		color: var(--black);
 	}
-
 
 	.adventure-places {
 		grid-template-columns: repeat(3, 1fr);
