@@ -44,11 +44,13 @@ img {
 
 /* header section styling starts here */
 
-/* .intro-container {
-  background: url('') no-repeat;
+.intro-container {
+  background: url('../src/images/homepage.jpg') no-repeat;
   background-size: cover;
   padding: 20px;
-} */
+  height: 100vh;
+  width:100%;
+}
 
 .socials {
   display: none;
@@ -264,20 +266,24 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-	/* .intro-container {
+	.intro-container {
     padding: 0;
-  } */
+  }
 
 	.socials {
 		width: 100%;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-		padding: 8px 100px;
+		padding: 20px 30px;
 		gap: 15px;
 		font-size: 12px;
 		color: var(--gray);
 	}
+
+  .socials img {
+    mix-blend-mode: multiply;
+  }
 
   .socials li {
     list-style-type: none;
@@ -285,6 +291,7 @@ img {
 	.socials li input {
 		border-radius: 5px;
 		outline: none;
+    background: none;
 	}
 
 	.socials li a {
