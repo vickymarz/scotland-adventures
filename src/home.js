@@ -2,6 +2,11 @@ import isle from './images/isle-of-skyle.jpg'
 import river from './images/river.jpg'
 import walkWay from './images/walk-way.jpg'
 import pasture from './images/pasture.jpg'
+import hike from './images/hike.jpg'
+import sea from './images/sea.jpg'
+import train from './images/train.jpg'
+import georgeHiles from './images/george-hiles.jpg'
+import mountain from './images/mountain.jpg'
 import favIcon from './images/favourite.png'
 import avatarIcon from './images/avatar.png'
 import logoIcon from './images/logo.png'
@@ -66,7 +71,7 @@ const stories = () => {
 	return `
 	      <div class="stories-title">
 					<h2>FIND POPULAR DESTINATIONS</h2>
-					<i class="fa fa-arrow-right"></i>
+					<i class="fa fa-arrow-right" id="arrow"></i>
 				</div>
 				<div class="stories">
 					<div class="story">
@@ -93,6 +98,49 @@ const stories = () => {
 	`
 }
 
+const adventures = () => {
+	return `
+	<div class="adventure-title">
+					<h2>HISTORICAL ADVENTURES</h2>
+					<ul class="adventure-btns">
+						<a href="#">All</a>
+						<a href="#">Sort By</a>
+						<a href="#">Sort By</a>
+						<a href="#">Sort By</a>
+					</ul>
+				</div>
+				<div class="adventure-places">
+					<div class="adventure-imgs">
+						<img src=${hike} alt="hike" />
+						<p>George Hills</p>
+					</div>
+					<div class="adventure-imgs">
+						<img src=${sea} alt="" />
+						<p> Moongoose Sea </p>
+					</div>
+					<div class="adventure-imgs">
+						<img src=${train} alt="" />
+						<p> Moongoose Sea </p>
+					</div>
+					<div class="adventure-imgs">
+						<img src=${georgeHiles} alt="" />
+						<p> Moongoose Sea </p>
+					</div>
+					<div class="adventure-imgs">
+						<img src=${mountain} alt="" />
+						<p> Moongoose Sea </p>
+					</div>
+					<div class="adventure-imgs">
+						<img src=${isle} alt="" />
+						<p> Moongoose Sea </p>
+					</div>
+				</div>
+				<div class="adventure-btn">
+				<button type="button">Show More</button>
+				</div>
+	`
+}
+
 const createElement = () => {
 	const favourite = document.createElement('img')
 	favourite.setAttribute('src', favIcon)
@@ -107,4 +155,4 @@ const createElement = () => {
 	document.querySelector('.logo-desktop').appendChild(logo)
 }
 
-export { carousel, createElement, stories }
+export { carousel, createElement, stories, adventures }
