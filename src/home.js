@@ -10,7 +10,7 @@ import mountain from './images/mountain.jpg'
 import favIcon from './images/favourite.png'
 import avatarIcon from './images/avatar.png'
 import logoIcon from './images/logo.png'
-
+// import titleIcon from './images/scotland.png'
 
 const stories = () => {
 	return `
@@ -97,7 +97,11 @@ const createElement = () => {
 
 	const logo = document.createElement('img')
 	logo.setAttribute('src', logoIcon)
-	document.querySelector('.logo-desktop').appendChild(logo)
+	document.querySelector('.span').appendChild(logo)
+
+	// const title = document.createElement('img')
+	// title.setAttribute('src', titleIcon)
+	// document.querySelector('.intro-title').appendChild(title)
 }
 
-export {createElement, stories, adventures }
+export { createElement, stories, adventures }

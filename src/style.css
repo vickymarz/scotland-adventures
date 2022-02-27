@@ -2,9 +2,10 @@
 	/* primary colors */
 	--black: #000;
 	--white: #fff;
-	--navy-blue: #034c6a;
+	--deep-brown: #373928;
 	--gray: #d3d3d3;
- 
+	--orange: #ce6a10;
+	--brown: #4f4e43;
 }
 
 /* global styling  */
@@ -45,29 +46,37 @@ img {
 /* header section styling starts here */
 
 .intro-container {
-  background: url('../src/images/homepage.jpg') no-repeat;
-  background-size: cover;
-  padding: 20px;
-  height: 100vh;
-  width:100%;
+	background: url('../src/images/homepage.jpg') no-repeat;
+	background-size: cover;
+	padding: 20px;
+	height: 100vh;
+	width: 100%;
 }
 
 .socials {
-  display: none;
+	display: none;
 }
 
 .navbar {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 72px;
 	width: 100%;
 	z-index: 2;
 }
 
-
 .logo-desktop {
 	display: none;
+}
+
+.logo-desktop h1 {
+	font-size: 15px;
+	color: var(--orange);
+	padding: 0 10px;
+}
+
+.span img {
+	mix-blend-mode: multiply;
 }
 
 .mobile-menu {
@@ -109,17 +118,31 @@ img {
 	margin-bottom: 20px;
 	padding: 5px 0;
 	text-align: center;
+	list-style-type: none;
 }
 
 .nav-list li a {
-	font-weight: 600;
+	font-weight: bolder;
 	font-size: 24px;
-	color: var(--orange);
+	color: var(--brown);
 }
 
 .nav-list li:hover {
 	border-radius: 15px;
 	border-bottom: 3px solid var(--orange);
+}
+
+.intro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.intro h1 {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 200%;
+	color: white;
 }
 
 /* stories section starts here */
@@ -133,7 +156,7 @@ img {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	color: var(--navy-blue);
+	color: var(--deep-brown);
 }
 
 .stories {
@@ -173,7 +196,7 @@ img {
 /* adventure styling starts here */
 
 .adventures {
-	background-color: var(--navy-blue);
+	background-color: var(--deep-brown);
 	padding: 20px 40px;
 }
 
@@ -214,7 +237,7 @@ img {
 	margin: 10px 0;
 	border: none;
 	outline: none;
-	background-color: var(--navy-blue);
+	background-color: var(--deep-brown);
 	color: var(--white);
 }
 
@@ -238,7 +261,7 @@ img {
 	padding: 10px 20px;
 	border: none;
 	outline: none;
-	background-color: var(--navy-blue);
+	background-color: var(--deep-brown);
 	color: var(--white);
 }
 
@@ -250,73 +273,205 @@ img {
 
 .about h2 {
 	padding: 20px 0;
-  color: var(--navy-blue);
+	color: var(--deep-brown);
 }
 
 .about h3 {
-	color: var(--navy-blue);
+	color: var(--deep-brown);
 }
 
 .about-intro {
-  margin: 15px 0;
+	margin: 15px 0;
 }
 
 .tour-package {
-   margin: 25px 0;
+	margin: 25px 0;
+}
+
+/* modal and form styling starts here */
+
+.modal {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	backdrop-filter: blur(5px);
+	background: #7f8cff6d;
+	z-index: 5;
+	animation: modalopen 1s ease-out;
+	display: none;
+}
+
+@keyframes modalopen {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.form-container {
+	border: 1px solid #dfe1e6;
+	border-radius: 16px;
+	width: 400px;
+	margin: 100px auto;
+	position: relative;
+	display: flex;
+	text-align: center;
+	padding: 25px;
+	flex-direction: column;
+	color: var(--white);
+	justify-content: center;
+	align-items: center;
+	background-color: var(--deep-brown);
+}
+
+.cancel {
+	width: 20px;
+	position: absolute;
+	right: -40px;
+	top: -30px;
+	z-index: 2;
+}
+
+form {
+	margin: auto;
+	padding: 10px 15px;
+	justify-content: center;
+	justify-items: center;
+	border-radius: 1.5%;
+}
+
+.form-container p,
+.form-container h2 {
+	padding-bottom: 20px;
+}
+
+.form-container p {
+	color: var(--white);
+	text-align: center;
+}
+
+.form-container h2 {
+	text-align: center;
+}
+
+form input {
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	background-color: var(--white);
+	margin: 10px 0 20px 0;
+	border-radius: 5px;
+	border: none;
+}
+
+form input::placeholder {
+	color: var(--brown);
+	font-weight: lighter;
+}
+
+form input:focus {
+	outline: none;
+	border: 1px solid var(--orange);
+}
+
+input:hover {
+	cursor: text;
+}
+
+#submit {
+	background-color: var(--orange);
+	margin: 20px 0 0 0;
+	font-size: 14px;
+	align-items: center;
+	justify-items: center;
+	border-radius: 10px 0px;
+	color: var(--white);
+	font-weight: bold;
+}
+
+#submit:hover {
+	cursor: pointer;
+}
+
+.footer {
+	margin-top: 15px;
+}
+
+.footer p {
+	color: white;
+	font-size: 14px;
+}
+
+.footer p a {
+	text-decoration: none;
+	color: var(--orange);
 }
 
 @media only screen and (min-width: 768px) {
 	.intro-container {
-    padding: 0;
-  }
+		padding: 0;
+	}
 
 	.socials {
 		width: 100%;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-		padding: 20px 30px;
-		gap: 15px;
+		padding: 20px 80px;
+		padding-bottom: 0;
+		gap: 5px;
 		font-size: 12px;
 		color: var(--gray);
 	}
 
-  .socials img {
-    mix-blend-mode: multiply;
-  }
+	.socials img {
+		mix-blend-mode: multiply;
+	}
 
-  .socials li {
-    list-style-type: none;
-  }
+	.socials li {
+		list-style-type: none;
+		color: var(--orange);
+		font-size: 15px;
+		font-weight: bolder;
+		cursor: pointer;
+		padding: 5px 10px;
+	}
+
+	.link:hover {
+		background-color: var(--brown);
+		border-radius: 10px;
+	}
+
 	.socials li input {
 		border-radius: 5px;
 		outline: none;
-    background: none;
-	}
-
-	.socials li a {
-		color: var(--black);
-		font-size: 12px;
-    font-weight: bolder;
+		background: none;
 	}
 
 	.navbar {
 		padding-left: 80px;
 		padding-right: 80px;
-		background: var(--white);
 	}
 
 	.logo-desktop {
-		display: block;
+		display: flex;
 	}
 
 	.nav-list {
-		margin-top: 10px;
-		margin-left: initial;
 		display: flex;
 		gap: 50px;
 		justify-content: flex-end;
 		align-items: center;
+		margin-left: initial;
+		margin-top: 10px;
 	}
 
 	.nav-list li {
@@ -326,8 +481,6 @@ img {
 	.nav-list li a {
 		font-size: 15px;
 		line-height: 20px;
-		color: var(--black);
-		font-weight: 400;
 	}
 
 	.nav-list li:hover {
@@ -361,18 +514,10 @@ img {
 		transform: initial;
 	}
 
-	.intro h1 {
-		font-size: 32px;
-	}
-
-	.intro span {
-		font-size: 28px;
-	}
-
-	.intro {
+	/* .intro {
 		margin-top: 80px;
 		padding: 20px 200px;
-	}
+	} */
 
 	.event-date {
 		font-size: 28px;
@@ -391,6 +536,7 @@ img {
 	.story-title {
 		padding: 0 40px;
 	}
+
 	.story {
 		justify-content: center;
 		align-items: center;
