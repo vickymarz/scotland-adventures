@@ -85,7 +85,7 @@ img {
 	right: 0;
 	bottom: 0;
 	width: 0;
-	background: var(--black);
+	background: var(--deep-brown);
 	backdrop-filter: blur(8px);
 	display: block;
 	transition: all 1s ease;
@@ -97,7 +97,7 @@ img {
 }
 
 .bars {
-	color: var(--black);
+	color: var(--deep-brown);
 	font-size: 25px;
 }
 
@@ -121,10 +121,10 @@ img {
 	list-style-type: none;
 }
 
-.nav-list li a {
+.nav-list li a, .link-mobile {
 	font-weight: bolder;
 	font-size: 24px;
-	color: var(--brown);
+	color: var(--white);
 }
 
 .nav-list li:hover {
@@ -132,6 +132,13 @@ img {
 	border-bottom: 3px solid var(--orange);
 }
 
+.link-mobile {
+	display: block;
+}
+
+.link {
+	display: none;
+}
 .intro {
 	display: flex;
 	justify-content: center;
@@ -379,7 +386,7 @@ form input::placeholder {
 
 form input:focus {
 	outline: none;
-	border: 1px solid var(--orange);
+	border: 2px solid var(--orange);
 }
 
 input:hover {
@@ -481,6 +488,7 @@ input:hover {
 	.nav-list li a {
 		font-size: 15px;
 		line-height: 20px;
+		color: var(--brown);
 	}
 
 	.nav-list li:hover {
@@ -491,6 +499,9 @@ input:hover {
 		color: var(--orange);
 	}
 
+	.link {
+		display: flex;
+	}
 	.mobile-menu {
 		position: initial;
 		min-width: initial;
@@ -514,6 +525,9 @@ input:hover {
 		transform: initial;
 	}
 
+  .link-mobile {
+		display: none;
+	}
 	/* .intro {
 		margin-top: 80px;
 		padding: 20px 200px;
