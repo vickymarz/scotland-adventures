@@ -3,9 +3,6 @@ import * as home from './home.js'
 import * as more from './viewMoreStories.js'
 
 
-
-document.querySelector('.logo-desktop').innerHTML = home.carousel()
-
 document.querySelector('.stories-container').innerHTML = home.stories()
 document.querySelector('.adventures').innerHTML = home.adventures()
 

@@ -4,6 +4,7 @@
 	--white: #fff;
 	--navy-blue: #034c6a;
 	--gray: #d3d3d3;
+ 
 }
 
 /* global styling  */
@@ -44,10 +45,14 @@ img {
 /* header section styling starts here */
 
 /* .intro-container {
-  background: url('../assets/images/header.png') no-repeat;
+  background: url('') no-repeat;
   background-size: cover;
   padding: 20px;
 } */
+
+.socials {
+  display: none;
+}
 
 .navbar {
 	display: flex;
@@ -58,9 +63,6 @@ img {
 	z-index: 2;
 }
 
-.socials {
-	display: none;
-}
 
 .logo-desktop {
 	display: none;
@@ -272,19 +274,23 @@ img {
 		justify-content: flex-end;
 		align-items: center;
 		padding: 8px 100px;
-		gap: 10px;
+		gap: 15px;
 		font-size: 12px;
 		color: var(--gray);
 	}
 
+  .socials li {
+    list-style-type: none;
+  }
 	.socials li input {
 		border-radius: 5px;
 		outline: none;
 	}
 
 	.socials li a {
-		color: var(--gray);
+		color: var(--black);
 		font-size: 12px;
+    font-weight: bolder;
 	}
 
 	.navbar {
