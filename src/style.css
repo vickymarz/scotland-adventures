@@ -206,7 +206,7 @@ img {
 	justify-content: center;
 	align-items: center;
 	gap: 20px;
-	margin: 40px 0;
+	margin: 20px 0;
 }
 
 .story {
@@ -238,7 +238,7 @@ img {
 
 .adventures {
 	background-color: var(--deep-brown);
-	padding: 20px 40px;
+	padding: 40px;
 }
 
 .adventure-title {
@@ -278,7 +278,7 @@ img {
 	margin: 10px 0;
 	border: none;
 	outline: none;
-	background-color: var(--deep-brown);
+	background-color: var(--orange);
 	color: var(--white);
 }
 
