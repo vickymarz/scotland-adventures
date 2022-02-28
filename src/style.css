@@ -20,7 +20,7 @@
 
 html {
 	font-size: 1rem;
-	font-family: 'Lato', sans-serif;
+	font-family: 'poppins', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 }
@@ -298,11 +298,18 @@ img {
 #more-stories h2 {
 	font-size: 32px;
 	color: var(--white);
-	padding: 20px;
+	padding: 10px 0;
+	font-family: 'Times New Roman', Times, serif;
 }
 
 #stories-title span {
 	color: var(--white);
+}
+
+#stories-title h2{
+  padding: 0;
+	margin-left: 0;
+	margin-bottom: 40px;
 }
 
 .more-story h3,
@@ -314,16 +321,24 @@ img {
 
 .more-story img {
 	width: 400px;
+	height: 300px;
 }
 
 .more-story {
 	display: flex;
 	justify-content: flex-start;
-	gap: 50px;
+	align-items: initial;
+	gap: 80px;
 }
 
 .more-story-desc p {
 	margin: 20px 0;
+	line-height: 24px;
+	font-size: 16px;
+}
+
+.my-stories {
+	margin-top: 20px;
 }
 
 .adventure-btn {
@@ -662,7 +677,6 @@ input:hover {
 
 	.story {
 		justify-content: center;
-		align-items: center;
 		color: var(--black);
 	}
 

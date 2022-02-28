@@ -5,7 +5,6 @@ import signUp from './signUp.js'
 import login from './login.js'
 import readStories from './readStories.js'
 
-
 document.querySelector('.stories-container').innerHTML = home.stories()
 document.querySelector('.adventures').innerHTML = home.adventures()
 
@@ -17,25 +16,20 @@ document.querySelector('.more-stories-popup').innerHTML = readStories()
 
 window.addEventListener('load', home.createElement)
 
-
 const hideSection = () => {
-  const viewMore = document.querySelector('#more-stories')
-  const sections = document.querySelectorAll('section')
-  sections.forEach(section => {
-    section.style.display = 'none',
-    viewMore.style.display = 'block'
-  })
-  
+	const viewMore = document.querySelector('#more-stories')
+	const sections = document.querySelectorAll('.section')
+	sections.forEach(section => {
+		;(section.style.display = 'none'), (viewMore.style.display = 'block')
+	})
 }
 
 const showSection = () => {
-  const viewMore = document.querySelector('#more-stories')
-  const sections = document.querySelectorAll('section')
-  sections.forEach(section => {
-    section.style.display = 'block',
-    viewMore.style.display = 'none'
-  })
-  
+	const viewMore = document.querySelector('#more-stories')
+	const sections = document.querySelectorAll('.section')
+	sections.forEach(section => {
+		;(section.style.display = 'block'), (viewMore.style.display = 'none')
+	})
 }
 
 const storiesBtn = document.querySelector('#arrow')
@@ -43,7 +37,6 @@ storiesBtn.addEventListener('click', hideSection)
 
 const returnBtn = document.querySelector('#arrow-back')
 returnBtn.addEventListener('click', showSection)
-
 
 function toggleMenu() {
 	document.querySelectorAll('.menu-bar').forEach(element =>
