@@ -78,6 +78,7 @@ img {
 .link:hover {
 	background-color: var(--brown);
 	border-radius: 10px;
+	color: var(--white);
 }
 
 #search {
@@ -376,13 +377,17 @@ img {
 	position: relative;
 }
 
+.view:hover img {
+	filter: opacity(0.5);
+}
+
 .view:hover .read {
 	display: block;
 }
 
 .read {
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	left:40%;
 	padding: 10px 15px;
 	border: none;
