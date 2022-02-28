@@ -3,7 +3,7 @@ import * as home from './home.js'
 import * as more from './viewMoreStories.js'
 import signUp from './signUp.js'
 import login from './login.js'
-// import './utils'
+import readStories from './readStories.js'
 
 
 document.querySelector('.stories-container').innerHTML = home.stories()
@@ -13,6 +13,7 @@ document.querySelector('#more-stories').innerHTML = more.moreStories()
 
 document.querySelector('.signup-section').innerHTML = signUp()
 document.querySelector('.login-section').innerHTML = login()
+document.querySelector('.more-stories-popup').innerHTML = readStories()
 
 window.addEventListener('load', home.createElement)
 

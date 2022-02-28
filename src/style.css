@@ -80,7 +80,7 @@ img {
 	border-radius: 10px;
 }
 
- #search {
+#search {
 	display: none;
 }
 
@@ -160,6 +160,10 @@ img {
 	border-bottom: 3px solid var(--orange);
 }
 
+.nav-list li:hover a {
+	color: var(--white);
+}
+
 .intro {
 	display: flex;
 	justify-content: center;
@@ -178,6 +182,7 @@ img {
 	margin-top: 150px;
 	line-height: 24px;
 	font-weight: bolder;
+	font-size: 20px;
 }
 
 /* stories section starts here */
@@ -192,7 +197,11 @@ img {
 	justify-content: space-between;
 	align-items: center;
 	color: var(--deep-brown);
-	margin-top:40px;
+	margin-top: 40px;
+}
+
+.stories-title h2 span {
+	color: var(--orange);
 }
 
 .stories {
@@ -275,13 +284,47 @@ img {
 	outline: none;
 	background-color: var(--orange);
 	color: var(--white);
+	cursor: pointer;
 }
 
 #more-stories {
 	display: none;
+	background-color: var(--deep-brown);
+	padding: 40px;
+	color: var(--white);
 }
 
-.description,
+#more-stories h2 {
+	font-size: 32px;
+	color: var(--white);
+	padding: 20px;
+}
+
+#stories-title span {
+	color: var(--white);
+}
+
+.more-story h3,
+.more-story p,
+.more-story span {
+	color: var(--white);
+	text-align: left;
+}
+
+.more-story img {
+	width: 400px;
+}
+
+.more-story {
+	display: flex;
+	justify-content: flex-start;
+	gap: 50px;
+}
+
+.more-story-desc p {
+	margin: 20px 0;
+}
+
 .adventure-btn {
 	display: flex;
 	justify-content: center;
@@ -297,7 +340,7 @@ img {
 	padding: 10px 20px;
 	border: none;
 	outline: none;
-	background-color: var(--deep-brown);
+	background-color: var(--orange);
 	color: var(--white);
 }
 
@@ -312,16 +355,50 @@ img {
 	color: var(--deep-brown);
 }
 
+.about h2 span {
+	color: var(--orange);
+}
+
 .about h3 {
-	color: var(--deep-brown);
+	color: var(--orange);
+	padding: 10px 0;
 }
 
 .about-intro {
 	margin: 15px 0;
 }
+ 
+.about-intro p {
+  line-height: 24px;
+}
+
+.view {
+	position: relative;
+}
+
+.view:hover .read {
+	display: block;
+}
+
+.read {
+	position: absolute;
+	top: 50%;
+	left:40%;
+	padding: 10px 15px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: var(--orange);
+	color: var(--white);
+	display: none;
+}
 
 .tour-package {
 	margin: 25px 0;
+}
+
+.tour-package ul li {
+	padding: 10px 0;
 }
 
 /* modal and form styling starts here */
@@ -368,7 +445,24 @@ img {
 	background-color: var(--deep-brown);
 }
 
-.cancel {
+.popup-container {
+		margin: 30px 16px;
+	border: 1px solid #dfe1e6;
+	border-radius: 16px;
+	min-height: 713px;
+	padding: 18px 16px;
+	background-color: var(--deep-brown);
+}
+
+#read-stories {
+	display: block;
+}
+
+#read-stories img {
+	width: 100%;
+	height: 80vh;
+}
+.cancel i {
 	width: 20px;
 	position: absolute;
 	right: -30px;
@@ -457,27 +551,27 @@ input:hover {
 	}
 
 	.socials {
-	width: 100%;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	padding: 20px 80px;
-	padding-bottom: 0;
-	gap: 5px;
-	font-size: 12px;
-	color: var(--gray);
-}
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding: 20px 80px;
+		padding-bottom: 0;
+		gap: 5px;
+		font-size: 12px;
+		color: var(--gray);
+	}
 
-.socials li {
-	font-size: 15px;
-}
+	.socials li {
+		font-size: 15px;
+	}
 
- #search {
-	display: block;
-	background: none;
-	outline: none;
-	margin-right: 10px;
-}
+	#search {
+		display: block;
+		background: none;
+		outline: none;
+		margin-right: 10px;
+	}
 	.navbar {
 		padding-left: 80px;
 		padding-right: 80px;
@@ -489,11 +583,12 @@ input:hover {
 
 	.nav-list {
 		display: flex;
-		gap: 50px;
+		gap: 10px;
 		justify-content: flex-end;
 		align-items: center;
 		margin-left: initial;
 		margin-top: 10px;
+		margin-right: initial;
 	}
 
 	.nav-list li {
@@ -504,6 +599,8 @@ input:hover {
 		font-size: 15px;
 		line-height: 20px;
 		color: var(--brown);
+		padding: 10px;
+		border-radius: 10px;
 	}
 
 	.nav-list li:hover {
@@ -511,7 +608,7 @@ input:hover {
 	}
 
 	.nav-list li:hover a {
-		color: var(--orange);
+		background-color: var(--orange);
 	}
 
 	.link {
@@ -519,7 +616,7 @@ input:hover {
 	}
 	.mobile-menu {
 		position: initial;
-		min-width: initial;
+		width: initial;
 		height: initial;
 		background: initial;
 		backdrop-filter: initial;
@@ -569,9 +666,33 @@ input:hover {
 		grid-template-rows: repeat(2, 1fr);
 	}
 
+	footer {
+		background-color: var(--deep-brown);
+		padding: 20px;
+	}
+
+	footer h3 {
+		color: var(--orange);
+	}
+
 	.footer-container {
 		display: flex;
 		justify-content: space-around;
-		align-items: center;
 	}
+
+	.footer-container ul li {
+		list-style-type: none;
+		padding: 10px 0;
+		color: var(--orange);
+	}
+
+	.link-icons {
+		display: flex;
+		gap: 15px;
+	}
+  
+	.footer-container ul li a {
+		color: var(--white);
+	}
+
 }

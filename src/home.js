@@ -15,27 +15,42 @@ import titleIcon from './images/scotland.png'
 const stories = () => {
 	return `
 	      <div class="stories-title">
-					<h2>FIND POPULAR DESTINATIONS</h2>
-					<i class="fa fa-arrow-right" id="arrow"></i>
+					<h2>FIND POPULAR <span> STORIES </span></h2>
+					<span id="arrow"> See more
+					<i class="fa fa-arrow-right" ></i>
+					</span>
 				</div>
 				<div class="stories">
 					<div class="story">
+					<div class="view">
 						<img src=${river} alt="" />
+						
+             <button type="button" class="read popup">Read</button>
+					</div>	
 						<h3>ISLE LAKE</h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 					</div>
 					<div class="story">
+						<div class="view">
 						<img src=${walkWay} alt="" />
+             <button type="button" class="read popup">Read</button>
+					</div>	
 						<h3>LILLE VALLEY</h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 					</div>
 					<div class="story">
-						<img src=${isle}  alt="" />
+						<div class="view">
+						<img src=${isle} alt="" />
+             <button type="button" class="read popup">Read</button>
+					</div>	
 						<h3>ICE LAND</h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 					</div>
 					<div class="story">
-						<img src=${pasture}  alt="" />
+						<div class="view">
+						<img src=${pasture} alt="" />
+             <button type="button" class="read popup">Read</button>
+					</div>	
 						<h3>GREEN FIELD</h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 					</div>
@@ -46,7 +61,7 @@ const stories = () => {
 const adventures = () => {
 	return `
 	<div class="adventure-title">
-					<h2>HISTORICAL ADVENTURES</h2>
+					<h2>HISTORICAL ATTRACTIONS</h2>
 					<ul class="adventure-btns">
 						<a href="#">All</a>
 						<a href="#">Sort By</a>
