@@ -5,12 +5,14 @@ import signUp from './signUp.js'
 import login from './login.js'
 import readStories from './readStories.js'
 import historyAttractions from './historyAttractions.js'
+import adventureIdeas from './adventureIdeas.js'
 
 document.querySelector('.stories-container').innerHTML = home.stories()
 document.querySelector('.adventures').innerHTML = home.adventures()
 
 document.querySelector('#more-stories').innerHTML = more.moreStories()
 document.querySelector('#more-adventures').innerHTML = historyAttractions()
+document.querySelector('#adventure-ideas').innerHTML = adventureIdeas()
 
 document.querySelector('.signup-section').innerHTML = signUp()
 document.querySelector('.login-section').innerHTML = login()
@@ -60,7 +62,6 @@ const adventureBtn = document.querySelector('#adventure-btn')
 adventureBtn.addEventListener('click', showAttractionSection)
 
 const returnAdventureBtn = document.querySelector('#back')
-console.log(returnAdventureBtn)
 returnAdventureBtn.addEventListener('click', hideAttractionSection)
 
 function toggleMenu() {
@@ -87,6 +88,7 @@ const openModal = () => {
 	})
 }
 openModal()
+
 const closeModal = () => {
 	document.querySelectorAll('.cancel').forEach(close => {
 		close.addEventListener('click', () => {

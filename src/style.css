@@ -309,11 +309,18 @@ img {
 }
 
 #stories-title h2{
-  padding: 0;
+	padding: 0;
 	margin-left: 0;
 	margin-bottom: 40px;
 }
 
+.more-story {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: initial;
+	gap: 30px;
+}
 
 .more-story p,
 .more-story span {
@@ -331,12 +338,6 @@ img {
 	height: 300px;
 }
 
-.more-story {
-	display: flex;
-	justify-content: flex-start;
-	align-items: initial;
-	gap: 80px;
-}
 
 .more-story-desc p {
 	margin: 20px 0;
@@ -427,6 +428,37 @@ img {
 
 .tour-package ul li {
 	padding: 10px 0;
+}
+
+/* adventure ideas section styling */
+
+.adventure-ideas {
+	background-color: var(--deep-brown);
+	padding: 40px;
+}
+
+.adventure-ideas h2 {
+	color: var(--white);
+}
+
+.adventure-ideas .location {
+	color: var(--orange);
+	margin-top: 10px;
+}
+
+.ideas-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ideas-btn button {
+	outline: none;
+	background: none;
+	color: var(--white);
+	border: 1px solid var(--white);
+	padding: 10px 20px;
+	cursor: pointer;
 }
 
 /* modal and form styling starts here */
@@ -688,13 +720,17 @@ input:hover {
 		color: var(--black);
 	}
 
+	.more-story {
+		flex-direction: row;
+		gap: 80px;
+	}
 	.adventure-places {
 		grid-template-columns: repeat(3, 1fr);
 		/* grid-template-rows: repeat(2, 1fr); */
 	}
 
 	footer {
-		background-color: var(--deep-brown);
+		background-color: var(--white);
 		padding: 20px;
 	}
 
@@ -719,7 +755,7 @@ input:hover {
 	}
   
 	.footer-container ul li a {
-		color: var(--white);
+		color: var(--brown);
 	}
 
 }

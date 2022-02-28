@@ -6,6 +6,7 @@ import pasture from './images/pasture.jpg'
 const moreStories = () => {
 	return `
 	      <div class="stories-title id="stories-title">
+				
 					<h2>SEE ALL INTERESTING STORIES</h2>
           <span id="span">
           Go back	<i class="fa fa-arrow-left" id="arrow-back"></i>
