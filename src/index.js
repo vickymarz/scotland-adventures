@@ -38,11 +38,11 @@ const showAttractionSection = () => {
 	const viewMore = document.querySelector('#more-adventures')
 	const sections = document.querySelectorAll('.section')
 	sections.forEach(section => {
-		; (section.style.display = 'none'), (viewMore.style.display = 'block')
+		;(section.style.display = 'none'), (viewMore.style.display = 'block')
 	})
 }
-	
-	const hideAttractionSection = () => {
+
+const hideAttractionSection = () => {
 	const viewMore = document.querySelector('#more-adventures')
 	const sections = document.querySelectorAll('.section')
 	sections.forEach(section => {
@@ -53,13 +53,14 @@ const showAttractionSection = () => {
 const storiesBtn = document.querySelector('#arrow')
 storiesBtn.addEventListener('click', hideSection)
 
-const returnBtn = document.querySelector('#arrow-back')
+const returnBtn = document.querySelector('#span')
 returnBtn.addEventListener('click', showSection)
 
 const adventureBtn = document.querySelector('#adventure-btn')
 adventureBtn.addEventListener('click', showAttractionSection)
 
-const returnAdventureBtn = document.querySelector('#arrow-back')
+const returnAdventureBtn = document.querySelector('#back')
+console.log(returnAdventureBtn)
 returnAdventureBtn.addEventListener('click', hideAttractionSection)
 
 function toggleMenu() {

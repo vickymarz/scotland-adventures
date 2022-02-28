@@ -305,6 +305,7 @@ img {
 
 #span  {
 	color: var(--white);
+	cursor: pointer;
 }
 
 #stories-title h2{

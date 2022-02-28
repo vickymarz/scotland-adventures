@@ -66,7 +66,7 @@ const historyAttractions = () => {
 					</div>
 				</div>
 				<div class="adventure-btn">
-				<button type="button id="adventure-btn">Go Back</button>
+				<button type="button" id="back">Go Back</button>
 				</div>
 	`
 }
