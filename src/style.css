@@ -288,12 +288,13 @@ img {
 	cursor: pointer;
 }
 
-#more-stories {
+#more-stories, #more-adventures {
 	display: none;
 	background-color: var(--deep-brown);
 	padding: 40px;
 	color: var(--white);
 }
+
 
 #more-stories h2 {
 	font-size: 32px;
@@ -302,7 +303,7 @@ img {
 	font-family: 'Times New Roman', Times, serif;
 }
 
-#stories-title span {
+#span  {
 	color: var(--white);
 }
 
@@ -312,9 +313,14 @@ img {
 	margin-bottom: 40px;
 }
 
-.more-story h3,
+
 .more-story p,
 .more-story span {
+	color: var(--gray);
+	text-align: left;
+}
+
+.more-story h3 {
 	color: var(--white);
 	text-align: left;
 }
@@ -345,6 +351,7 @@ img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 
 #arrow,
@@ -682,7 +689,7 @@ input:hover {
 
 	.adventure-places {
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 1fr);
+		/* grid-template-rows: repeat(2, 1fr); */
 	}
 
 	footer {

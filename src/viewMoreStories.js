@@ -7,7 +7,7 @@ const moreStories = () => {
 	return `
 	      <div class="stories-title id="stories-title">
 					<h2>SEE ALL INTERESTING STORIES</h2>
-          <span>
+          <span id="span">
           Go back	<i class="fa fa-arrow-left" id="arrow-back"></i>
           </span>
 				</div>
@@ -17,8 +17,8 @@ const moreStories = () => {
 						<div class="more-story-desc">
 						<h3>ISLE LAKE</h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error at modi placeat impedit eveniet, illum iste sapiente corrupti! Animi laudantium laborum velit consequatur architecto provident odit mollitia eligendi. Animi dolorem sed, quos, reiciendis doloribus officia fuga mollitia, corporis odit similique ipsam? Mollitia eligendi nihil fugit quia ipsam voluptatibus vitae quaerat neque est /p>
-            <div class="description">
-             <button type="button">Description</button>
+            <div class="description ">
+             <button type="button" >Description</button>
              </div>
 						 </div>
 					</div>

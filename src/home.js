@@ -96,7 +96,7 @@ const adventures = () => {
 					</div>
 				</div>
 				<div class="adventure-btn">
-				<button type="button">Show More</button>
+				<button type="button" id="adventure-btn">Show More</button>
 				</div>
 	`
 }
