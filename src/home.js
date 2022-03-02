@@ -8,8 +8,6 @@ import train from './images/train.jpg'
 import georgeHiles from './images/george-hiles.jpg'
 import mountain from './images/mountain.jpg'
 import favIcon from './images/favourite.png'
-import avatarIcon from './images/avatar.png'
-import logoIcon from './images/logo.png'
 import titleIcon from './images/scotland.png'
 
 const stories = () => {
@@ -96,27 +94,68 @@ const adventures = () => {
 					</div>
 				</div>
 				<div class="adventure-btn">
-				<button type="button" id="adventure-btn">Show More</button>
+				<button type="button" id="history-btn">Show More</button>
 				</div>
 	`
 }
 
-const createElement = () => {
-	const favourite = document.createElement('img')
-	favourite.setAttribute('src', favIcon)
-	document.querySelector('.favourite').appendChild(favourite)
+const adventureIdeas = () => {
+	return `
+					<h2>ADVENTURE IDEAS</h2>
+				<div class="my-stories">
+					<div class="story more-story">
+						<img src=${river} alt="" />
+						<div class="more-story-desc">
+						<h3> Jump into an ice-cold lake to boost your immunity</h3>
+						<p>I’m a huge fan of spontaneously jumping into lakes, especially after a hike or trail run. It’s fantastic for muscle relief and boosting your immunity. The trick is not to think about it too much or testing the water beforehand. Just go for it and enjoy the tingling sensation in your body. You only live once! </p>
+            <p class="location"> Location: No 20, scotland Road off negro street
+            </p>
+						 </div>
+					</div>
+					<div class="story more-story">
+						<img src=${walkWay} alt="" />
+							<div class="more-story-desc">
+						<h3>Take a walking tour</h3>
+						<p>You don’t have to travel far to take a walking tour. You can take one to learn something new about your city. Whether it’s focused on history, art or haunted houses like the one I’ve attended, you’ll expand your horizons.</p>
+             <p class="location"> Location: N0 20, scotland Road off negro street
+            </p>
+						 </div>
+					</div>
+					<div class="story more-story">
+						<img src=${isle}  alt="" />
+							<div class="more-story-desc">
+						<h3>Catch a sunrise from a mountain top</h3>
+						<p>Stand up paddleboarding is a fantastic sport suitable for all age groups and fitness levels. You can even find a budget-friendly priced paddle board to buy or rent one and go for a paddle on the lake. This is my favourite activity when Canadian lakes are thawed.</p>
+            <p class="location"> Location: N0 20, scotland Road off negro street
+            </p>
+						 </div>
+					</div>
+					<div class="story more-story">
+						<img src=${pasture}  alt="" />
+							<div class="more-story-desc">
+						<h3>Sign up for a nature walk</h3>
+						<p>If you’d like to know all the different plants and animals that live in your area, the best thing would be to sign up for a nature walk.</p>
+            <p class="location"> Location: N0 20, scotland Road off negro street
+            </p>
+						 </div>
+					</div>
+          <div class="ideas-btn">
+             <button type="button" id="adventure-btn">View All</button>
+             </div>
+				</div>
+	`
+}
 
-	const avatar = document.createElement('img')
-	avatar.setAttribute('src', avatarIcon)
-	document.querySelector('.avatar').appendChild(avatar)
+
+const createElement = () => {
 
 	const logo = document.createElement('img')
 	logo.setAttribute('src', logoIcon)
-	document.querySelector('.span').appendChild(logo)
+	document.querySelector('.logo-wrapper').appendChild(logo)
 
 	const title = document.createElement('img')
 	title.setAttribute('src', titleIcon)
 	document.querySelector('.intro-title').appendChild(title)
 }
 
-export { createElement, stories, adventures }
+export { createElement, stories, adventures, adventureIdeas }
