@@ -1,21 +1,21 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const buildPath = path.resolve(__dirname, 'dist')
 
 module.exports = {
 	mode: 'production',
-	entry: './src/index.js',
+	devtool: 'source-map',
+	entry: {
+		index: './src/index.js',
+		users: './src/users.js',
+	},
 	devServer: {
 		static: './dist',
 	},
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: './src/index.html',
-		}),
-	],
 	output: {
-		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dist'),
-		clean: true,
+		filename: '[name].[fullhash].js',
+		path: buildPath,
 	},
 	module: {
 		rules: [
@@ -33,4 +33,19 @@ module.exports = {
 			},
 		],
 	},
+	plugins: [
+		new CleanWebpackPlugin(),
+		new HtmlWebpackPlugin({
+			template: './src/index.html',
+			inject: 'body',
+			chunks: ['index'],
+			filename: 'index.html',
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/users.html',
+			inject: 'body',
+			chunks: ['users'],
+			filename: 'users.html',
+		}),
+	],
 }
