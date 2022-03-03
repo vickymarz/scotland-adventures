@@ -1,18 +1,19 @@
 import './style.css'
 import * as home from './home.js'
-import * as more from './viewMoreStories.js'
+import * as more from './viewMore.js'
 import signUp from './signUp.js'
 import login from './login.js'
 import readStories from './readStories.js'
-import historyAttractions from './historyAttractions.js'
-import adventureIdeas from './adventureIdeas.js'
 
 document.querySelector('.stories-container').innerHTML = home.stories()
 document.querySelector('.adventures').innerHTML = home.adventures()
+document.querySelector('.adventure-ideas').innerHTML = home.adventureIdeas()
 
 document.querySelector('#more-stories').innerHTML = more.moreStories()
-document.querySelector('#more-adventures').innerHTML = historyAttractions()
-document.querySelector('#adventure-ideas').innerHTML = adventureIdeas()
+
+document.querySelector('#more-history').innerHTML = more.moreHistory()
+
+document.querySelector('#more-adventures').innerHTML = more.moreAdventures()
 
 document.querySelector('.signup-section').innerHTML = signUp()
 document.querySelector('.login-section').innerHTML = login()
@@ -20,7 +21,7 @@ document.querySelector('.more-stories-popup').innerHTML = readStories()
 
 window.addEventListener('load', home.createElement)
 
-const hideSection = () => {
+const moreStories = () => {
 	const viewMore = document.querySelector('#more-stories')
 	const sections = document.querySelectorAll('.section')
 	sections.forEach(section => {
@@ -28,7 +29,7 @@ const hideSection = () => {
 	})
 }
 
-const showSection = () => {
+const lessStories = () => {
 	const viewMore = document.querySelector('#more-stories')
 	const sections = document.querySelectorAll('.section')
 	sections.forEach(section => {
@@ -36,7 +37,23 @@ const showSection = () => {
 	})
 }
 
-const showAttractionSection = () => {
+const moreHistory = () => {
+	const viewMore = document.querySelector('#more-history')
+	const sections = document.querySelectorAll('.section')
+	sections.forEach(section => {
+		;(section.style.display = 'none'), (viewMore.style.display = 'block')
+	})
+}
+
+const lessHistory = () => {
+	const viewMore = document.querySelector('#more-history')
+	const sections = document.querySelectorAll('.section')
+	sections.forEach(section => {
+		;(section.style.display = 'block'), (viewMore.style.display = 'none')
+	})
+}
+
+const moreAdventures = () => {
 	const viewMore = document.querySelector('#more-adventures')
 	const sections = document.querySelectorAll('.section')
 	sections.forEach(section => {
@@ -44,7 +61,7 @@ const showAttractionSection = () => {
 	})
 }
 
-const hideAttractionSection = () => {
+const lessAdventures = () => {
 	const viewMore = document.querySelector('#more-adventures')
 	const sections = document.querySelectorAll('.section')
 	sections.forEach(section => {
@@ -52,17 +69,17 @@ const hideAttractionSection = () => {
 	})
 }
 
-const storiesBtn = document.querySelector('#arrow')
-storiesBtn.addEventListener('click', hideSection)
+document.querySelector('#arrow').addEventListener('click', moreStories)
 
-const returnBtn = document.querySelector('#span')
-returnBtn.addEventListener('click', showSection)
+document.querySelector('#span').addEventListener('click', lessStories)
 
-const adventureBtn = document.querySelector('#adventure-btn')
-adventureBtn.addEventListener('click', showAttractionSection)
+document.querySelector('#history-btn').addEventListener('click', moreHistory)
 
-const returnAdventureBtn = document.querySelector('#back')
-returnAdventureBtn.addEventListener('click', hideAttractionSection)
+document.querySelector('#back').addEventListener('click', lessHistory)
+
+document.querySelector('#adventure-btn').addEventListener('click', moreAdventures)
+
+document.querySelector('#back-btn').addEventListener('click', lessAdventures)
 
 function toggleMenu() {
 	document.querySelectorAll('.menu-bar').forEach(element =>
@@ -76,7 +93,6 @@ toggleMenu()
 
 const openModal = () => {
 	const modalButtons = Array.from(document.querySelectorAll('.popup'))
-	console.log(modalButtons)
 	const modals = Array.from(document.querySelectorAll('.modal'))
 
 	const modalButtonZip = modalButtons.map((button, i) => [button, modals[i]])
