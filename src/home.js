@@ -7,7 +7,7 @@ import sea from './images/sea.jpg'
 import train from './images/train.jpg'
 import georgeHiles from './images/george-hiles.jpg'
 import mountain from './images/mountain.jpg'
-import favIcon from './images/favourite.png'
+import logoIcon from './images/logo.png'
 import titleIcon from './images/scotland.png'
 
 const stories = () => {
