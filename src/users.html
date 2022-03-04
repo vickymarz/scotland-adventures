@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- fontawesome font kit -->
+		<script src="https://kit.fontawesome.com/d31edfa6bf.js" crossorigin="anonymous"></script>
+		<title>My Dashboard</title>
+	</head>
+	<body>
+		<header id="header">
+			<nav class="nav-element">
+				<div class="logo-dashboard"> </div>
+				<ul class="nav-items">
+					<li class="list" ><i class="fas fa-home"  id="main"></i><span>Home</span></li>
+					<li class="list" ><i class="fa fa-bell" id="notifications"></i><span>Notifications</span></li>
+					<li class="list" ><i class="fa fa-bookmark" id="saved-stories"></i><span>Favorites</span></li>
+					<li class="list" ><i class="fa fa-book-open" id="created-stories"></i><span>Stories</span></li>
+					<span class="line"></span>
+					<li class="list" ><i class="fa fa-edit" id="write-story"></i><span>Write</span></li>
+				</ul>
+			</nav>
+		</header>
+		<aside>
+			<div class="search">
+				<input type="search" name="search" id="search" placeholder="Search" />
+				<span> <i class="fas fa-search"></i> </span>
+			</div>
+			<h2>Recommended Stories</h2>
+			<ul class="recommended">
+				<li>Isle</li>
+				<li>Scotland Lake</li>
+				<li>Stories to add</li>
+				<li>Stories</li>
+				<li>Lorem, ipsum dolor. </li></ul
+			>
+
+			<div class="reading-list">
+				<h3>Reading List</h3>
+				<p
+					>Click the
+
+					<i class="fa fa-bookmark"></i>
+					on any story to easily add it to your reading list or a custom list that you can share.</p
+				>
+			</div>
+			<div class="aside-footer">
+				<ul>
+					<li> Help</li>
+					<li>Writers</li>
+					<li>Privacy</li>
+					<li>Terms</li>
+					<li>About</li>
+					<li>Blog</li>
+				</ul>
+			</div>
+		</aside>
+		<section class="main">
+			<div class="topics">
+				<span> <i class="fa fa-plus"></i> </span>
+				<p>Keep up with the lates topics</p>
+			</div>
+			<h2 class="section-title">Recommended</h2>
+			<div id="stories-container"> </div>
+		</section>
+		<section class="notifications">
+			<h2 class="section-title">Notifications</h2>
+			<div class="view-notification"> </div>
+			<small>See all nofifications</small>
+		</section>
+		<section class="saved-stories">
+			<h2 class="section-title">Favourite Stories</h2>
+			<div class="favourites"></div>
+		</section>
+		<section class="created-stories">
+			<div class="created-stories-title">
+				<h2>Your Stories</h2>
+				<button type="button"> Write a story </button>
+			</div>
+			<ul class="story-list">
+				<li>Drafts</li>
+				<li>Published</li>
+			</ul>
+			<div class="drafts">
+				<p>You have no drafts</p>
+			</div>
+		</section>
+		<section class="write-story">
+			<h2 class="title">Write your story</h2>
+			<div class="write-story-header">
+					<button type="button">
+             Preview
+					</button>
+					<button type="button">
+             Publish
+					</button>
+			</div>
+			<div class="publish-story">
+			  <input type="file" name="file" id="file" value="Add Image" accept="image/*">
+				<label for="file">Upload Image
+					<i class="fas fa-image"></i>
+				</label>
+			</div>
+			<div class="text-area">
+        <textarea name="story" id="text-area" required>
+
+				</textarea>
+					<div id="img-browser">
+						<img src="" alt="" class="text-img">
+					</div>
+			</div>
+		</section>
+	</body>
+</html>
