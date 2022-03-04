@@ -16,6 +16,7 @@ module.exports = {
 	output: {
 		filename: '[name].[fullhash].js',
 		path: buildPath,
+
 	},
 	module: {
 		rules: [
