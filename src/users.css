@@ -1,0 +1,411 @@
+:root {
+	/* primary colors */
+	--black: #000;
+	--white: #fff;
+	--deep-brown: #373928;
+	--gray: #d3d3d3;
+	--orange: #ce6a10;
+	--brown: #4f4e43;
+	--light-gray: rgb(80, 78, 78);
+}
+
+/* global styling  */
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html {
+	font-size: 1rem;
+	font-family: 'poppins', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	background-color: var(--white);
+	overflow-x: hidden;
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* header styling starts here */
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 10%;
+	bottom: 0;
+	background-color: var(--deep-brown);
+	border-right: 2px solid var(--orange);
+	padding: 50px 20px;
+}
+
+.avatar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.avatar img {
+	border-radius: 50%;
+	mix-blend-mode: multiply;
+	border: 1px solid var(--orange);
+	width: 40px;
+}
+
+.logo-dashboard {
+	mix-blend-mode: multiply;
+}
+
+.nav-items {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.nav-items li {
+	margin: 30px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.nav-items li span {
+	position: absolute;
+	top: 0;
+	left: 30px;
+	color: var(--white);
+	visibility: hidden;
+	background-color: var(--orange);
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 20px;
+	z-index: 1;
+}
+
+.nav-items li span::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent var(--orange) transparent transparent;
+}
+
+.nav-items li:hover span {
+	visibility: visible;
+}
+
+.nav-items li i {
+	font-size: 25px;
+	color: var(--orange);
+}
+
+.line {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+	width: 70%;
+	background-color: var(--orange);
+	height: 2px;
+}
+
+/* aside styling starts here */
+
+aside {
+	width: 30%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	border-left: 1px solid var(--gray);
+	padding: 20px;
+	padding-top: 50px;
+}
+
+.search {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+#search {
+	padding: 15px 50px;
+	width: 80%;
+	border-radius: 20px;
+	border: 1px solid var(--gray);
+}
+.search span {
+	position: absolute;
+	top: 12px;
+	left: 60px;
+}
+
+aside h2 {
+	text-align: center;
+	margin: 30px 0;
+}
+
+.recommended {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+.recommended li {
+	padding: 10px 30px;
+	background-color: var(--gray);
+	border-radius: 30px;
+	text-align: center;
+	display: flex;
+}
+
+.reading-list {
+	margin-top: 40px;
+}
+
+.reading-list p {
+	padding: 20px 0;
+}
+
+.aside-footer ul {
+	display: flex;
+	margin-top: 20px;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+.aside-footer ul li {
+	display: flex;
+	cursor: pointer;
+}
+
+/* main section styling starts here */
+
+.main,
+.notifications,
+.saved-stories,
+.created-stories,
+.write-story {
+	margin-left: 10%;
+	width: 60%;
+	padding: 30px;
+}
+
+.section-title {
+	font-size: 32px;
+	padding: 10px 0;
+	border-bottom: 1px solid var(--gray);
+}
+
+#stories-container {
+	margin-top: 70px;
+}
+
+.topics {
+	display: flex;
+	gap: 10px;
+	justify-content: flex-start;
+	align-items: center;
+	padding-bottom: 30px;
+}
+
+.topics span {
+	background: var(--gray);
+	display: flex;
+	border-radius: 100%;
+	padding: 15px;
+	justify-content: center;
+	align-items: center;
+}
+
+.recommended-stories {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid var(--gray);
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+	gap: 50px;
+}
+
+.recommended-story span {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.author {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+}
+
+.author img {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+}
+
+.story-img img {
+	width: 200px;
+}
+
+/* notifications section starts here */
+
+.view-notification {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.view-notification img {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+}
+
+.notification p span,
+.date {
+	color: var(--light-gray);
+}
+
+.notifications span,
+.notifications small {
+	color: var(--deep-brown);
+}
+
+/* favourite stories section starts here */
+
+.favourites {
+	margin-top: 50px;
+}
+.favourite-stories {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid var(--gray);
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+	gap: 50px;
+}
+
+.delete-author {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+	color: var(--deep-brown);
+}
+
+/* created stories section starts here */
+
+.created-stories h2 {
+	font-size: 32px;
+	padding: 10px 0;
+}
+
+.created-stories-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid var(--gray);
+}
+
+.created-stories-title button {
+	padding: 10px 20px;
+	background-color: var(--orange);
+	color: white;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+}
+
+.story-list {
+	margin-top: 50px;
+	border-bottom: 1px solid var(--deep-brown);
+	display: flex;
+	gap: 20px;
+	
+}
+
+.story-list li {
+  font-weight: 600;
+	cursor: pointer;
+}
+
+.drafts {
+	transform: translate(50%, 50%);
+}
+
+/* write stories section starts here  */
+
+.write-story-header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	gap: 20px;
+}
+
+.write-story-header button {
+	cursor: pointer;
+		padding: 10px 20px;
+	background-color: var(--orange);
+	color: white;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+}
+
+.publish-story {
+	position: relative;
+}
+
+input[type='file'] {
+	display: none;
+} 
+
+.publish-story label {
+	cursor: pointer;
+	color: var(--white);
+	padding: 10px;
+	background-color: var(--deep-brown);
+ font-size: 13px;
+
+}
+.text-area textarea{
+	width: 100%;
+	height: 100vh;
+	margin-top: 10px;
+}
