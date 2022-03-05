@@ -16,13 +16,20 @@ document.querySelectorAll('.list').forEach(e => {
 function displayPage(e) {
 	const list = e.target.id
 	const activeSection = document.querySelector(`.${list}`)
-
+	const navList = document.querySelectorAll('.list i')
+	const activeList = document.querySelector(`#${list}`)
+	
 	document.querySelectorAll('section').forEach(section => {
 		section.style.display = 'none'
 		let { className } = section
 		if (className === list) {
+			console.log(className, list);
 			activeSection.style.display = 'block'
-		}
+			navList.forEach(list => {
+				list.style.color = '#ce6a10'
+			})
+			activeList.style.color = 'white'
+		} 
 	})
 }
 
@@ -50,5 +57,3 @@ function updateImg (value) {
 	let content = document.querySelector('#text-area')
 	content.value = content.value + "\n" + value
 }
-
-// window.onload = () => imageAdder()
