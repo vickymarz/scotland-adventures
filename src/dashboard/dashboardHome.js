@@ -106,7 +106,7 @@ const savedStories = () => {
 	return `
 	<div class="favourite-stories">
 	  <div class="favourite-story">
-			<h2>Intesting things about Scotland</h2>
+			<h2 class="popup">Intesting things about Scotland</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Ducimus repudiandae earum
 				maxime reiciendis necessitatibus totam, deserunt molestias eaque a vitae quidem
 				libero, voluptates perferendis nulla culpa in illo unde cum </p>

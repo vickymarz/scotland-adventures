@@ -1,6 +1,7 @@
 import './users.css'
 import * as dashboard from './dashboard/dashboardHome'
 import userStories from './dashboard/usersStories'
+import favouriteStories from './dashboard/favouriteStory'
 
 window.addEventListener('load', dashboard.createUserElement)
 
@@ -11,6 +12,8 @@ document.querySelector('.view-notification').innerHTML = dashboard.notifications
 document.querySelector('.favourites').innerHTML = dashboard.savedStories()
 
 document.querySelector('.users-stories-popup').innerHTML = userStories()
+
+document.querySelector('.favourite-stories-popup').innerHTML = favouriteStories()
 
 document.querySelectorAll('.list').forEach(e => {
 	e.addEventListener('click', displayPage)
