@@ -386,8 +386,10 @@ aside h2 {
 	cursor: pointer;
 }
 
-.drafts {
-	transform: translate(50%, 50%);
+.my-stories {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* write stories section starts here  */
@@ -493,6 +495,6 @@ input[type='file'] {
 	color: var(--white);
 }
 
-#write {
+#write, .story-list li {
 	cursor: pointer;
 }

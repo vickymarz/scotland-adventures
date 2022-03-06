@@ -19,6 +19,10 @@ document.querySelectorAll('.list').forEach(e => {
 	e.addEventListener('click', displayPage)
 })
 
+document.querySelectorAll('.view-stories').forEach(e => {
+	e.addEventListener('click', displayStory)
+})
+
 document.querySelector('#write').addEventListener('click', () => {
 	document.querySelector('.created-stories').style.display = 'none'
 	document.querySelector('.write-story').style.display = 'block'
@@ -41,6 +45,26 @@ function displayPage(e) {
 			})
 			activeList.style.color = 'white'
 		} 
+	})
+}
+
+function displayStory(e) {
+	const myStoryId = e.target.id
+	const activeSection = document.querySelector(`.${myStoryId}`)
+	const activeStoryBtn = document.querySelectorAll('.view-stories')
+	const activeStory = document.querySelector(`#${myStoryId}`)
+	
+	document.querySelectorAll('.my-stories').forEach(story => {
+		story.style.display = 'none'
+		let { className } = story
+		className = className.split(' ')[0]
+		if (className === myStoryId) {
+			activeSection.style.display = 'flex'
+			activeStoryBtn.forEach(list => {
+				list.style.color = '#000'
+			})
+			activeStory.style.color = '#ce6a10'
+		}
 	})
 }
 
