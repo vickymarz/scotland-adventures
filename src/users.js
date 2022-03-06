@@ -28,6 +28,26 @@ document.querySelector('#write').addEventListener('click', () => {
 	document.querySelector('.write-story').style.display = 'block'
 })
 
+const togglePreview = () => {
+	const previewBtn = document.querySelector('#preview-btn')
+	const publishSection = document.querySelector('.publish-section')
+	const previewSection = document.querySelector('.preview-section')
+
+	previewBtn.addEventListener('click', () => {
+
+		publishSection.classList.toggle('toggle-preview')
+		previewSection.classList.toggle('toggle-preview')
+		if (previewBtn.textContent === 'Preview') {
+		previewBtn.textContent = 'Continue Writing'
+		} else {
+				previewBtn.textContent = 'Preview'
+		}
+})
+}
+
+togglePreview()
+
+
 
 function displayPage(e) {
 	const list = e.target.id
@@ -67,6 +87,7 @@ function displayStory(e) {
 		}
 	})
 }
+
 
 let defaultBtn = document.querySelector('#file')
 let image = document.querySelector('.text-img')

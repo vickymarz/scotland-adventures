@@ -415,6 +415,10 @@ aside h2 {
 	position: relative;
 }
 
+.toggle-preview {
+	display: none;
+}
+
 input[type='file'] {
 	display: none;
 } 
@@ -497,4 +501,8 @@ input[type='file'] {
 
 #write, .story-list li {
 	cursor: pointer;
+}
+
+.preview-section {
+	margin-top: 20px;
 }

@@ -13,12 +13,18 @@
 			<nav class="nav-element">
 				<div class="logo-dashboard"> </div>
 				<ul class="nav-items">
-					<li class="list" ><i class="fas fa-home"  id="main"></i><span>Home</span></li>
-					<li class="list" ><i class="fa fa-bell" id="notifications"></i><span>Notifications</span></li>
-					<li class="list" ><i class="fa fa-bookmark" id="saved-stories"></i><span>Favorites</span></li>
-					<li class="list" ><i class="fa fa-book-open" id="created-stories"></i><span>Stories</span></li>
+					<li class="list"><i class="fas fa-home" id="main"></i><span>Home</span></li>
+					<li class="list"
+						><i class="fa fa-bell" id="notifications"></i><span>Notifications</span></li
+					>
+					<li class="list"
+						><i class="fa fa-bookmark" id="saved-stories"></i><span>Favorites</span></li
+					>
+					<li class="list"
+						><i class="fa fa-book-open" id="created-stories"></i><span>Stories</span></li
+					>
 					<span class="line"></span>
-					<li class="list" ><i class="fa fa-edit" id="write-story"></i><span>Write</span></li>
+					<li class="list"><i class="fa fa-edit" id="write-story"></i><span>Write</span></li>
 				</ul>
 			</nav>
 		</header>
@@ -78,7 +84,7 @@
 				<li id="drafts" class="view-stories">Drafts</li>
 				<li id="published" class="view-stories">Published</li>
 			</ul>
-			<div class="drafts my-stories" >
+			<div class="drafts my-stories">
 				<p>You have no drafts</p>
 			</div>
 			<div class="published my-stories">
@@ -88,30 +94,29 @@
 		<section class="write-story">
 			<h2 class="title">Write your story</h2>
 			<div class="write-story-header">
-					<button type="button">
-             Preview
-					</button>
-					<button type="button">
-             Publish
-					</button>
+				<button type="button" id="preview-btn"> Preview </button>
+				<button type="button"> Publish </button>
 			</div>
-			<div class="publish-story">
-			  <input type="file" name="file" id="file" value="Add Image" accept="image/*">
-				<label for="file">Upload Image
-					<i class="fas fa-image"></i>
-				</label>
+			<div class="publish-section">
+				<div class="publish-story">
+					<input type="file" name="file" id="file" value="Add Image" accept="image/*" />
+					<label for="file"
+						>Upload Image
+						<i class="fas fa-image"></i>
+					</label>
+				</div>
+				<div class="text-area">
+					<textarea name="story" id="text-area" required> </textarea>
+				</div>
 			</div>
-			<div class="text-area">
-        <textarea name="story" id="text-area" required>
-
-				</textarea>
-					<div id="img-browser">
-						<img src="" alt="" class="text-img">
-					</div>
+			<div class="preview-section toggle-preview">
+				<div id="img-browser">
+					<p></p>
+					<img src="" alt="" class="text-img" />
+				</div>
 			</div>
 		</section>
-			<div class="users-stories-popup"></div>
-			<div class="favourite-stories-popup"></div>
+		<div class="users-stories-popup"></div>
+		<div class="favourite-stories-popup"></div>
 	</body>
 </html>
-
