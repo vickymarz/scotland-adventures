@@ -492,3 +492,7 @@ input[type='file'] {
 	background-color: var(--orange);
 	color: var(--white);
 }
+
+#write {
+	cursor: pointer;
+}

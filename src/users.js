@@ -19,6 +19,12 @@ document.querySelectorAll('.list').forEach(e => {
 	e.addEventListener('click', displayPage)
 })
 
+document.querySelector('#write').addEventListener('click', () => {
+	document.querySelector('.created-stories').style.display = 'none'
+	document.querySelector('.write-story').style.display = 'block'
+})
+
+
 function displayPage(e) {
 	const list = e.target.id
 	const activeSection = document.querySelector(`.${list}`)
@@ -62,6 +68,7 @@ function updateImg (value) {
 	let content = document.querySelector('#text-area')
 	content.value = content.value + "\n" + value
 }
+
 
 const openModal = () => {
 	const modalButtons = Array.from(document.querySelectorAll('.popup'))
