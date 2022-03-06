@@ -1,5 +1,6 @@
 import './users.css'
 import * as dashboard from './dashboard/dashboardHome'
+import userStories from './dashboard/usersStories'
 
 window.addEventListener('load', dashboard.createUserElement)
 
@@ -8,6 +9,8 @@ document.querySelector('#stories-container').innerHTML = dashboard.recommendedSt
 document.querySelector('.view-notification').innerHTML = dashboard.notifications()
 
 document.querySelector('.favourites').innerHTML = dashboard.savedStories()
+
+document.querySelector('.users-stories-popup').innerHTML = userStories()
 
 document.querySelectorAll('.list').forEach(e => {
 	e.addEventListener('click', displayPage)
@@ -23,7 +26,6 @@ function displayPage(e) {
 		section.style.display = 'none'
 		let { className } = section
 		if (className === list) {
-			console.log(className, list);
 			activeSection.style.display = 'block'
 			navList.forEach(list => {
 				list.style.color = '#ce6a10'
@@ -57,3 +59,27 @@ function updateImg (value) {
 	let content = document.querySelector('#text-area')
 	content.value = content.value + "\n" + value
 }
+
+const openModal = () => {
+	const modalButtons = Array.from(document.querySelectorAll('.popup'))
+	const modals = Array.from(document.querySelectorAll('.modal'))
+	const modalButtonZip = modalButtons.map((button, i) => [button, modals[i]])
+
+	modalButtonZip.forEach(pair => {
+		pair[0].addEventListener('click', () => {
+			pair[1].style.display = 'block'
+		})
+	})
+}
+openModal()
+
+const closeModal = () => {
+	document.querySelectorAll('.cancel').forEach(close => {
+		close.addEventListener('click', () => {
+			document.querySelectorAll('.modal').forEach(modal => {
+				modal.style.display = 'none'
+			})
+		})
+	})
+}
+closeModal()

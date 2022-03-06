@@ -14,7 +14,7 @@ const recommendedStories = () => {
 						<span>John Doe</span>
 						</div>
 						<div class="recommended-story">
-							<h2>Intesting things about Scotland</h2>
+							<h2 class="popup">Intesting things about Scotland</h2>
 							<p
 								>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repudiandae earum
 								maxime reiciendis necessitatibus totam, deserunt molestias eaque a vitae quidem
@@ -34,7 +34,7 @@ const recommendedStories = () => {
 						<span>John Doe</span>
 						</div>
 						<div class="recommended-story">
-							<h2>Intesting things about Scotland</h2>
+							<h2 class="popup">Intesting things about Scotland</h2>
 							<p
 								>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repudiandae earum
 								maxime reiciendis necessitatibus totam, deserunt molestias eaque a vitae quidem
@@ -54,7 +54,7 @@ const recommendedStories = () => {
 						<span>John Doe</span>
 						</div>
 						<div class="recommended-story">
-							<h2>Intesting things about Scotland</h2>
+							<h2 class="popup">Intesting things about Scotland</h2>
 							<p
 								>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repudiandae earum
 								maxime reiciendis necessitatibus totam, deserunt molestias eaque a vitae quidem
@@ -74,7 +74,7 @@ const recommendedStories = () => {
 						<span>John Doe</span>
 						</div>
 						<div class="recommended-story">
-							<h2>Intesting things about Scotland</h2>
+							<h2 class="popup">Intesting things about Scotland</h2>
 							<p
 								>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repudiandae earum
 								maxime reiciendis necessitatibus totam, deserunt molestias eaque a vitae quidem
