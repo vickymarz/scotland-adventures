@@ -33,9 +33,6 @@ const showDrafts = () => {
 	document.querySelector('#published').style.display='none'
 }
 
-window.onload = () => {
-	showDrafts()
-}
 const togglePreview = () => {
 	const previewBtn = document.querySelector('#preview-btn')
 	const publishSection = document.querySelector('.publish-section')
@@ -73,6 +70,14 @@ function displayPage(e) {
 	activeSection.style.display = 'block'
 }
 
+const showStories = () => {
+	document.querySelectorAll('section').forEach(section => {
+		section.style.display = "none"
+	})
+	document.querySelector('.main').style.display='block'
+	document.querySelector('#main').style.color='white'
+}
+
 function displayStory(e) {
 	const myStoryId = e.target.id
 	const activeSection = document.querySelector(`.${myStoryId}`)
@@ -91,6 +96,11 @@ function displayStory(e) {
 			activeStory.style.color = '#ce6a10'
 		}
 	})
+}
+
+window.onload = () => {
+	showStories()
+		showDrafts()
 }
 
 const openModal = () => {
