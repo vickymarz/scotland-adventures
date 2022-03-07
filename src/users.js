@@ -28,6 +28,14 @@ document.querySelector('#write').addEventListener('click', () => {
 	document.querySelector('.write-story').style.display = 'block'
 })
 
+const showDrafts = () => {
+	document.querySelector('.published').style.display='none'
+	document.querySelector('#published').style.display='none'
+}
+
+window.onload = () => {
+	showDrafts()
+}
 const togglePreview = () => {
 	const previewBtn = document.querySelector('#preview-btn')
 	const publishSection = document.querySelector('.publish-section')
