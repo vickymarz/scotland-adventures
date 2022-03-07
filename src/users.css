@@ -432,11 +432,19 @@ input[type='file'] {
 
 }
 
-.text-area textarea{
+.text-area {
 	width: 100%;
 	height: 100vh;
 	margin-top: 10px;
+	border: 1px solid var(--gray);
+	outline: none;
 }
+
+.text-area:focus {
+	border: 1px solid var(--gray);
+  outline: none;
+}
+
 
 /* modal and form styling starts here */
 
@@ -504,5 +512,23 @@ input[type='file'] {
 }
 
 .preview-section {
-	margin-top: 20px;
+	margin-top: 40px;
+}
+
+.preview-section #text {
+  word-wrap: break-word;
+}
+
+.text-img {
+	display: none;
+}
+
+.text-area img {
+	width: 80%;
+	height: 50%;
+	margin: auto;
+}
+
+#text .preview-img {
+	display: none;
 }

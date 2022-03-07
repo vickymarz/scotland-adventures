@@ -59,13 +59,13 @@ function displayPage(e) {
 		section.style.display = 'none'
 		let { className } = section
 		if (className === list) {
-			activeSection.style.display = 'block'
 			navList.forEach(list => {
 				list.style.color = '#ce6a10'
 			})
 			activeList.style.color = 'white'
 		} 
 	})
+	activeSection.style.display = 'block'
 }
 
 function displayStory(e) {
@@ -89,30 +89,6 @@ function displayStory(e) {
 }
 
 
-let defaultBtn = document.querySelector('#file')
-let image = document.querySelector('.text-img')
-defaultBtn.addEventListener('change', function (e) {
-
-	const file = e.target.files[0]
-	if (file) {
-		const reader = new FileReader();
-		reader.onload = function() {
-			const result = reader.result
-			image.src = result
-		}
-		reader.readAsDataURL(file)
-	}
-	if (this.value) {
-		let value = this.value
-		updateImg(value)
-		console.log(value);
-	}
-})
-
-function updateImg (value) {
-	let content = document.querySelector('#text-area')
-	content.value = content.value + "\n" + value
-}
 
 
 const openModal = () => {
@@ -138,3 +114,32 @@ const closeModal = () => {
 	})
 }
 closeModal()
+
+
+
+
+document.querySelector('#file').addEventListener('input', function (e) {
+
+	const textArea = document.querySelector('.text-area')
+	let image = document.querySelector('.text-img')
+
+	const file = e.target.files[0]
+	if (file) {
+		const reader = new FileReader()
+		reader.onload = function () {
+			const result = reader.result
+			image.style.display="block"
+			image.src = result
+			textArea.innerHTML += `<br> <img src=${result} alt="" class="preview-img" />`
+		}
+		reader.readAsDataURL(file)
+	}
+})
+
+const displayText = e => {
+	console.log(e.target.innerHTML)
+	document.querySelector('#text').innerHTML = e.target.innerHTML
+}
+
+const textArea = document.querySelector('.text-area')
+textArea.addEventListener('input', displayText)
