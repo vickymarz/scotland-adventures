@@ -34,27 +34,24 @@ const togglePreview = () => {
 	const previewSection = document.querySelector('.preview-section')
 
 	previewBtn.addEventListener('click', () => {
-
 		publishSection.classList.toggle('toggle-preview')
 		previewSection.classList.toggle('toggle-preview')
 		if (previewBtn.textContent === 'Preview') {
-		previewBtn.textContent = 'Continue Writing'
+			previewBtn.textContent = 'Continue Writing'
 		} else {
-				previewBtn.textContent = 'Preview'
+			previewBtn.textContent = 'Preview'
 		}
-})
+	})
 }
 
 togglePreview()
-
-
 
 function displayPage(e) {
 	const list = e.target.id
 	const activeSection = document.querySelector(`.${list}`)
 	const navList = document.querySelectorAll('.list i')
 	const activeList = document.querySelector(`#${list}`)
-	
+
 	document.querySelectorAll('section').forEach(section => {
 		section.style.display = 'none'
 		let { className } = section
@@ -63,7 +60,7 @@ function displayPage(e) {
 				list.style.color = '#ce6a10'
 			})
 			activeList.style.color = 'white'
-		} 
+		}
 	})
 	activeSection.style.display = 'block'
 }
@@ -73,7 +70,7 @@ function displayStory(e) {
 	const activeSection = document.querySelector(`.${myStoryId}`)
 	const activeStoryBtn = document.querySelectorAll('.view-stories')
 	const activeStory = document.querySelector(`#${myStoryId}`)
-	
+
 	document.querySelectorAll('.my-stories').forEach(story => {
 		story.style.display = 'none'
 		let { className } = story
@@ -87,9 +84,6 @@ function displayStory(e) {
 		}
 	})
 }
-
-
-
 
 const openModal = () => {
 	const modalButtons = Array.from(document.querySelectorAll('.popup'))
@@ -115,11 +109,7 @@ const closeModal = () => {
 }
 closeModal()
 
-
-
-
 document.querySelector('#file').addEventListener('input', function (e) {
-
 	const textArea = document.querySelector('.text-area')
 	let image = document.querySelector('.text-img')
 
@@ -128,7 +118,7 @@ document.querySelector('#file').addEventListener('input', function (e) {
 		const reader = new FileReader()
 		reader.onload = function () {
 			const result = reader.result
-			image.style.display="block"
+			image.style.display = 'block'
 			image.src = result
 			textArea.innerHTML += `<br> <img src=${result} alt="" class="preview-img" />`
 		}
@@ -137,7 +127,6 @@ document.querySelector('#file').addEventListener('input', function (e) {
 })
 
 const displayText = e => {
-	console.log(e.target.innerHTML)
 	document.querySelector('#text').innerHTML = e.target.innerHTML
 }
 
