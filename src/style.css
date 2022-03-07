@@ -1,0 +1,706 @@
+:root {
+	/* primary colors */
+	--black: #000;
+	--white: #fff;
+	--deep-brown: #373928;
+	--gray: #d3d3d3;
+	--orange: #ce6a10;
+	--brown: #4f4e43;
+}
+
+/* global styling  */
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html {
+	font-size: 1rem;
+	font-family: 'poppins', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	background-color: var(--white);
+	overflow-x: hidden;
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* header section styling starts here */
+
+.intro-container {
+	background: url('../src/images/homepage.jpg') no-repeat;
+	background-size: cover;
+	padding: 20px;
+	height: 100vh;
+	width: 100%;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	z-index: 2;
+}
+
+.logo-desktop {
+	display: none;
+}
+
+.logo-desktop h1 {
+	font-size: 15px;
+	color: var(--orange);
+	padding: 0 10px;
+}
+
+.logo-wrapper img {
+	mix-blend-mode: multiply;
+}
+
+.mobile-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	background: var(--deep-brown);
+	backdrop-filter: blur(8px);
+	display: block;
+	transition: all 1s ease;
+	z-index: 2;
+}
+
+.active {
+	width: 100%;
+}
+
+.bars {
+	color: var(--deep-brown);
+	font-size: 25px;
+}
+
+.times {
+	color: var(--orange);
+	font-size: 25px;
+	margin-top: 40px;
+	margin-left: 438px;
+}
+
+.nav-list {
+	margin-top: 70px;
+	margin-left: 28px;
+	margin-right: 28px;
+}
+
+.nav-list li {
+	margin-bottom: 20px;
+	padding: 5px 0;
+	text-align: center;
+	list-style-type: none;
+}
+
+.nav-list li a, .link {
+	font-weight: bolder;
+	font-size: 24px;
+	color: var(--white);
+}
+
+.nav-list li:hover, .link:hover {
+	border-radius: 10px;
+	border-bottom: 3px solid var(--orange);
+}
+
+.nav-list li:hover a {
+	color: var(--white);
+}
+
+.intro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.intro-title img {
+	width: 80%;
+}
+
+.intro p {
+	color: var(--white);
+	margin-top: 150px;
+	line-height: 24px;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+/* stories section starts here */
+
+.stories-container {
+	background-color: white;
+	padding: 20px;
+}
+
+.stories-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--deep-brown);
+	margin-top: 40px;
+}
+
+.stories-title h2 span {
+	color: var(--orange);
+}
+
+.stories {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	margin: 20px 0;
+}
+
+.story {
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0;
+	color: var(--black);
+}
+
+.story img {
+	display: block;
+	height: 200px;
+}
+
+.story h3 {
+	text-align: center;
+	font-size: 17px;
+	padding: 10px 0;
+	flex: 1;
+}
+
+.story p {
+	font-size: 13px;
+	line-height: 20px;
+	flex: 1;
+}
+
+/* adventure styling starts here */
+
+.adventures {
+	background-color: var(--deep-brown);
+	padding: 40px;
+}
+
+.adventure-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--white);
+}
+
+.adventure-btns {
+	display: none;
+}
+
+.adventure-places {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	margin-top: 20px;
+	padding: 20px 0;
+}
+
+.adventure-imgs {
+	max-width: 400px;
+	height: 200px;
+	position: relative;
+}
+
+.adventure-imgs p {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	color: var(--white);
+}
+
+.adventure-btn button {
+	padding: 10px 20px;
+	margin: 10px 0;
+	border: none;
+	outline: none;
+	background-color: var(--orange);
+	color: var(--white);
+	cursor: pointer;
+}
+
+#more-stories, #more-adventures, #more-history{
+	display: none;
+	background-color: var(--deep-brown);
+	padding: 40px;
+	color: var(--white);
+}
+
+
+#more-stories h2 {
+	font-size: 32px;
+	color: var(--white);
+	padding: 10px 0;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+#span  {
+	color: var(--white);
+	cursor: pointer;
+}
+
+#stories-title h2{
+	padding: 0;
+	margin-left: 0;
+	margin-bottom: 40px;
+}
+
+.more-story {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: initial;
+	gap: 30px;
+}
+
+.more-story p,
+.more-story span {
+	color: var(--gray);
+	text-align: left;
+}
+
+.more-story h3 {
+	color: var(--white);
+	text-align: left;
+}
+
+.more-story img {
+	width: 400px;
+	height: 300px;
+}
+
+
+.more-story-desc p {
+	margin: 20px 0;
+	line-height: 24px;
+	font-size: 16px;
+}
+
+.my-stories {
+	margin-top: 20px;
+}
+
+.adventure-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+#arrow,
+#arrow-back {
+	cursor: pointer;
+}
+
+.description button {
+	padding: 10px 20px;
+	border: none;
+	outline: none;
+	background-color: var(--orange);
+	color: var(--white);
+}
+
+/* about section starts here */
+
+.about {
+	padding: 20px 40px;
+}
+
+.about h2 {
+	padding: 20px 0;
+	color: var(--deep-brown);
+}
+
+.about h2 span {
+	color: var(--orange);
+}
+
+.about h3 {
+	color: var(--orange);
+	padding: 10px 0;
+}
+
+.about-intro {
+	margin: 15px 0;
+}
+ 
+.about-intro p {
+  line-height: 24px;
+}
+
+.view {
+	position: relative;
+}
+
+.view:hover img {
+	filter: opacity(0.5);
+}
+
+.view:hover .read {
+	display: block;
+}
+
+.read {
+	position: absolute;
+	top: 40%;
+	left:40%;
+	padding: 10px 15px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: var(--orange);
+	color: var(--white);
+	display: none;
+}
+
+.tour-package {
+	margin: 25px 0;
+}
+
+.tour-package ul li {
+	padding: 10px 0;
+}
+
+/* adventure ideas section styling */
+
+.adventure-ideas {
+	background-color: var(--deep-brown);
+	padding: 40px;
+}
+
+.adventure-ideas h2 {
+	color: var(--white);
+}
+
+.adventure-ideas .location {
+	color: var(--orange);
+	margin-top: 10px;
+}
+
+.ideas-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ideas-btn button {
+	outline: none;
+	background: none;
+	color: var(--white);
+	border: 1px solid var(--white);
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+/* modal and form styling starts here */
+
+.modal {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	backdrop-filter: blur(5px);
+	background: #7f8cff6d;
+	z-index: 5;
+	animation: modalopen 1s ease-out;
+	display: none;
+}
+
+@keyframes modalopen {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.form-container {
+	border: 1px solid #dfe1e6;
+	border-radius: 16px;
+	width: 400px;
+	margin: 100px auto;
+	position: relative;
+	display: flex;
+	text-align: center;
+	padding: 25px;
+	flex-direction: column;
+	color: var(--white);
+	justify-content: center;
+	align-items: center;
+	background-color: var(--deep-brown);
+}
+
+.popup-container {
+		margin: 30px 16px;
+	border: 1px solid #dfe1e6;
+	border-radius: 16px;
+	min-height: 713px;
+	padding: 18px 16px;
+	background-color: var(--deep-brown);
+}
+
+#read-stories {
+	display: block;
+}
+
+#read-stories img {
+	width: 100%;
+	height: 80vh;
+}
+.cancel i {
+	width: 20px;
+	position: absolute;
+	right: -20px;
+	top: -30px;
+	z-index: 2;
+}
+
+form {
+	margin: auto;
+	padding: 10px 15px;
+	justify-content: center;
+	justify-items: center;
+	border-radius: 1.5%;
+}
+
+.form-container p,
+.form-container h2 {
+	padding-bottom: 20px;
+}
+
+.form-container p {
+	color: var(--white);
+	text-align: center;
+}
+
+.form-container h2 {
+	text-align: center;
+}
+
+form input {
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	background-color: var(--white);
+	margin: 10px 0 20px 0;
+	border-radius: 5px;
+	border: none;
+}
+
+form input::placeholder {
+	color: var(--brown);
+	font-weight: lighter;
+}
+
+form input:focus {
+	outline: none;
+	border: 2px solid var(--orange);
+}
+
+input:hover {
+	cursor: text;
+}
+
+#submit {
+	background-color: var(--orange);
+	margin: 20px 0 0 0;
+	font-size: 14px;
+	align-items: center;
+	justify-items: center;
+	border-radius: 10px 0px;
+	color: var(--white);
+	font-weight: bold;
+}
+
+#submit:hover {
+	cursor: pointer;
+}
+
+.footer {
+	margin-top: 15px;
+}
+
+.footer p {
+	color: white;
+	font-size: 14px;
+}
+
+.footer p a {
+	text-decoration: none;
+	color: var(--orange);
+}
+
+@media only screen and (min-width: 768px) {
+
+	/* header desktop view styling start here */
+	.intro-container {
+		padding: 0;
+	}
+
+	.navbar {
+		padding: 10px 80px;
+	}
+
+	.logo-desktop {
+		display: flex;
+	}
+
+	.nav-list {
+		display: flex;
+		gap: 10px;
+		justify-content: flex-end;
+		align-items: center;
+		margin-left: initial;
+		margin-top: 10px;
+		margin-right: initial;
+	}
+
+	.nav-list li {
+		margin-top: 5px;
+	}
+
+	.nav-list li a, .nav-list .link {
+		font-size: 15px;
+		line-height: 20px;
+		color: var(--brown);
+		padding: 8px;
+		border-radius: 10px;
+	}
+
+	.nav-list li:hover {
+		border-bottom: none;
+	}
+
+	.nav-list li:hover a , .nav-list .link:hover{
+		background-color: var(--orange);
+		color: var(--white);
+	}
+
+	.link {
+		display: flex;
+		cursor: pointer;
+	}
+
+	.mobile-menu {
+		position: initial;
+		width: initial;
+		height: initial;
+		background: initial;
+		backdrop-filter: initial;
+		mix-blend-mode: initial;
+		transition: initial;
+	}
+
+	.bars {
+		display: none;
+	}
+
+	.times {
+		display: none;
+	}
+
+	.active {
+		display: block;
+		transform: initial;
+	}
+
+	.stories {
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.stories-container {
+		padding: 20px 60px;
+	}
+
+	.story-title {
+		padding: 0 40px;
+	}
+
+	.story {
+		justify-content: center;
+		color: var(--black);
+	}
+
+	.more-story {
+		flex-direction: row;
+		gap: 80px;
+	}
+	.adventure-places {
+		grid-template-columns: repeat(3, 1fr);
+		/* grid-template-rows: repeat(2, 1fr); */
+	}
+
+	footer {
+		background-color: var(--white);
+		padding: 20px;
+	}
+
+	footer h3 {
+		color: var(--orange);
+	}
+
+	.footer-container {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.footer-container ul li {
+		list-style-type: none;
+		padding: 10px 0;
+		color: var(--orange);
+	}
+
+	.link-icons {
+		display: flex;
+		gap: 15px;
+	}
+  
+	.footer-container ul li a {
+		color: var(--brown);
+	}
+
+}
