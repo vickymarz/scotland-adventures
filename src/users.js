@@ -6,9 +6,7 @@ import favouriteStories from './dashboard/favouriteStory'
 window.addEventListener('load', dashboard.createUserElement)
 dashboard.renderPage()
 
-document.querySelector('#stories-container').innerHTML = dashboard.recommendedStories()
-
-// document.querySelector('.view-notification').innerHTML = dashboard.notifications()
+// document.querySelector('#stories-container').innerHTML = dashboard.recommendedStories()
 
 document.querySelector('.favourites').innerHTML = dashboard.savedStories()
 

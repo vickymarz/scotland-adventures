@@ -5,8 +5,8 @@ import river from '../images/river.jpg'
 import walkWay from '../images/walk-way.jpg'
 import pasture from '../images/pasture.jpg'
 
-const recommendedStories = () => {
-	return `
+const recommendedStories =
+	 `
           <div class="recommended-stories">
 					<div class="story-description">
           <div class="author">
@@ -88,7 +88,6 @@ const recommendedStories = () => {
           </div>
 				</div>
       `
-}
 
 const notifications = 
 	 `
@@ -135,5 +134,6 @@ const createUserElement = () => {
 
 const renderPage = () => {
   document.querySelector('.view-notification').innerHTML = notifications
+	document.querySelector('#stories-container').innerHTML = recommendedStories
 }
 export { recommendedStories, createUserElement, savedStories, renderPage }
