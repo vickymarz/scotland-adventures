@@ -4,10 +4,11 @@ import userStories from './dashboard/usersStories'
 import favouriteStories from './dashboard/favouriteStory'
 
 window.addEventListener('load', dashboard.createUserElement)
+dashboard.renderPage()
 
 document.querySelector('#stories-container').innerHTML = dashboard.recommendedStories()
 
-document.querySelector('.view-notification').innerHTML = dashboard.notifications()
+// document.querySelector('.view-notification').innerHTML = dashboard.notifications()
 
 document.querySelector('.favourites').innerHTML = dashboard.savedStories()
 
@@ -30,7 +31,7 @@ document.querySelector('#write').addEventListener('click', () => {
 
 const showDrafts = () => {
 	document.querySelector('.published').style.display='none'
-	document.querySelector('#published').style.display='none'
+	document.querySelector('#published').style.display='flex'
 }
 
 const togglePreview = () => {

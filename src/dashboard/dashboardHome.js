@@ -90,8 +90,8 @@ const recommendedStories = () => {
       `
 }
 
-const notifications = () => {
-	return `
+const notifications = 
+	 `
 	 <div class="view-notification">
 	    <img src=${avatarIcon } alt="author" />
 				<div class="notification">
@@ -100,7 +100,6 @@ const notifications = () => {
 				</div>
 		</div>
 	`
-}
 
 const savedStories = () => {
 	return `
@@ -134,4 +133,7 @@ const createUserElement = () => {
 	document.querySelector('.avatar').appendChild(avatar)
 }
 
-export { recommendedStories, createUserElement, notifications, savedStories }
+const renderPage = () => {
+  document.querySelector('.view-notification').innerHTML = notifications
+}
+export { recommendedStories, createUserElement, savedStories, renderPage }
