@@ -1,14 +1,12 @@
 import './users.css'
-import * as dashboard from './dashboard/dashboardHome'
+import renderNav from './dashboard/nav'
+import renderPage from './dashboard/dashboardHome'
 import userStories from './dashboard/usersStories'
 import favouriteStories from './dashboard/favouriteStory'
 
-window.addEventListener('load', dashboard.createUserElement)
-dashboard.renderPage()
+renderNav()
+renderPage()
 
-// document.querySelector('#stories-container').innerHTML = dashboard.recommendedStories()
-
-document.querySelector('.favourites').innerHTML = dashboard.savedStories()
 
 document.querySelector('.users-stories-popup').innerHTML = userStories()
 
