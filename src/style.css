@@ -189,7 +189,6 @@ img {
 }
 
 .story img {
-	display: block;
 	height: 200px;
 }
 
@@ -299,12 +298,6 @@ img {
 	color: var(--white);
 	text-align: left;
 }
-
-.more-story img {
-	width: 400px;
-	height: 300px;
-}
-
 
 .more-story-desc p {
 	margin: 20px 0;
