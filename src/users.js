@@ -6,9 +6,7 @@ import favouriteStories from './dashboard/favouriteStory'
 
 renderNav()
 renderPage()
-
-
-document.querySelector('.users-stories-popup').innerHTML = userStories()
+userStories()
 
 document.querySelector('.favourite-stories-popup').innerHTML = favouriteStories()
 

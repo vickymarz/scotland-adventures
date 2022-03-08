@@ -4,8 +4,8 @@ import walkWay from '../images/walk-way.jpg'
 import pasture from '../images/pasture.jpg'
 import avatarIcon from '../images/avatar.png'
 
-const userStories = () => {
-	return `
+const stories = 
+	`
   <section class="modal">
     <div class="popup-container">
       <div class="recommended-stories">
@@ -111,5 +111,8 @@ const userStories = () => {
     </div>
   </section>
           `
+
+const userStories = () => {
+  document.querySelector('.users-stories-popup').innerHTML = stories
 }
 export default userStories
