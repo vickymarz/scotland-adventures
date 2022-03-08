@@ -112,7 +112,7 @@ const stories =
   </section>
           `
 
-const userStories = () => {
+const renderUserStories = () => {
   document.querySelector('.users-stories-popup').innerHTML = stories
 }
-export default userStories
+export default renderUserStories
