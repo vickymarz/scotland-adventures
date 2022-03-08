@@ -7,8 +7,7 @@ import favouriteStories from './dashboard/favouriteStory'
 renderNav()
 renderPage()
 userStories()
-
-document.querySelector('.favourite-stories-popup').innerHTML = favouriteStories()
+favouriteStories()
 
 document.querySelectorAll('.list').forEach(e => {
 	e.addEventListener('click', displayPage)

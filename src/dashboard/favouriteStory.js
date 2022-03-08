@@ -1,8 +1,8 @@
 import walkWay from '../images/walk-way.jpg'
 import avatarIcon from '../images/avatar.png'
 
-const favouriteStories = () => {
-	return `
+const favourites = 
+	 `
   <section class="modal">
     <div class="popup-container">
       <div class="recommended-stories">
@@ -31,5 +31,9 @@ const favouriteStories = () => {
   </section>
   
           `
+
+  const favouriteStories = () => {
+  document.querySelector('.favourite-stories-popup').innerHTML = favourites
 }
+
 export default favouriteStories
