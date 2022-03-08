@@ -189,7 +189,6 @@ img {
 }
 
 .story img {
-	display: block;
 	height: 200px;
 }
 
@@ -299,12 +298,6 @@ img {
 	color: var(--white);
 	text-align: left;
 }
-
-.more-story img {
-	width: 400px;
-	height: 300px;
-}
-
 
 .more-story-desc p {
 	margin: 20px 0;
@@ -572,6 +565,40 @@ input:hover {
 	color: var(--orange);
 }
 
+	footer {
+		background-color: var(--white);
+		padding: 20px;
+	}
+
+	footer h3 {
+		color: var(--orange);
+	}
+
+	.footer-container {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+	}
+
+	.footer-container ul li {
+		list-style-type: none;
+		padding: 10px 0;
+		color: var(--orange);
+	}
+
+	.link-icons {
+		display: flex;
+		gap: 15px;
+	}
+  
+	.footer-container ul li a {
+		color: var(--brown);
+	}
+
+		.footer-container ul li a:hover {
+		color: var(--orange);
+		}
+
 @media only screen and (min-width: 768px) {
 
 	/* header desktop view styling start here */
@@ -671,36 +698,12 @@ input:hover {
 	}
 	.adventure-places {
 		grid-template-columns: repeat(3, 1fr);
-		/* grid-template-rows: repeat(2, 1fr); */
 	}
 
-	footer {
-		background-color: var(--white);
-		padding: 20px;
-	}
-
-	footer h3 {
-		color: var(--orange);
-	}
-
-	.footer-container {
+		.footer-container {
 		display: flex;
-		justify-content: space-around;
+		flex-direction: row;
 	}
 
-	.footer-container ul li {
-		list-style-type: none;
-		padding: 10px 0;
-		color: var(--orange);
-	}
-
-	.link-icons {
-		display: flex;
-		gap: 15px;
-	}
-  
-	.footer-container ul li a {
-		color: var(--brown);
-	}
 
 }

@@ -9,25 +9,7 @@
 		<title>My Dashboard</title>
 	</head>
 	<body>
-		<header id="header">
-			<nav class="nav-element">
-				<div class="logo-dashboard"> </div>
-				<ul class="nav-items">
-					<li class="list"><i class="fas fa-home" id="main"></i><span>Home</span></li>
-					<li class="list"
-						><i class="fa fa-bell" id="notifications"></i><span>Notifications</span></li
-					>
-					<li class="list"
-						><i class="fa fa-bookmark" id="saved-stories"></i><span>Favorites</span></li
-					>
-					<li class="list"
-						><i class="fa fa-book-open" id="created-stories"></i><span>Stories</span></li
-					>
-					<span class="line"></span>
-					<li class="list"><i class="fa fa-edit" id="write-story"></i><span>Write</span></li>
-				</ul>
-			</nav>
-		</header>
+		<header id="header"></header>
 		<aside>
 			<div class="search">
 				<input type="search" name="search" id="search" placeholder="Search" />
@@ -81,14 +63,15 @@
 				<button type="button" id="write"> Write a story </button>
 			</div>
 			<ul class="story-list">
-				<li id="drafts" class="view-stories">Drafts</li>
+				<li id="drafts" class="view-stories active">Drafts</li>
 				<li id="published" class="view-stories">Published</li>
 			</ul>
+			<div id="content"></div>
 			<div class="drafts my-stories">
 				<p>You have no drafts</p>
 			</div>
 			<div class="published my-stories">
-				<p>You have no published stories</p>
+				<p class="published-stories"></p>
 			</div>
 		</section>
 		<section class="write-story">

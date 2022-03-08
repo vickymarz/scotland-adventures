@@ -1,12 +1,12 @@
-import avatarIcon from '../images/avatar.png'
-import logoIcon from '../images/logo.png'
+
 import isle from '../images/isle-of-skyle.jpg'
 import river from '../images/river.jpg'
 import walkWay from '../images/walk-way.jpg'
 import pasture from '../images/pasture.jpg'
+import avatarIcon from '../images/avatar.png'
 
-const recommendedStories = () => {
-	return `
+const recommendedStories =
+	 `
           <div class="recommended-stories">
 					<div class="story-description">
           <div class="author">
@@ -88,10 +88,9 @@ const recommendedStories = () => {
           </div>
 				</div>
       `
-}
 
-const notifications = () => {
-	return `
+const notifications = 
+	 `
 	 <div class="view-notification">
 	    <img src=${avatarIcon } alt="author" />
 				<div class="notification">
@@ -100,10 +99,9 @@ const notifications = () => {
 				</div>
 		</div>
 	`
-}
 
-const savedStories = () => {
-	return `
+const savedStories = 
+ `
 	<div class="favourite-stories">
 	  <div class="favourite-story">
 			<h2 class="popup">Intesting things about Scotland</h2>
@@ -122,16 +120,11 @@ const savedStories = () => {
 		</div>
 		
 	`
+
+const renderPage = () => {
+  document.querySelector('.view-notification').innerHTML = notifications
+	document.querySelector('#stories-container').innerHTML = recommendedStories
+	document.querySelector('.favourites').innerHTML = savedStories
 }
 
-const createUserElement = () => {
-	const logo = document.createElement('img')
-	logo.setAttribute('src', logoIcon)
-	document.querySelector('.logo-dashboard').appendChild(logo)
-
-	const avatar = document.createElement('img')
-	avatar.setAttribute('src', avatarIcon)
-	document.querySelector('.avatar').appendChild(avatar)
-}
-
-export { recommendedStories, createUserElement, notifications, savedStories }
+export default renderPage
