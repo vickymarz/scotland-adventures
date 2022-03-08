@@ -32,8 +32,8 @@ const favourites =
   
           `
 
-  const favouriteStories = () => {
+  const renderfavouriteStories = () => {
   document.querySelector('.favourite-stories-popup').innerHTML = favourites
 }
 
-export default favouriteStories
+export default renderfavouriteStories
