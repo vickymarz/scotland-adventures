@@ -70,6 +70,7 @@ const displayStory = () => {
 			activeSection.style.display = 'flex'
 			activeStoryBtn.forEach(list => {
 				list.style.color = '#000'
+				activeStoryBtn[0].style.color = '#ce6a10'
 			})
 			activeStory.style.color = '#ce6a10'
 		}
