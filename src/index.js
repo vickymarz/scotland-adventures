@@ -4,7 +4,7 @@ import * as more from './viewMore.js'
 import signUp from './signUp.js'
 import login from './login.js'
 import readStories from './readStories.js'
-import interSectionObserver from './animations.js'
+import interSectionObserver from './animation.js'
 
 interSectionObserver()
 

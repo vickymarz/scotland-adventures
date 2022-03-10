@@ -18,3 +18,5 @@ const interSectionObserver = () => {
 
 	observer.observe(introSection)
 }
+
+export default interSectionObserver
