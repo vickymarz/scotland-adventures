@@ -121,7 +121,7 @@ header {
 	color: var(--orange);
 	font-size: 25px;
 	margin-top: 40px;
-	margin-left: 438px;
+	margin-left: 40px;
 }
 
 .nav-list {
@@ -140,7 +140,6 @@ header {
 .nav-list li a,
 .link {
 	font-weight: bolder;
-	font-size: 24px;
 	color: var(--white);
 }
 
@@ -582,7 +581,7 @@ input:hover {
 
 .footer p {
 	color: white;
-	font-size: 14px;
+	font-size: 0.8rem;
 }
 
 .footer p a {
@@ -757,6 +756,11 @@ footer h3 {
 	.form-container h2 {
 		font-size: initial;
 	}
+
+	.footer p {
+	color: white;
+	font-size: 15px;
+}
 
 	form {
 		padding: 5px;
