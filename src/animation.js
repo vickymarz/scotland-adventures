@@ -1,9 +1,9 @@
-function introSectionObserver() {
+const interSectionObserver = () => {
 	const header = document.querySelector('header')
-	const introSection = document.querySelector('.divider')
+	const introSection = document.querySelector('.intro')
 
 	const options = {
-		rootMargin: '0px',
+		rootMargin: '-280px',
 	}
 
 	const observer = new IntersectionObserver(entries => {
@@ -18,5 +18,3 @@ function introSectionObserver() {
 
 	observer.observe(introSection)
 }
-introSectionObserver()
-
