@@ -47,7 +47,7 @@ img {
 
 .intro-container {
 	background-image: url('../src/images/homepage.jpg');
-	background-color: rgb(223, 216, 216);
+	background-color: rgb(242, 232, 232);
 	background-repeat: no-repeat;
 	background-blend-mode: multiply;
 	background-size: cover;
