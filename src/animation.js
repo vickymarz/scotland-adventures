@@ -1,9 +1,9 @@
 const interSectionObserver = () => {
 	const header = document.querySelector('header')
-	const introSection = document.querySelector('.intro')
+	const introSection = document.querySelector('.intro-title')
 
 	const options = {
-		rootMargin: '-280px',
+		rootMargin: '-160px',
 	}
 
 	const observer = new IntersectionObserver(entries => {
