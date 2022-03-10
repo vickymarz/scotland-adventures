@@ -68,11 +68,11 @@ img {
 .logo-desktop h1 {
 	font-size: 15px;
 	color: var(--orange);
-	padding: 0 10px;
 }
 
 .logo-wrapper img {
 	mix-blend-mode: multiply;
+	width: 70px;
 }
 
 .mobile-menu {
@@ -612,6 +612,9 @@ input:hover {
 
 	.logo-desktop {
 		display: flex;
+		justify-content: space-between;
+		align-items: center;
+    gap: 10px;
 	}
 
 	.nav-list {
