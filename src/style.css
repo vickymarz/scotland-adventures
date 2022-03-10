@@ -59,6 +59,7 @@ img {
 	align-items: center;
 	width: 100%;
 	z-index: 2;
+	padding: 10px 10%;
 }
 
 .logo-desktop {
@@ -607,7 +608,7 @@ input:hover {
 	}
 
 	.navbar {
-		padding: 10px 80px;
+			padding: 10px 5%;
 	}
 
 	.logo-desktop {
