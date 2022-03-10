@@ -4,6 +4,9 @@ import * as more from './viewMore.js'
 import signUp from './signUp.js'
 import login from './login.js'
 import readStories from './readStories.js'
+import interSectionObserver from './animation.js'
+
+interSectionObserver()
 
 document.querySelector('.stories-container').innerHTML = home.stories()
 document.querySelector('.adventures').innerHTML = home.adventures()
