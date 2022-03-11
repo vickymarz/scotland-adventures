@@ -1,4 +1,4 @@
-import validateEmail from './validation'
+import { validateEmail, validatePassword } from './validation'
 
 const signForm = `
   	<div class="modal">
@@ -8,6 +8,8 @@ const signForm = `
   <i class="fa fa-times fa-2x"></i>
     </div>
 				<form action="" id="signup-form">
+				<ul>
+				<li>
 					<input
 						type="text"
 						name="Full Name"
@@ -16,6 +18,8 @@ const signForm = `
 						placeholder="Your First Name"
 						required
 					/>
+					</li>
+					<li>
 					<input
 						type="text"
 						name="Last Name"
@@ -24,6 +28,8 @@ const signForm = `
 						placeholder="Your Last Name"
 						required
 					/>
+					</li>
+					<li>
 					<input
 						type="email"
 						name="email"
@@ -31,24 +37,29 @@ const signForm = `
 						placeholder="Enter Your Email Address"
 						required
 					/>
-				   	<small id="email-msg"></small>
+				   </li>
+					 <li class="password">
 						<input
 						type="password"
-						name="Password"
+						name="password"
 						id="password"
 						placeholder="Choose a Password"
 						required
 						autocomplete="new-password"
-				
-						<input
+						/>
+						<i class="fas fa-eye-slash eye" ></i>
+						</li>
+					<li class="password">
+								<input
 						type="password"
 						name="Confirm Password"
 						id="confirm_password"
 						autocomplete="new-password"
 						placeholder="Confirm Your Password"
-						required
-						/>
-							<small id=password-msg></small>
+						required />
+						<i class="fas fa-eye-slash eye"></i>
+						</li>
+						<ul>
 					<input type="submit" value="CREATE AN ACCOUNT" id="submit" />
 				</form>
 				<div class="footer">
@@ -58,26 +69,28 @@ const signForm = `
 		</div>
   `
 
-const signUpValidation = () => {
-	const form = document.querySelector('#signup-form')
-	const EMAIL_INVALID = 'Kindly enter a valid email address e.g abc@gmail.com'
-	const emailMsg = document.querySelector('#email-msg')
-
-	form.addEventListener('submit', e => {
-		e.preventDefault()
-		const emailValid = validateEmail(form.elements.email, EMAIL_INVALID, emailMsg)
-
-		if (emailValid) {
-		
-				input.nextElementSibling.remove()
-			form.reset()
-		}
-	})
-}
-
 const signUp = () => {
 	document.querySelector('.signup-section').innerHTML = signForm
 	signUpValidation()
+}
+
+const signUpValidation = () => {
+	const form = document.querySelector('#signup-form')
+	const EMAIL_INVALID = 'Kindly enter a valid email address e.g abc@gmail.com'
+	const PASSWORD_INVALID =
+		'Minimum of 8 characters required and must contain at least one lowercase, one uppercase, one numeric, and one special character e.g Abc01@ff'
+
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		const emailValid = validateEmail(form.elements.email, EMAIL_INVALID)
+		const passwordValid = validatePassword(form.elements.password, PASSWORD_INVALID)
+
+		if (emailValid && passwordValid) {
+			form.reset()
+			alert('Registeration successful. Proceed to sign in.')
+			location.href = './users.html'
+		}
+	})
 }
 
 export default signUp
