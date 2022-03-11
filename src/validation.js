@@ -1,4 +1,5 @@
 const displayMsg = (input, message, status, element) => {
+	consolole.log(element)
 	element.innerText = message
 	input.className = status ? 'success' : 'error'
 	return status
@@ -13,7 +14,9 @@ const showSuccess = input => {
 }
 
 const validateEmail = (input, invalidMsg, element) => {
-	const emailRegex = /^([a-z 0-9 \. -]+)@([a-z 0-9 -]+)\.([a-z 0-9 \. -]{2,5}).([a-z 0-9]{2,8})?$/
+	const emailRegex = new RegExp(
+		'^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*.,])(?=.{8,})'
+	);
 
 	const email = input.value.trim()
 	if (!emailRegex.test(email) || email !== email.toLowerCase()) {

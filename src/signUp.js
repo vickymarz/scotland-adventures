@@ -68,7 +68,8 @@ const signUpValidation = () => {
 		const emailValid = validateEmail(form.elements.email, EMAIL_INVALID, emailMsg)
 
 		if (emailValid) {
-			form.submit()
+		
+				input.nextElementSibling.remove()
 			form.reset()
 		}
 	})

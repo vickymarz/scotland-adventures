@@ -4,9 +4,7 @@ import * as more from './viewMore.js'
 import signUp from './signUp.js'
 import login from './login.js'
 import readStories from './readStories.js'
-import interSectionObserver from './animation.js'
-
-interSectionObserver()
+import interSectionObserver from './animations.js'
 
 document.querySelector('.stories-container').innerHTML = home.stories()
 document.querySelector('.adventures').innerHTML = home.adventures()
@@ -22,6 +20,8 @@ document.querySelector('.login-section').innerHTML = login()
 document.querySelector('.more-stories-popup').innerHTML = readStories()
 
 window.addEventListener('load', home.createElement)
+
+interSectionObserver()
 
 const moreStories = () => {
 	const viewMore = document.querySelector('#more-stories')
@@ -117,3 +117,18 @@ const closeModal = () => {
 	})
 }
 closeModal()
+
+const password = document.querySelector('#password')
+const confirmPassword = document.querySelector('#confirm_password')
+
+const eye = Array.from(document.querySelectorAll('.eye'))
+eye[0].addEventListener('click', () => hideOrShow(password))
+eye[1].addEventListener('click', () => hideOrShow(confirmPassword))
+
+const hideOrShow = inputField => {
+	if (inputField.getAttribute('type') === 'password') {
+		inputField.setAttribute('type', 'text')
+	} else {
+		inputField.setAttribute('type', 'password')
+	}
+}
