@@ -1,5 +1,6 @@
 import { validateEmail, validatePassword, passwordConfirmation } from './validation'
-
+import postData from './services';
+import capitalizeCharAt from './helpers';
 const signForm = `
   	<div class="modal">
 			<div class="form-container">
@@ -12,7 +13,7 @@ const signForm = `
 				<li>
 					<input
 						type="text"
-						name="Full Name"
+						name="firstName"
 						id="first_name"
 						autocomplete="cc-given-name"
 						placeholder="Your First Name"
@@ -22,7 +23,7 @@ const signForm = `
 					<li>
 					<input
 						type="text"
-						name="Last Name"
+						name="lastName"
 						id="last_name"
 						autocomplete="cc-family-name"
 						placeholder="Your Last Name"
@@ -75,7 +76,6 @@ const signUp = () => {
 
 const signUpValidation = () => {
 	const form = document.querySelector('#signup-form')
-	// const confirmPassword = document.querySelector('#confirm-password').value.trim()
 	const EMAIL_INVALID = 'Kindly enter a valid email address e.g abc@gmail.com'
 	const PASSWORD_INVALID =
 		'Minimum of 8 characters required and must contain at least one lowercase, one uppercase, one numeric, and one special character e.g Abc01@ff'
@@ -92,11 +92,21 @@ const signUpValidation = () => {
 		)
 
 		if (emailValid && passwordValid && passwordMatch) {
-			form.reset()
+		
+			const firstName = capitalizeCharAt(form.elements.firstName.value , 0)
+			const lastName = capitalizeCharAt(form.elements.lastName.value , 0)
+			const email =  form.elements.email.value.toLowerCase()
+			const password = form.elements.password.value 
+
+			const currentUser = {firstName, lastName, email, password}
+			console.log(currentUser)
+			postData(currentUser)
+				form.reset()
 			alert('Registeration successful. Proceed to sign in.')
-			location.href = './users.html'
 		}
 	})
 }
+
+
 
 export default signUp
