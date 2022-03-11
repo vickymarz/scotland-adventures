@@ -1,4 +1,4 @@
-import { validateEmail, validatePassword } from './validation'
+import { validateEmail, validatePassword, passwordConfirmation } from './validation'
 
 const signForm = `
   	<div class="modal">
@@ -53,7 +53,7 @@ const signForm = `
 								<input
 						type="password"
 						name="Confirm Password"
-						id="confirm_password"
+						id="confirm-password"
 						autocomplete="new-password"
 						placeholder="Confirm Your Password"
 						required />
@@ -77,15 +77,19 @@ const signUp = () => {
 const signUpValidation = () => {
 	const form = document.querySelector('#signup-form')
 	const EMAIL_INVALID = 'Kindly enter a valid email address e.g abc@gmail.com'
+
 	const PASSWORD_INVALID =
 		'Minimum of 8 characters required and must contain at least one lowercase, one uppercase, one numeric, and one special character e.g Abc01@ff'
+	
+	const PASSWORD_MATCH_INVALID = 'Password do not match. Please check and try again'
 
 	form.addEventListener('submit', e => {
 		e.preventDefault()
 		const emailValid = validateEmail(form.elements.email, EMAIL_INVALID)
 		const passwordValid = validatePassword(form.elements.password, PASSWORD_INVALID)
+		const passwordMatch = passwordConfirmation(form.elements.password, PASSWORD_MATCH_INVALID)
 
-		if (emailValid && passwordValid) {
+		if (emailValid && passwordValid && passwordMatch) {
 			form.reset()
 			alert('Registeration successful. Proceed to sign in.')
 			location.href = './users.html'

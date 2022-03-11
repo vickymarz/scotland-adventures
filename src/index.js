@@ -119,7 +119,7 @@ const closeModal = () => {
 closeModal()
 
 const password = document.querySelector('#password')
-const confirmPassword = document.querySelector('#confirm_password')
+const confirmPassword = document.querySelector('#confirm-password')
 
 const eye = Array.from(document.querySelectorAll('.eye'))
 eye[0].addEventListener('click', () => hideOrShow(password))

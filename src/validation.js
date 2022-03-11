@@ -8,7 +8,7 @@ const displayMsg = (input, message, status) => {
 const showError = (input, message) => {
 	setTimeout(() => {
 		input.parentElement.nextElementSibling.remove()
-	}, 2000)
+	}, 5000)
 	return displayMsg(input, message, false)
 }
 
@@ -36,6 +36,16 @@ export const validatePassword = (input, invalidMsg) => {
 		return showError(input, invalidMsg)
 	}
 	input.nextSibling.remove()
+	showSuccess(input)
+	return true
+}
+
+export const passwordConfirmation = (input, invalidMsg, confirmPasswordInput) => {
+	const confirmPassword = confirmPasswordInput.value.trim()
+	const password = input.value.trim()
+	if (password !== confirmPassword) {
+		return showError(input, invalidMsg)
+	}
 	showSuccess(input)
 	return true
 }
