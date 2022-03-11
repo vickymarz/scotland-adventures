@@ -6,6 +6,7 @@
 	--gray: #d3d3d3;
 	--orange: #ce6a10;
 	--brown: #4f4e43;
+	--red: red;
 }
 
 /* global styling  */
@@ -582,13 +583,6 @@ input:hover {
 	cursor: pointer;
 }
 
-small {
-	color: var(--red);
-	display: block;
-	z-index: 2;
-	font-weight: 500;
-}
-
 /* input error */
 input.error {
 	border: 1px solid var(--red);
@@ -597,6 +591,14 @@ input.error {
 /* input success */
 input.success {
 	border: 1px solid var(--green);
+}
+
+form small {
+	color: var(--white);
+	display: block;
+	z-index: 2;
+	margin-top: -10px;
+	font-weight: 500;
 }
 
 .footer {
