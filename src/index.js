@@ -17,8 +17,7 @@ document.querySelector('#more-stories').innerHTML = more.moreStories()
 document.querySelector('#more-history').innerHTML = more.moreHistory()
 
 document.querySelector('#more-adventures').innerHTML = more.moreAdventures()
-
-document.querySelector('.signup-section').innerHTML = signUp()
+signUp()
 document.querySelector('.login-section').innerHTML = login()
 document.querySelector('.more-stories-popup').innerHTML = readStories()
 

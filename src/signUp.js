@@ -1,5 +1,7 @@
-const signUp = () => {
-	return `
+import validateEmail from './validation'
+
+const signForm =
+`
   	<div class="modal">
 			<div class="form-container">
 				<h2>Create a Secure Account</h2>
@@ -25,12 +27,12 @@ const signUp = () => {
 					/>
 					<input
 						type="email"
-						name="Email"
+						name="email"
 						id="signup-email"
 						placeholder="Enter Your Email Address"
 						required
 					/>
-				
+				   	<small id="email-msg"></small>
 						<input
 						type="password"
 						name="Password"
@@ -47,6 +49,7 @@ const signUp = () => {
 						placeholder="Confirm Your Password"
 						required
 						/>
+							<small id=password-msg></small>
 					<input type="submit" value="CREATE AN ACCOUNT" id="submit" />
 				</form>
 				<div class="footer">
@@ -55,6 +58,25 @@ const signUp = () => {
 			</div>
 		</div>
   `
+
+const signUpValidation = () => {
+  const EMAIL_INVALID = 'Kindly enter a valid email address e.g abc@gmail.com'
+	const form = document.querySelector('#signup-form')
+	
+form.addEventListener('submit', e => {
+	e.preventDefault()
+	const emailValid = validateEmail(form.elements.email, EMAIL_INVALID)
+
+	if (emailValid) {
+		form.submit()
+		form.reset()
+	}
+})
 }
 
-export default signUp 
+const signUp = () => {
+	document.querySelector('.signup-section').innerHTML = signForm
+	signUpValidation()
+}
+
+export default signUp

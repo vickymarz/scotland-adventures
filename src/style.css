@@ -582,6 +582,24 @@ input:hover {
 	cursor: pointer;
 }
 
+small {
+	color: var(--black);
+	display: block;
+	width: 55%;
+	z-index: 2;
+	font-weight: 500;
+}
+
+/* input error */
+input.error {
+	border: 1px solid var(--red);
+}
+
+/* input success */
+input.success {
+	border: 1px solid var(--green);
+}
+
 .footer {
 	margin-top: 15px;
 }
