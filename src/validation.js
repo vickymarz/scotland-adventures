@@ -1,29 +1,41 @@
-const displayMsg = (input, message, status, element) => {
-	consolole.log(element)
-	element.innerText = message
+const displayMsg = (input, message, status) => {
+	const htmlString = `<small>${message}<htmlString>`
+	input.parentNode.insertAdjacentHTML('afterend', htmlString)
 	input.className = status ? 'success' : 'error'
 	return status
 }
 
-const showError = (input, message, element) => {
-	return displayMsg(input, message, false, element)
+const showError = (input, message) => {
+	setTimeout(() => {
+		input.parentElement.nextElementSibling.remove()
+	}, 2000)
+	return displayMsg(input, message, false)
 }
 
 const showSuccess = input => {
-	return displayMessage(input, '', true)
+	return displayMsg(input, '', true)
 }
 
-const validateEmail = (input, invalidMsg, element) => {
-	const emailRegex = new RegExp(
-		'^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*.,])(?=.{8,})'
-	);
+export const validateEmail = (input, invalidMsg) => {
+	const emailRegex = /^([a-z 0-9 \. -]+)@([a-z 0-9 -]+)\.([a-z 0-9 \. -]{2,5}).([a-z 0-9]{2,8})?$/
 
 	const email = input.value.trim()
 	if (!emailRegex.test(email) || email !== email.toLowerCase()) {
-		return showError(input, invalidMsg, element)
+		return showError(input, invalidMsg)
 	}
+
 	showSuccess(input)
 	return true
 }
 
-export default validateEmail
+export const validatePassword = (input, invalidMsg) => {
+	const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\^&*])(?=.{8,})/
+
+	const password = input.value.trim()
+	if (!passwordRegex.test(password)) {
+		return showError(input, invalidMsg)
+	}
+	input.nextSibling.remove()
+	showSuccess(input)
+	return true
+}
