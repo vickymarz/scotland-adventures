@@ -583,9 +583,8 @@ input:hover {
 }
 
 small {
-	color: var(--black);
+	color: var(--red);
 	display: block;
-	width: 55%;
 	z-index: 2;
 	font-weight: 500;
 }
