@@ -593,6 +593,16 @@ input.success {
 	border: 1px solid var(--green);
 }
 
+form ul li {
+	list-style-type: none;
+	width: 100%;
+	display: inline;
+}
+
+form ul {
+		width: 100%;
+}
+
 form small {
 	color: var(--white);
 	display: block;
@@ -601,6 +611,18 @@ form small {
 	font-weight: 500;
 }
 
+.password {
+	position: relative;
+	display: flex;
+}
+
+.eye {
+	position: absolute;
+	right: 20px;
+	top: 25px;
+	z-index: 2;
+	color: var(--orange);
+}
 .footer {
 	margin-top: 15px;
 }
