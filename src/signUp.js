@@ -1,6 +1,6 @@
 import { validateEmail, validatePassword, passwordConfirmation } from './validation'
-import postData from './services';
-import capitalizeCharAt from './helpers';
+import postData from './services'
+import capitalizeCharAt from './helpers'
 const signForm = `
   	<div class="modal">
 			<div class="form-container">
@@ -92,21 +92,18 @@ const signUpValidation = () => {
 		)
 
 		if (emailValid && passwordValid && passwordMatch) {
-		
-			const firstName = capitalizeCharAt(form.elements.firstName.value , 0)
-			const lastName = capitalizeCharAt(form.elements.lastName.value , 0)
-			const email =  form.elements.email.value.toLowerCase()
-			const password = form.elements.password.value 
+			const firstName = capitalizeCharAt(form.elements.firstName.value, 0)
+			const lastName = capitalizeCharAt(form.elements.lastName.value, 0)
+			const email = form.elements.email.value.toLowerCase()
+			const password = form.elements.password.value
 
-			const currentUser = {firstName, lastName, email, password}
+			const currentUser = { firstName, lastName, email, password }
 			console.log(currentUser)
 			postData(currentUser)
-				form.reset()
+			form.reset()
 			alert('Registeration successful. Proceed to sign in.')
 		}
 	})
 }
-
-
 
 export default signUp
