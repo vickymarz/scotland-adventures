@@ -1,7 +1,6 @@
 import validateEmail from './validation'
 
-const signForm =
-`
+const signForm = `
   	<div class="modal">
 			<div class="form-container">
 				<h2>Create a Secure Account</h2>
@@ -60,18 +59,19 @@ const signForm =
   `
 
 const signUpValidation = () => {
-  const EMAIL_INVALID = 'Kindly enter a valid email address e.g abc@gmail.com'
 	const form = document.querySelector('#signup-form')
-	
-form.addEventListener('submit', e => {
-	e.preventDefault()
-	const emailValid = validateEmail(form.elements.email, EMAIL_INVALID)
+	const EMAIL_INVALID = 'Kindly enter a valid email address e.g abc@gmail.com'
+	const emailMsg = document.querySelector('#email-msg')
 
-	if (emailValid) {
-		form.submit()
-		form.reset()
-	}
-})
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		const emailValid = validateEmail(form.elements.email, EMAIL_INVALID, emailMsg)
+
+		if (emailValid) {
+			form.submit()
+			form.reset()
+		}
+	})
 }
 
 const signUp = () => {
