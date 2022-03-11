@@ -13,7 +13,7 @@ const showError = (input, message) => {
 	return displayMsg(input, message, false)
 }
 
-function showSuccess(input) {
+const showSuccess = (input) => {
 	return displayMessage(input, '', true)
 }
 
