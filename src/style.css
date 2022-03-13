@@ -335,6 +335,10 @@ header {
 	font-size: 16px;
 }
 
+.more-story-desc .location {
+	color: var(--orange);
+}
+
 .my-stories {
 	margin-top: 20px;
 }
