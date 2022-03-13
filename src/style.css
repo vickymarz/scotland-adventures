@@ -512,6 +512,24 @@ header {
 	background-color: var(--deep-brown);
 }
 
+.signup-success {
+	background-color: var(--deep-brown);
+	padding: 20px;
+	color: white;
+	border-radius:10px;
+	text-align: center;
+	width: 300px;
+	position: absolute;
+	right: 50px;
+	top: 10px;
+	font-size: 0.8rem;
+}
+
+.signup-success h2 {
+	padding-bottom: 20px;
+	color: var(--orange);
+}
+
 .cancel i {
 	font-size: 25px;
 	position: absolute;
