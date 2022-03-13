@@ -288,7 +288,7 @@ header {
 #more-history {
 	display: none;
 	background-color: var(--deep-brown);
-	padding: 40px;
+	padding: 20px;
 	color: var(--white);
 }
 
