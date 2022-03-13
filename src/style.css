@@ -417,6 +417,10 @@ header {
 	margin: 25px 0;
 }
 
+.tour-package ul {
+	padding: 20px;
+}
+
 .tour-package ul li {
 	padding: 10px 0;
 }
