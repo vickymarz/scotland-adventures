@@ -224,7 +224,6 @@ header {
 .story h3 {
 	text-align: center;
 	font-size: 17px;
-	padding: 10px 0;
 	flex: 1;
 }
 
@@ -316,6 +315,7 @@ header {
 	justify-content: flex-start;
 	align-items: initial;
 	gap: 30px;
+	padding: 30px 0;
 }
 
 .more-story p,
@@ -609,7 +609,7 @@ form ul li {
 }
 
 form ul {
-		width: 100%;
+	width: 100%;
 }
 
 form small {
@@ -797,6 +797,12 @@ footer h3 {
 		flex-direction: row;
 		gap: 80px;
 	}
+
+	.more-story img {
+		height: 300px;
+		width: 400px;
+	}
+
 	.adventure-places {
 		grid-template-columns: repeat(3, 1fr);
 	}
@@ -819,9 +825,9 @@ footer h3 {
 	}
 
 	.footer p {
-	color: white;
-	font-size: 15px;
-}
+		color: white;
+		font-size: 15px;
+	}
 
 	form {
 		padding: 5px;
