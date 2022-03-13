@@ -6,6 +6,7 @@
 	--gray: #d3d3d3;
 	--orange: #ce6a10;
 	--brown: #4f4e43;
+	--red: red;
 }
 
 /* global styling  */
@@ -47,7 +48,7 @@ img {
 
 .intro-container {
 	background-image: url('../src/images/homepage.jpg');
-	background-color: rgb(223, 216, 216);
+	background-color: rgb(242, 232, 232);
 	background-repeat: no-repeat;
 	background-blend-mode: multiply;
 	background-size: cover;
@@ -171,7 +172,7 @@ header {
 
 .intro p {
 	color: var(--white);
-	margin-top: 170px;
+	margin-top: 100px;
 	line-height: 24px;
 	font-weight: bolder;
 	font-family: Georgia, 'Times New Roman', Times, serif;
@@ -582,6 +583,46 @@ input:hover {
 	cursor: pointer;
 }
 
+/* input error */
+input.error {
+	border: 1px solid var(--red);
+}
+
+/* input success */
+input.success {
+	border: 1px solid var(--green);
+}
+
+form ul li {
+	list-style-type: none;
+	width: 100%;
+	display: inline;
+}
+
+form ul {
+		width: 100%;
+}
+
+form small {
+	color: var(--white);
+	display: block;
+	z-index: 2;
+	margin-top: -10px;
+	font-weight: 500;
+}
+
+.password {
+	position: relative;
+	display: flex;
+}
+
+.eye {
+	position: absolute;
+	right: 20px;
+	top: 25px;
+	z-index: 2;
+	color: var(--orange);
+}
 .footer {
 	margin-top: 15px;
 }
@@ -718,6 +759,10 @@ footer h3 {
 
 	.intro {
 		margin-top: 80px;
+	}
+
+	.intro p {
+		margin-top: 170px;
 	}
 
 	.stories {
