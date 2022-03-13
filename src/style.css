@@ -238,7 +238,7 @@ header {
 
 .adventures {
 	background-color: var(--deep-brown);
-	padding: 40px;
+	padding: 20px;
 }
 
 .adventure-title {
@@ -349,6 +349,7 @@ header {
 #arrow,
 #arrow-back {
 	cursor: pointer;
+	font-size: 0.9rem;
 }
 
 .description button {
@@ -362,7 +363,7 @@ header {
 /* about section starts here */
 
 .about {
-	padding: 20px 40px;
+	padding: 20px;
 }
 
 .about h2 {
@@ -424,7 +425,7 @@ header {
 
 .adventure-ideas {
 	background-color: var(--deep-brown);
-	padding: 40px;
+	padding: 20px;
 }
 
 .adventure-ideas h2 {
