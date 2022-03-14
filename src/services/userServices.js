@@ -7,6 +7,15 @@ import {
 	RESET_PASSWORD_URL,
 } from './rootEndpoints'
 
+export const userServices = {
+	register,
+	login,
+	forgotPassword,
+	resetPassword,
+	getAll,
+	getById,
+}
+
 const register = async params => {
 	await fetchApi.post(`${BASE_URL}/${SIGNUP_URL}`, params)
 }
