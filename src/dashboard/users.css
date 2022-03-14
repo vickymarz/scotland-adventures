@@ -51,13 +51,21 @@ img {
 /* header styling starts here */
 #header {
 	position: fixed;
-	top: 0;
 	left: 0;
-	width: 10%;
+	width: 100%;
+	height: 8%;
 	bottom: 0;
 	background-color: var(--deep-brown);
 	border-right: 2px solid var(--orange);
-	padding: 50px 20px;
+	padding: 5px 20px;
+	z-index: 3;
+}
+
+.nav-element {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
 }
 
 .avatar {
@@ -70,22 +78,25 @@ img {
 	border-radius: 50%;
 	mix-blend-mode: multiply;
 	border: 1px solid var(--orange);
-	width: 40px;
+	width: 30px;
 }
 
 .logo-dashboard {
 	mix-blend-mode: multiply;
 }
 
+.logo-dashboard img {
+	width: 50px;
+}
+
 .nav-items {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	flex-direction: column;
+	gap: 40px;
 }
 
 .nav-items li {
-	margin: 30px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -95,22 +106,21 @@ img {
 
 .nav-items li span {
 	position: absolute;
-	top: 0;
-	left: 30px;
+	top: -40px;
 	color: var(--white);
 	visibility: hidden;
 	background-color: var(--orange);
 	text-align: center;
 	border-radius: 6px;
-	padding: 5px 20px;
+	padding: 5px 10px;
 	z-index: 1;
 }
 
 .nav-items li span::after {
 	content: '';
 	position: absolute;
-	top: 50%;
-	right: 100%;
+	top: 100%;
+	right: 50%;
 	margin-top: -5px;
 	border-width: 5px;
 	border-style: solid;
@@ -122,18 +132,12 @@ img {
 }
 
 .nav-items li i {
-	font-size: 25px;
+	font-size: 20px;
 	color: var(--orange);
 }
 
 .line {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 10px;
-	width: 70%;
-	background-color: var(--orange);
-	height: 2px;
+	display: none;
 }
 
 /* aside styling starts here */
@@ -264,8 +268,8 @@ aside h2 {
 	color: var(--white);
 }
 
-.modal .recommended-stories h2{
-  color: var(--orange);
+.modal .recommended-stories h2 {
+	color: var(--orange);
 }
 
 .modal .story-img img {
@@ -378,11 +382,10 @@ aside h2 {
 	border-bottom: 1px solid var(--deep-brown);
 	display: flex;
 	gap: 20px;
-	
 }
 
 .story-list li {
-  font-weight: 600;
+	font-weight: 600;
 	cursor: pointer;
 }
 
@@ -403,7 +406,7 @@ aside h2 {
 
 .write-story-header button {
 	cursor: pointer;
-		padding: 10px 20px;
+	padding: 10px 20px;
 	background-color: var(--orange);
 	color: white;
 	border-radius: 20px;
@@ -421,15 +424,14 @@ aside h2 {
 
 input[type='file'] {
 	display: none;
-} 
+}
 
 .publish-story label {
 	cursor: pointer;
 	color: var(--white);
 	padding: 10px;
 	background-color: var(--deep-brown);
- font-size: 13px;
-
+	font-size: 13px;
 }
 
 .text-area {
@@ -442,9 +444,8 @@ input[type='file'] {
 
 .text-area:focus {
 	border: 1px solid var(--gray);
-  outline: none;
+	outline: none;
 }
-
 
 /* modal and form styling starts here */
 
@@ -491,7 +492,7 @@ input[type='file'] {
 }
 
 .popup-container {
-		margin: 30px 16px;
+	margin: 30px 16px;
 	border: 1px solid #dfe1e6;
 	border-radius: 16px;
 	min-height: 713px;
@@ -507,7 +508,8 @@ input[type='file'] {
 	color: var(--white);
 }
 
-#write, .story-list li {
+#write,
+.story-list li {
 	cursor: pointer;
 }
 
@@ -516,7 +518,7 @@ input[type='file'] {
 }
 
 .preview-section #text {
-  word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 .text-img {
@@ -531,4 +533,84 @@ input[type='file'] {
 
 #text .preview-img {
 	display: none;
+}
+
+@media only screen and (min-width: 786px) {
+	/* header styling starts here */
+	#header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 10%;
+		height: 100%;
+		bottom: 0;
+		background-color: var(--deep-brown);
+		border-right: 2px solid var(--orange);
+		padding: 50px 20px;
+	}
+
+	.logo-dashboard img {
+	width: 100%;
+}
+
+	.nav-items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.nav-element {
+		display: block;
+		gap: initial;
+	}
+
+	.nav-items {
+		display: flex;
+		justify-content: space-between;
+		gap: initial;
+		align-items: center;
+	}
+
+	.nav-items li {
+		margin: 30px 0;
+	}
+
+	.nav-items li i {
+		font-size: 25px;
+	}
+
+	.line {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 10px;
+		width: 70%;
+		background-color: var(--orange);
+		height: 2px;
+	}
+
+	.nav-items li span {
+	position: absolute;
+	top: 0;
+	left: 30px;
+	color: var(--white);
+	visibility: hidden;
+	background-color: var(--orange);
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 20px;
+	z-index: 1;
+}
+
+.nav-items li span::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent var(--orange) transparent transparent;
+}
 }
