@@ -1,14 +1,12 @@
 import './style.css'
-import * as home from './home.js'
+import renderHomePage from './home.js'
 import * as more from './viewMore.js'
 import signUp from './signUp.js'
 import login from './login.js'
 import readStories from './readStories.js'
-import interSectionObserver from './animation.js'
+import interSectionObserver from './animations.js'
 
-document.querySelector('.stories-container').innerHTML = home.stories()
-document.querySelector('.adventures').innerHTML = home.adventures()
-document.querySelector('.adventure-ideas').innerHTML = home.adventureIdeas()
+renderHomePage()
 
 document.querySelector('#more-stories').innerHTML = more.moreStories()
 
