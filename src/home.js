@@ -10,8 +10,7 @@ import mountain from './images/mountain.jpg'
 import logoIcon from './images/logo.png'
 import titleIcon from './images/scotland.png'
 
-const stories = () => {
-	return `
+const stories = `
 	      <div class="stories-title">
 					<h2>FIND POPULAR <span> STORIES </span></h2>
 					<span id="arrow"> See more
@@ -54,10 +53,8 @@ const stories = () => {
 					</div>
 				</div>
 	`
-}
 
-const adventures = () => {
-	return `
+const adventures = `
 	<div class="adventure-title">
 					<h2>HISTORICAL ATTRACTIONS</h2>
 					<ul class="adventure-btns">
@@ -97,10 +94,8 @@ const adventures = () => {
 				<button type="button" id="history-btn">Show More</button>
 				</div>
 	`
-}
 
-const adventureIdeas = () => {
-	return `
+const adventureIdeas = `
 					<h2>ADVENTURE IDEAS</h2>
 				<div class="my-stories">
 					<div class="story more-story">
@@ -144,11 +139,8 @@ const adventureIdeas = () => {
              </div>
 				</div>
 	`
-}
-
 
 const createElement = () => {
-
 	const logo = document.createElement('img')
 	logo.setAttribute('src', logoIcon)
 	document.querySelector('.logo-wrapper').appendChild(logo)
@@ -158,4 +150,11 @@ const createElement = () => {
 	document.querySelector('.intro-title').appendChild(title)
 }
 
-export { createElement, stories, adventures, adventureIdeas }
+const renderHomePage = () => {
+	document.querySelector('.stories-container').innerHTML = stories
+	document.querySelector('.adventures').innerHTML = adventures
+	document.querySelector('.adventure-ideas').innerHTML = adventureIdeas
+	createElement()
+}
+
+export default renderHomePage
