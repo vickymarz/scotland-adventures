@@ -202,10 +202,10 @@ const moreAdventures = `
 				</div>
 	`
 
-const renderViewMore = () => {
+const renderViewMorePages = () => {
 	document.querySelector('.stories-container').innerHTML = moreStories
 	document.querySelector('.adventures').innerHTML = moreHistory
 	document.querySelector('.adventure-ideas').innerHTML = moreAdventures
 }
 
-export default renderViewMore
+export default renderViewMorePages

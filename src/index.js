@@ -1,18 +1,13 @@
 import './style.css'
 import renderHomePage from './home.js'
-import * as more from './viewMore.js'
+import renderViewMorePages from './viewMore'
 import signUp from './signUp.js'
 import login from './login.js'
 import readStories from './readStories.js'
 import interSectionObserver from './animations.js'
 
 renderHomePage()
-
-document.querySelector('#more-stories').innerHTML = more.moreStories()
-
-document.querySelector('#more-history').innerHTML = more.moreHistory()
-
-document.querySelector('#more-adventures').innerHTML = more.moreAdventures()
+renderViewMorePages()
 signUp()
 document.querySelector('.login-section').innerHTML = login()
 document.querySelector('.more-stories-popup').innerHTML = readStories()
