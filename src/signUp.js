@@ -70,6 +70,7 @@ const signForm = `
 		</div>
   `
 
+
 	const successMsg = `<div class="signup-success">
 			<h2>Signup Successful</h2>
 			<p>Kindly check your email for verification</p>
