@@ -11,12 +11,12 @@ module.exports = {
 		users: './src/users.js',
 	},
 	devServer: {
-		static: './dist',
+		static: 'dist',
+		historyApiFallback: true,
 	},
 	output: {
 		filename: '[name].[fullhash].js',
 		path: buildPath,
-
 	},
 	module: {
 		rules: [
