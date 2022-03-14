@@ -8,8 +8,7 @@ import train from './images/train.jpg'
 import georgeHiles from './images/george-hiles.jpg'
 import mountain from './images/mountain.jpg'
 
-const moreStories = () => {
-	return `
+const moreStories = `
 	      <div class="stories-title id="stories-title">
 
 					<h2>SEE ALL INTERESTING STORIES</h2>
@@ -60,10 +59,8 @@ const moreStories = () => {
 					</div>
 				</div>
 	`
-}
 
-const moreHistory = () => {
-	return `
+const moreHistory = `
   	<div class="adventure-title">
 					<h2>HISTORICAL ATTRACTIONS</h2>
 					<ul class="adventure-btns">
@@ -123,10 +120,8 @@ const moreHistory = () => {
 				<button type="button" id="back">Go Back</button>
 				</div>
 	`
-}
 
-const moreAdventures = () => {
-	return `
+const moreAdventures = `
 					<h2>ADVENTURE IDEAS</h2>
 				<div class="my-stories">
 					<div class="story more-story">
@@ -206,6 +201,11 @@ const moreAdventures = () => {
              </div>
 				</div>
 	`
+
+const renderViewMore = () => {
+	document.querySelector('.stories-container').innerHTML = moreStories
+	document.querySelector('.adventures').innerHTML = moreHistory
+	document.querySelector('.adventure-ideas').innerHTML = moreAdventures
 }
 
-export { moreStories, moreHistory, moreAdventures }
+export default renderViewMore
