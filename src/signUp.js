@@ -1,5 +1,5 @@
 import { validateEmail, validatePassword, passwordConfirmation } from './validation'
-import postData from './services'
+import postData from './service/userServices'
 import capitalizeCharAt from './helpers'
 const signForm = `
   	<div class="modal">
@@ -66,16 +66,25 @@ const signForm = `
 					<p>Already have an Account? <a href="login.html">Login</a></p>
 				</div>
 			</div>
+			<div class="success-container"></div>
 		</div>
   `
 
+
+	const successMsg = `<div class="signup-success">
+			<h2>Signup Successful</h2>
+			<p>Kindly check your email for verification</p>
+		</div>`
+
 const signUp = () => {
 	document.querySelector('.signup-section').innerHTML = signForm
+	document.querySelector('.success-container').innerHTML = successMsg
 	signUpValidation()
 }
 
 const signUpValidation = () => {
 	const form = document.querySelector('#signup-form')
+	const success = document.querySelector('.signup-success')
 	const EMAIL_INVALID = 'Kindly enter a valid email address e.g abc@gmail.com'
 	const PASSWORD_INVALID =
 		'Minimum of 8 characters required and must contain at least one lowercase, one uppercase, one numeric, and one special character e.g Abc01@ff'
@@ -96,12 +105,14 @@ const signUpValidation = () => {
 			const lastName = capitalizeCharAt(form.elements.lastName.value, 0)
 			const email = form.elements.email.value.toLowerCase()
 			const password = form.elements.password.value
-
 			const currentUser = { firstName, lastName, email, password }
-			console.log(currentUser)
 			postData(currentUser)
+
+			success.style.display = 'block'
+			setTimeout(() => {
+				success.style.display = 'none'
+			}, 3000)
 			form.reset()
-			alert('Registeration successful. Proceed to sign in.')
 		}
 	})
 }
