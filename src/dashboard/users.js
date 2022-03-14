@@ -1,9 +1,9 @@
 import './users.css'
-import renderNav from './dashboard/nav'
-import renderPage from './dashboard/dashboardHome'
-import renderUserStories from './dashboard/usersStories'
-import renderfavouriteStories from './dashboard/favouriteStory'
-import renderPublished from './dashboard/publishedStories'
+import renderNav from './nav'
+import renderPage from './dashboardHome'
+import renderUserStories from './usersStories'
+import renderfavouriteStories from './favouriteStory'
+import renderPublished from './publishedStories'
 
 renderNav()
 renderPage()
