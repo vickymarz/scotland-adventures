@@ -33,4 +33,24 @@ const get = async url => {
 	}
 }
 
+const put = async (url, data) => {
+	const config = {
+		method: 'PUT',
+		headers: {
+			'Content-Type': 'application/json',
+			...authHeader(url),
+		},
+		body: JSON.stringify(data),
+	}
+
+	try {
+		const response = await fetch(url, config)
+		const datas = await response.json()
+		return datas
+	} catch (err) {
+		return err
+	}
+}
+
+
 export default post
