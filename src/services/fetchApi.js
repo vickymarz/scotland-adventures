@@ -1,3 +1,9 @@
+export const fetchApi = {
+	post,
+	get,
+	put,
+}
+
 const post = async (url, data) => {
 	const config = {
 		method: 'POST',
@@ -52,5 +58,13 @@ const put = async (url, data) => {
 	}
 }
 
-
-export default post
+const authHeader = () => {
+	const token = localStorage.getItem('jwt-token')
+	const decoded = jwt_decode(token)
+	const isLoggedIn = decoded
+	if (isLoggedIn) {
+		return { authorization: token }
+	} else {
+		return {}
+	}
+}
