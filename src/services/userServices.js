@@ -19,6 +19,14 @@ const forgotPassword = async email => {
 	await fetchApi.post(`${BASE_URL}/${FORGOT_PASSWORD_URL}`, { email })
 }
 
-const resetPassword = async ({token, password, confirmPassword}) => {
+const resetPassword = async ({ token, password, confirmPassword }) => {
 	await fetchApi.post(`${BASE_URL}/${RESET_PASSWORD_URL}`, { token, password, confirmPassword })
+}
+
+const getAll = async () => {
+	return await fetchApi.get(BASE_URL)
+}
+
+const getById = async () => {
+	return await fetchApi.get(`${BASE_URL}/${id}`)
 }
