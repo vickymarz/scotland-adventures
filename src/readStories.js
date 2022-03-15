@@ -3,8 +3,7 @@ import river from './images/river.jpg'
 import walkWay from './images/walk-way.jpg'
 import pasture from './images/pasture.jpg'
 
-const readStories = () => {
-	return `
+const content = `
   <section class="modal">
   <div class="popup-container">
 
@@ -63,5 +62,9 @@ const readStories = () => {
 					</div>
           </div>
           </section>`
+
+const readStories = () => {
+	document.querySelector('.more-stories-popup').innerHTML = content
 }
+
 export default readStories
