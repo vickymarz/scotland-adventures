@@ -203,9 +203,9 @@ const moreAdventures = `
 	`
 
 const renderViewMorePages = () => {
-	document.querySelector('.stories-container').innerHTML = moreStories
-	document.querySelector('.adventures').innerHTML = moreHistory
-	document.querySelector('.adventure-ideas').innerHTML = moreAdventures
+	document.querySelector('#more-stories').innerHTML = moreStories
+	document.querySelector('#more-history').innerHTML = moreHistory
+	document.querySelector('#more-adventures').innerHTML = moreAdventures
 }
 
 export default renderViewMorePages
