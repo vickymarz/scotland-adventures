@@ -1,5 +1,4 @@
-const login = () => {
-	return `
+const content = `
   		<section class="modal">
 			<div class="form-container">
 				<h2>Login to your account</h2>
@@ -35,6 +34,7 @@ const login = () => {
 			</div>
 		</section>
   `
+const login = () => {
+	document.querySelector('.login-section').innerHTML = content
 }
-
 export default login

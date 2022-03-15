@@ -8,7 +8,8 @@ module.exports = {
 	devtool: 'source-map',
 	entry: {
 		index: './src/index.js',
-		users: './src/users.js',
+		users: './src/dashboard/users.js',
+		admin: './src/admin/admin.js',
 	},
 	devServer: {
 		static: 'dist',
@@ -47,6 +48,12 @@ module.exports = {
 			inject: 'body',
 			chunks: ['users'],
 			filename: 'users.html',
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/admin.html',
+			inject: 'body',
+			chunks: ['admin'],
+			filename: 'admin.html',
 		}),
 	],
 }
