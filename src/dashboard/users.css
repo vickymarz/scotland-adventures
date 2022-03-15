@@ -322,10 +322,6 @@ aside h2 {
 	font-size: 1.2rem;
 }
 
-.recommended-story p {
-	display: none;
-}
-
 .recommended-story span {
 	display: flex;
 	justify-content: flex-end;
@@ -392,6 +388,10 @@ aside h2 {
 	padding-bottom: 15px;
 	margin-bottom: 30px;
 	gap: 50px;
+}
+
+.favourite-story-desc {
+	display: none;
 }
 
 .delete-author {
@@ -684,13 +684,13 @@ input[type='file'] {
 		padding: 30px;
 	}
 
-	.recommended-story p {
-		display: block;
-	}
-
 	.recommended-story h2 {
 		font-size: initial;
 	}
+
+	.favourite-story-desc {
+	display: block;
+}
 
 	.story-img img {
 		width: 200px;
