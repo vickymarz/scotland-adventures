@@ -1,4 +1,3 @@
-
 import isle from '../images/isle-of-skyle.jpg'
 import river from '../images/river.jpg'
 import walkWay from '../images/walk-way.jpg'
@@ -89,10 +88,9 @@ const recommendedStories = `
 				</div>
       `
 
-const notifications = 
-	 `
+const notifications = `
 	 <div class="view-notification">
-	    <img src=${avatarIcon } alt="author" />
+	    <img src=${avatarIcon} alt="author" />
 				<div class="notification">
 					<p>Felicia Onye <span> liked your post for </span> Beauty in Scotland</p>
 					<p class="date">Feb, 30 2023</p>
@@ -119,19 +117,18 @@ const savedStories = `
 		</div>
 		
 	`
-	const createElement = () => {
-		const logo = document.createElement('img')
-		logo.setAttribute('src', logoIcon)
-		document.querySelector('.main-header-logo').appendChild(logo)
+const createElement = () => {
+	const logo = document.createElement('img')
+	logo.setAttribute('src', logoIcon)
+	document.querySelector('.main-header-logo').appendChild(logo)
 
-		
 	const title = document.createElement('img')
 	title.setAttribute('src', avatarIcon)
 	document.querySelector('.main-header-avatar').appendChild(title)
 }
-	
+
 const renderPage = () => {
-  document.querySelector('.view-notification').innerHTML = notifications
+	document.querySelector('.view-notification').innerHTML = notifications
 	document.querySelector('#stories-container').innerHTML = recommendedStories
 	document.querySelector('.favourites').innerHTML = savedStories
 	createElement()

@@ -10,8 +10,8 @@ import mountain from './images/mountain.jpg'
 import logoIcon from './images/logo.png'
 import titleIcon from './images/scotland.png'
 
-const stories = `
-	      <div class="stories-title">
+const stories = 
+	`  <div class="stories-title">
 					<h2>FIND POPULAR <span> STORIES </span></h2>
 					<span id="arrow"> See more
 					<i class="fa fa-arrow-right" ></i>
@@ -21,7 +21,6 @@ const stories = `
 					<div class="story">
 					<div class="view">
 						<img src=${river} alt="" />
-						
              <button type="button" class="read popup">Read</button>
 					</div>	
 						<h3>ISLE LAKE</h3>
@@ -51,11 +50,11 @@ const stories = `
 						<h3>GREEN FIELD</h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 					</div>
-				</div>
-	`
+				</div>`
 
-const adventures = `
-	<div class="adventure-title">
+
+const adventures = 
+	`	<div class="adventure-title">
 					<h2>HISTORICAL ATTRACTIONS</h2>
 					<ul class="adventure-btns">
 						<a href="#">All</a>
@@ -92,11 +91,11 @@ const adventures = `
 				</div>
 				<div class="adventure-btn">
 				<button type="button" id="history-btn">Show More</button>
-				</div>
-	`
+			</div>`
 
-const adventureIdeas = `
-					<h2>ADVENTURE IDEAS</h2>
+
+const adventureIdeas = 
+	`<h2>ADVENTURE IDEAS</h2>
 				<div class="my-stories">
 					<div class="story more-story">
 						<img src=${river} alt="" />
@@ -137,10 +136,10 @@ const adventureIdeas = `
           <div class="ideas-btn">
              <button type="button" id="adventure-btn">View All</button>
              </div>
-				</div>
-	`
+				</div>	`
 
-const createElement = () => {
+
+	const createElement = () => {
 	const logo = document.createElement('img')
 	logo.setAttribute('src', logoIcon)
 	document.querySelector('.logo-wrapper').appendChild(logo)
@@ -150,11 +149,12 @@ const createElement = () => {
 	document.querySelector('.intro-title').appendChild(title)
 }
 
-const renderHomePage = () => {
-	document.querySelector('.stories-container').innerHTML = stories
-	document.querySelector('.adventures').innerHTML = adventures
-	document.querySelector('.adventure-ideas').innerHTML = adventureIdeas
-	createElement()
-}
+	const renderHomePage = () => {
+		document.querySelector('.stories-container').innerHTML = stories
+		document.querySelector('.adventures').innerHTML = adventures
+		document.querySelector('.adventure-ideas').innerHTML = adventureIdeas
+		createElement()
+	}
 
 export default renderHomePage
+

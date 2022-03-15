@@ -12,8 +12,6 @@ signUp()
 document.querySelector('.login-section').innerHTML = login()
 document.querySelector('.more-stories-popup').innerHTML = readStories()
 
-window.addEventListener('load', home.createElement)
-
 interSectionObserver()
 
 const moreStories = () => {

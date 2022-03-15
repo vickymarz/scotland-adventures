@@ -1,9 +1,3 @@
-export const fetchApi = {
-	post,
-	get,
-	put,
-}
-
 const post = async (url, data) => {
 	const config = {
 		method: 'POST',
@@ -67,4 +61,10 @@ const authHeader = () => {
 	} else {
 		return {}
 	}
+}
+
+export const fetchApi = {
+	post,
+	get,
+	put,
 }
