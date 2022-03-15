@@ -57,21 +57,43 @@ img {
 	bottom: 0;
 	background-color: var(--deep-brown);
 	border-right: 2px solid var(--orange);
-	padding: 5px 20px;
+	padding: 15px 20px;
 	z-index: 3;
-}
-
-.nav-element {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 20px;
 }
 
 .avatar {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.main-header {
+	padding: 10px 20px;	
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	 box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+	 z-index: 5;
+	 background-color: var(--white);
+}
+
+.main-header #search {
+  padding: 10px 50px;
+}
+
+.main-header .search span {
+	position: absolute;
+	top: 5px;
+	left: 50px;
+}
+
+.main-header-logo img {
+	width: 50px;
+}
+
+.main-header-avatar img {
+	width: 30px;
 }
 
 .avatar img {
@@ -83,6 +105,11 @@ img {
 
 .logo-dashboard {
 	mix-blend-mode: multiply;
+}
+
+.logo-dashboard,
+.avatar {
+	display: none;
 }
 
 .logo-dashboard img {
@@ -98,7 +125,7 @@ img {
 
 .nav-items li {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	position: relative;
 	cursor: pointer;
@@ -107,6 +134,7 @@ img {
 .nav-items li span {
 	position: absolute;
 	top: -40px;
+	left: -20px;
 	color: var(--white);
 	visibility: hidden;
 	background-color: var(--orange);
@@ -151,6 +179,7 @@ aside {
 	border-left: 1px solid var(--gray);
 	padding: 20px;
 	padding-top: 50px;
+	display: none;
 }
 
 .search {
@@ -166,6 +195,7 @@ aside {
 	border-radius: 20px;
 	border: 1px solid var(--gray);
 }
+
 .search span {
 	position: absolute;
 	top: 12px;
@@ -220,19 +250,28 @@ aside h2 {
 .saved-stories,
 .created-stories,
 .write-story {
-	margin-left: 10%;
-	width: 60%;
+	margin-top: 50px;
 	padding: 30px;
+}
+
+.main {
+	padding-top: 10px;
+}
+
+.main-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .section-title {
 	font-size: 32px;
-	padding: 10px 0;
+	padding: 20px 0;
 	border-bottom: 1px solid var(--gray);
 }
 
 #stories-container {
-	margin-top: 70px;
+	margin-top: 50px;
 }
 
 .topics {
@@ -258,7 +297,7 @@ aside h2 {
 	border-bottom: 2px solid var(--gray);
 	padding-bottom: 15px;
 	margin-bottom: 30px;
-	gap: 50px;
+	gap: 30px;
 }
 
 .modal .recommended-stories {
@@ -276,6 +315,15 @@ aside h2 {
 	width: 100%;
 	height: 100vh;
 	object-fit: cover;
+}
+
+.recommended-story h2 {
+	padding: 10px 0;
+	font-size: 1.2rem;
+}
+
+.recommended-story p {
+	display: none;
 }
 
 .recommended-story span {
@@ -302,7 +350,7 @@ aside h2 {
 }
 
 .story-img img {
-	width: 200px;
+	width: 100%;
 }
 
 /* notifications section starts here */
@@ -550,8 +598,13 @@ input[type='file'] {
 	}
 
 	.logo-dashboard img {
-	width: 100%;
-}
+		width: 100%;
+	}
+
+	.logo-dashboard,
+	.avatar {
+		display: flex;
+	}
 
 	.nav-items {
 		display: flex;
@@ -591,26 +644,60 @@ input[type='file'] {
 	}
 
 	.nav-items li span {
-	position: absolute;
-	top: 0;
-	left: 30px;
-	color: var(--white);
-	visibility: hidden;
-	background-color: var(--orange);
-	text-align: center;
-	border-radius: 6px;
-	padding: 5px 20px;
-	z-index: 1;
-}
+		position: absolute;
+		top: 0;
+		left: 30px;
+		color: var(--white);
+		visibility: hidden;
+		background-color: var(--orange);
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px 20px;
+		z-index: 1;
+	}
 
-.nav-items li span::after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	right: 100%;
-	margin-top: -5px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: transparent var(--orange) transparent transparent;
-}
+	.nav-items li span::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 100%;
+		margin-top: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: transparent var(--orange) transparent transparent;
+	}
+
+	aside {
+		display: block;
+	}
+
+	/* main section styling starts here */
+
+	.main,
+	.notifications,
+	.saved-stories,
+	.created-stories,
+	.write-story {
+		margin-top: initial;
+		margin-left: 10%;
+		width: 60%;
+		padding: 30px;
+	}
+
+	.recommended-story p {
+		display: block;
+	}
+
+	.recommended-story h2 {
+		font-size: initial;
+	}
+
+	.story-img img {
+		width: 200px;
+	}
+
+	.main-header-logo,
+	.main-header-avatar, .main-header .search, .header-active, .main-header{
+		display: none;
+	}
 }
