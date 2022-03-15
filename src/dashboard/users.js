@@ -11,7 +11,6 @@ renderUserStories()
 renderfavouriteStories()
 renderPublished()
 
-
 const showDrafts = () => {
 	document.querySelector('.published').style.display='none'
 	document.querySelector('#published').style.display='flex'
