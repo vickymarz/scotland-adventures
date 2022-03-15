@@ -12,70 +12,70 @@ renderfavouriteStories()
 renderPublished()
 
 const showDrafts = () => {
-	document.querySelector('.published').style.display='none'
-	document.querySelector('#published').style.display='flex'
+	document.querySelector('.published').style.display = 'none'
+	document.querySelector('#published').style.display = 'flex'
 }
 
 showDrafts()
 
 const showStories = () => {
 	document.querySelectorAll('section').forEach(section => {
-		section.style.display = "none"
+		section.style.display = 'none'
 	})
-	document.querySelector('.main').style.display='block'
-	document.querySelector('#main').style.color='white'
+	document.querySelector('.main').style.display = 'block'
+	document.querySelector('#main').style.color = 'white'
 }
 
 showStories()
 
 const navigatePages = () => {
 	document.querySelectorAll('.list').forEach(navList => {
-	navList.addEventListener('click', (e) => {
-	const list = e.target.id
-	const activeSection = document.querySelector(`.${list}`)
-	const navList = document.querySelectorAll('.list i')
-	const activeList = document.querySelector(`#${list}`)
+		navList.addEventListener('click', e => {
+			const list = e.target.id
+			const activeSection = document.querySelector(`.${list}`)
+			const navList = document.querySelectorAll('.list i')
+			const activeList = document.querySelector(`#${list}`)
 
-	document.querySelectorAll('section').forEach(section => {
-		section.style.display = 'none'
-		let { className } = section
-		if (className === list) {
-			navList.forEach(list => {
-				list.style.color = '#ce6a10'
+			document.querySelectorAll('section').forEach(section => {
+				section.style.display = 'none'
+				let { className } = section
+				if (className === list) {
+					navList.forEach(list => {
+						list.style.color = '#ce6a10'
+					})
+					activeList.style.color = 'white'
+				}
 			})
-			activeList.style.color = 'white'
-		}
+			activeSection.style.display = 'block'
+		})
 	})
-	activeSection.style.display = 'block'
-	})
-})
 }
 
 navigatePages()
 
 const displayStory = () => {
-  document.querySelectorAll('.view-stories').forEach(btn => {
-	btn.addEventListener('click', (e) => {
-	const myStoryId = e.target.id
-	const activeSection = document.querySelector(`.${myStoryId}`)
-	const activeStoryBtn = document.querySelectorAll('.view-stories')
-	const activeStory = document.querySelector(`#${myStoryId}`)
+	document.querySelectorAll('.view-stories').forEach(btn => {
+		btn.addEventListener('click', e => {
+			const myStoryId = e.target.id
+			const activeSection = document.querySelector(`.${myStoryId}`)
+			const activeStoryBtn = document.querySelectorAll('.view-stories')
+			const activeStory = document.querySelector(`#${myStoryId}`)
 
-	document.querySelectorAll('.my-stories').forEach(story => {
-		story.style.display = 'none'
-		let { className } = story
-		className = className.split(' ')[0]
-		if (className === myStoryId) {
-			activeSection.style.display = 'flex'
-			activeStoryBtn.forEach(list => {
-				list.style.color = '#000'
-				activeStoryBtn[0].style.color = '#ce6a10'
+			document.querySelectorAll('.my-stories').forEach(story => {
+				story.style.display = 'none'
+				let { className } = story
+				className = className.split(' ')[0]
+				if (className === myStoryId) {
+					activeSection.style.display = 'flex'
+					activeStoryBtn.forEach(list => {
+						list.style.color = '#000'
+						activeStoryBtn[0].style.color = '#ce6a10'
+					})
+					activeStory.style.color = '#ce6a10'
+				}
 			})
-			activeStory.style.color = '#ce6a10'
-		}
+		})
 	})
-	})
-})
 }
 
 displayStory()
@@ -130,33 +130,31 @@ const closeModal = () => {
 closeModal()
 
 const renderImage = () => {
-  document.querySelector('#file').addEventListener('input', function (e) {
-	const textArea = document.querySelector('.text-area')
-	let image = document.querySelector('.text-img')
+	document.querySelector('#file').addEventListener('input', function (e) {
+		const textArea = document.querySelector('.text-area')
+		let image = document.querySelector('.text-img')
 
-	const file = e.target.files[0]
-	if (file) {
-		const reader = new FileReader()
-		reader.onload = function () {
-			const result = reader.result
-			image.style.display = 'block'
-			image.src = result
-			textArea.innerHTML += `<br> <img src=${result} alt="" class="preview-img" />`
+		const file = e.target.files[0]
+		if (file) {
+			const reader = new FileReader()
+			reader.onload = function () {
+				const result = reader.result
+				image.style.display = 'block'
+				image.src = result
+				textArea.innerHTML += `<br> <img src=${result} alt="" class="preview-img" />`
+			}
+			reader.readAsDataURL(file)
 		}
-		reader.readAsDataURL(file)
-	}
-})
+	})
 }
 
 renderImage()
 
 const displayText = e => {
 	const textArea = document.querySelector('.text-area')
-textArea.addEventListener('input', (e) => {
-  document.querySelector('#text').innerHTML = e.target.innerHTML
-})
+	textArea.addEventListener('input', e => {
+		document.querySelector('#text').innerHTML = e.target.innerHTML
+	})
 }
 
 displayText()
-
-
