@@ -1,5 +1,5 @@
 import './style.css'
-import renderHomePage from './home.js'
+import renderHomePage from './home'
 import renderViewMorePages from './viewMore'
 import signUp from './signUp.js'
 import login from './login.js'
@@ -9,9 +9,8 @@ import interSectionObserver from './animations.js'
 renderHomePage()
 renderViewMorePages()
 signUp()
-document.querySelector('.login-section').innerHTML = login()
-document.querySelector('.more-stories-popup').innerHTML = readStories()
-
+login()
+readStories()
 interSectionObserver()
 
 const moreStories = () => {
