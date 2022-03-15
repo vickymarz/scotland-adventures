@@ -1,3 +1,4 @@
+
 import isle from '../images/isle-of-skyle.jpg'
 import river from '../images/river.jpg'
 import walkWay from '../images/walk-way.jpg'
@@ -14,7 +15,7 @@ const recommendedStories = `
 						</div>
 						<div class="recommended-story">
 							<h2 class="popup">Intesting things about Scotland</h2>
-							<p
+							<p class ="favourite-story-desc"
 								>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repudiandae earum
 								maxime reiciendis necessitatibus totam, deserunt molestias eaque a vitae quidem
 								libero, voluptates perferendis nulla culpa in illo unde cum?</p
@@ -34,7 +35,7 @@ const recommendedStories = `
 						</div>
 						<div class="recommended-story">
 							<h2 class="popup">Intesting things about Scotland</h2>
-							<p
+							<p class ="favourite-story-desc"
 								>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repudiandae earum
 								maxime reiciendis necessitatibus totam, deserunt molestias eaque a vitae quidem
 								libero, voluptates perferendis nulla culpa in illo unde cum?</p
@@ -54,7 +55,7 @@ const recommendedStories = `
 						</div>
 						<div class="recommended-story">
 							<h2 class="popup">Intesting things about Scotland</h2>
-							<p
+							<p class ="favourite-story-desc"
 								>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repudiandae earum
 								maxime reiciendis necessitatibus totam, deserunt molestias eaque a vitae quidem
 								libero, voluptates perferendis nulla culpa in illo unde cum?</p
@@ -74,7 +75,7 @@ const recommendedStories = `
 						</div>
 						<div class="recommended-story">
 							<h2 class="popup">Intesting things about Scotland</h2>
-							<p
+							<p class ="favourite-story-desc"
 								>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repudiandae earum
 								maxime reiciendis necessitatibus totam, deserunt molestias eaque a vitae quidem
 								libero, voluptates perferendis nulla culpa in illo unde cum?</p
@@ -88,11 +89,12 @@ const recommendedStories = `
 				</div>
       `
 
-const notifications = `
+const notifications = 
+	 `
 	 <div class="view-notification">
-	    <img src=${avatarIcon} alt="author" />
+	    <img src=${avatarIcon } alt="author" />
 				<div class="notification">
-					<p>Emmanuel Orji <span> liked your post for </span> Beauty in Scotland</p>
+					<p>Felicia Onye <span> liked your post for </span> Beauty in Scotland</p>
 					<p class="date">Feb, 30 2023</p>
 				</div>
 		</div>
@@ -102,7 +104,7 @@ const savedStories = `
 	<div class="favourite-stories">
 	  <div class="favourite-story">
 			<h2 class="popup">Intesting things about Scotland</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Ducimus repudiandae earum
+			<p class="favourite-story-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Ducimus repudiandae earum
 				maxime reiciendis necessitatibus totam, deserunt molestias eaque a vitae quidem
 				libero, voluptates perferendis nulla culpa in illo unde cum </p>
 		     	<div class="delete-author">
@@ -117,18 +119,19 @@ const savedStories = `
 		</div>
 		
 	`
-const createElement = () => {
-	const logo = document.createElement('img')
-	logo.setAttribute('src', logoIcon)
-	document.querySelector('.main-header-logo').appendChild(logo)
+	const createElement = () => {
+		const logo = document.createElement('img')
+		logo.setAttribute('src', logoIcon)
+		document.querySelector('.main-header-logo').appendChild(logo)
 
+		
 	const title = document.createElement('img')
 	title.setAttribute('src', avatarIcon)
 	document.querySelector('.main-header-avatar').appendChild(title)
 }
-
+	
 const renderPage = () => {
-	document.querySelector('.view-notification').innerHTML = notifications
+  document.querySelector('.view-notification').innerHTML = notifications
 	document.querySelector('#stories-container').innerHTML = recommendedStories
 	document.querySelector('.favourites').innerHTML = savedStories
 	createElement()
