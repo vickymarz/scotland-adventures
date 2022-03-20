@@ -10,6 +10,8 @@ module.exports = {
 		index: './src/index.js',
 		users: './src/dashboard/users.js',
 		admin: './src/admin/admin.js',
+		adminDashboard: './src/admin/dashboard.js',
+		newAdmin: './src/admin/newAdmin.js',
 	},
 	devServer: {
 		static: 'dist',
@@ -44,16 +46,28 @@ module.exports = {
 			filename: 'index.html',
 		}),
 		new HtmlWebpackPlugin({
-			template: './src/users.html',
+			template: './src/dashboard/users.html',
 			inject: 'body',
 			chunks: ['users'],
 			filename: 'users.html',
 		}),
 		new HtmlWebpackPlugin({
-			template: './src/admin.html',
+			template: './src/admin/admin.html',
 			inject: 'body',
 			chunks: ['admin'],
 			filename: 'admin.html',
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/admin/dashboard.html',
+			inject: 'body',
+			chunks: ['adminDashboard'],
+			filename: 'dashboard.html',
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/admin/admin-register.html',
+			inject: 'body',
+			chunks: ['newAdmin'],
+			filename: 'admin-register.html',
 		}),
 	],
 }
