@@ -1,5 +1,5 @@
 export const BASE_URL = 'https://touristsstorytellingapp.herokuapp.com'
 export const SIGNUP_URL = 'api/auth/signup'
-export const LOGIN_URL = 'api/auth/login'
+export const LOGIN_URL = 'api/auth/signin'
 export const FORGOT_PASSWORD_URL = 'api/auth/forgot-password'
 export const RESET_PASSWORD_URL = 'api/auth/reset-password'
