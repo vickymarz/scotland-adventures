@@ -11,9 +11,10 @@ const register = async params => {
 	await fetchApi.post(`${BASE_URL}/${SIGNUP_URL}`, params)
 }
 
-const login = async (email, password) => {
-	const result = await fetchApi.post(`${BASE_URL}/${LOGIN_URL}`, { email, password })
+const login = async params => {
+	const result = await fetchApi.post(`${BASE_URL}/${LOGIN_URL}`, params)
 	localStorage.setItem('jwt-token', result.accessToken)
+	return result
 }
 
 const forgotPassword = async email => {
