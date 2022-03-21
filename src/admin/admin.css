@@ -103,7 +103,7 @@ img {
 	position: relative;
 }
 
-.signup-success h2 {
+.signup-success h2, .login-success h2 {
 	padding-bottom: 20px;
 	color: var(--orange);
 }

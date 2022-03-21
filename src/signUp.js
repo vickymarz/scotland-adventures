@@ -67,8 +67,8 @@ const signForm = `
 					<p>Already have an Account? <a href="login.html">Login</a></p>
 				</div>
 			</div>
+			</div>
 			<div class="success-container"></div>
-		</div>
   `
 
 const successMsg = `<div class="signup-success">
@@ -84,7 +84,6 @@ const signUp = () => {
 
 const signUpValidation = () => {
 	const form = document.querySelector('#signup-form')
-	const success = document.querySelector('.signup-success')
 	const EMAIL_INVALID = 'Kindly enter a valid email address e.g abc@gmail.com'
 	const PASSWORD_INVALID =
 		'Minimum of 8 characters required and must contain at least one lowercase, one uppercase, one numeric, and one special character e.g Abc01@ff'
@@ -107,11 +106,6 @@ const signUpValidation = () => {
 			const password = form.elements.password.value
 			const currentUser = { firstName, lastName, email, password }
 			userServices.register(currentUser)
-
-			success.style.display = 'block'
-			setTimeout(() => {
-				success.style.display = 'none'
-			}, 3000)
 			form.reset()
 		}
 	})
