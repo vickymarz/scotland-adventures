@@ -6,7 +6,6 @@ import capitalizeCharAt from '../helpers'
 
 const signUpValidation = () => {
 	const form = document.querySelector('#register-form')
-	console.log(form)
 	const EMAIL_INVALID = 'Kindly enter a valid email address e.g abc@gmail.com'
 	const PASSWORD_INVALID =
 		'Minimum of 8 characters required and must contain at least one lowercase, one uppercase, one numeric, and one special character e.g Abc01@ff'
@@ -24,7 +23,6 @@ const signUpValidation = () => {
 			const superAdminUser = form.elements.superAdminUser.value
 
 			const superAdminPass = form.elements.superAdminPass.value
-			console.log(superAdminPass)
 			const currentUser = { firstName, lastName, email, password, superAdminUser, superAdminPass }
 
 			userServices.adminRegister(currentUser)

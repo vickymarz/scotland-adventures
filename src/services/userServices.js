@@ -64,7 +64,6 @@ const adminRegister = async params => {
 		success.textContent =
 			'Your email has been verified. You already have an account. Kindly login with your basic user email and password'
 		setTimeout(() => {
-			console.log(container)
 			container.style.display = 'none'
 		}, 5000)
 	}
