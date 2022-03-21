@@ -22,15 +22,23 @@ const register = async params => {
 }
 const adminRegister = async params => {
 	const result = await fetchApi.post(`${BASE_URL}/${ADMIN_SIGNUP_URL}`, params)
-	if (result.sttus === 208) {
+	console.log(result)
+	if (result.code === 204) {
 		const success = document.querySelector('.success-text')
 		success.textContent =
 			'Your email has been verified. You already have an account. Kindly login with your basic user email and password'
 		setTimeout(() => {
 			error.style.display = 'none'
 		}, 3000)
-		return result
 	}
+	if (result.code === 208) {
+		const success = document.querySelector('.success-text')
+		success.textContent = 'You are already an admin!'
+		setTimeout(() => {
+			error.style.display = 'none'
+		}, 3000)
+	}
+	return result
 }
 
 const login = async params => {
