@@ -178,8 +178,14 @@ aside {
 	bottom: 0;
 	border-left: 1px solid var(--gray);
 	padding: 20px;
-	padding-top: 50px;
 	display: none;
+}
+
+aside .avatar {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	padding-bottom: 20px;
 }
 
 .search {
@@ -249,6 +255,7 @@ aside h2 {
 .notifications,
 .saved-stories,
 .created-stories,
+.manage-stories
 .write-story {
 	margin-top: 50px;
 	padding: 30px;
@@ -404,7 +411,7 @@ aside h2 {
 
 /* created stories section starts here */
 
-.created-stories h2 {
+.created-stories h2, .manage-stories h2{
 	font-size: 32px;
 	padding: 10px 0;
 }
@@ -464,6 +471,37 @@ aside h2 {
 
 .publish-story {
 	position: relative;
+}
+
+.approved-stories, .pending-stories {
+	margin-top: 20px;
+}
+
+.checks-wrapper {
+	display: flex;
+	gap: 50px;
+		justify-content: flex-start;
+	align-items: center;
+}
+.checks {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.checks small {
+	padding-right: 10px;
+	font-size: 0.9rem;
+		display: flex;
+}
+
+.checks i {
+	font-size: 24px;
+	color: var(--orange);
+		display: flex;
+		cursor: pointer;
+
 }
 
 .toggle-preview {
@@ -677,6 +715,7 @@ input[type='file'] {
 	.notifications,
 	.saved-stories,
 	.created-stories,
+	.manage-stories,
 	.write-story {
 		margin-top: initial;
 		margin-left: 10%;
