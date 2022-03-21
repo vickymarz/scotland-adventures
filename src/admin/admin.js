@@ -2,7 +2,7 @@ import './admin.css'
 import { userServices } from '../services/userServices'
 
 const loginValidation = () => {
-  const form = document.querySelector('#login-form')
+	const form = document.querySelector('#login-form')
 
 	form.addEventListener('submit', e => {
 		e.preventDefault()
