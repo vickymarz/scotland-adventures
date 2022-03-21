@@ -39,6 +39,7 @@ const signForm = `
 						required
 					/>
 				   </li>
+					 	<small class="verify-email"></small>
 					 <li class="password">
 						<input
 						type="password"
