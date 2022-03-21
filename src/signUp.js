@@ -73,7 +73,7 @@ const signForm = `
 
 const successMsg = `<div class="signup-success">
 			<h2>Signup Successful</h2>
-			<p>Kindly check your email for verification</p>
+			<p class="success-text">Kindly check your email for verification</p>
 		</div>`
 
 const signUp = () => {
