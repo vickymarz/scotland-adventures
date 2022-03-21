@@ -4,10 +4,8 @@ const authHeader = () => {
 	const token = localStorage.getItem('jwt-token')
 	if (token) {
 		const decoded = jwt_decode(token)
-		console.log('true')
 		return { authorization: decoded }
 	} else {
-		console.log('false')
 		return {}
 	}
 }
@@ -25,7 +23,7 @@ const post = async (url, data) => {
 	try {
 		const response = await fetch(url, config)
 		const datas = await response.json()
-		console.log(datas)
+		console.log(datas);
 		return datas
 	} catch (err) {
 		return err
@@ -65,6 +63,7 @@ const put = async (url, data) => {
 		return err
 	}
 }
+
 
 export const fetchApi = {
 	post,
