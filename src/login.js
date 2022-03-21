@@ -25,6 +25,7 @@ const content = `
 					/>
 					
 					<input type="submit" value="LOGIN" id="submit" />
+						<p class="login-error"></p>
 				</form>
 				<div class="footer">
 					<p>Don't have an account? <a href="sign_up.html">Sign Up</a></p>
