@@ -2,13 +2,35 @@ import { fetchApi } from './fetchApi'
 import {
 	BASE_URL,
 	SIGNUP_URL,
+	ADMIN_SIGNUP_URL,
 	LOGIN_URL,
 	FORGOT_PASSWORD_URL,
 	RESET_PASSWORD_URL,
 } from './rootEndpoints'
 
 const register = async params => {
-	await fetchApi.post(`${BASE_URL}/${SIGNUP_URL}`, params)
+	const result = await fetchApi.post(`${BASE_URL}/${SIGNUP_URL}`, params)
+	if (result.message === 'User with email already exists') {
+		const error = document.querySelector('.verify-email')
+		error.style.display = 'flex'
+		error.textContent = 'This email already exists'
+		setTimeout(() => {
+			error.style.display = 'none'
+		}, 3000)
+		return result
+	}
+}
+const adminRegister = async params => {
+	const result = await fetchApi.post(`${BASE_URL}/${ADMIN_SIGNUP_URL}`, params)
+	if (result.sttus === 208) {
+		const success = document.querySelector('.success-text')
+		success.textContent =
+			'Your email has been verified. You already have an account. Kindly login with your basic user email and password'
+		setTimeout(() => {
+			error.style.display = 'none'
+		}, 3000)
+		return result
+	}
 }
 
 const login = async params => {
@@ -35,6 +57,7 @@ const getById = async () => {
 
 export const userServices = {
 	register,
+	adminRegister,
 	login,
 	forgotPassword,
 	resetPassword,
