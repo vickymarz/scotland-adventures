@@ -23,7 +23,6 @@ const post = async (url, data) => {
 	try {
 		const response = await fetch(url, config)
 		const datas = await response.json()
-		console.log(datas);
 		return datas
 	} catch (err) {
 		return err
@@ -63,7 +62,6 @@ const put = async (url, data) => {
 		return err
 	}
 }
-
 
 export const fetchApi = {
 	post,
