@@ -512,7 +512,7 @@ header {
 	background-color: var(--deep-brown);
 }
 
-.signup-success {
+.signup-success, .login-success {
 	background-color: var(--deep-brown);
 	padding: 20px;
 	color: white;
@@ -531,7 +531,7 @@ header {
 	position: relative;
 }
 
-.signup-success h2 {
+.signup-success h2, .login-success h2 {
 	padding-bottom: 20px;
 	color: var(--orange);
 }
@@ -642,6 +642,13 @@ form small {
 	z-index: 2;
 	margin-top: -10px;
 	font-weight: 500;
+}
+
+.verify-email {
+	display: none;
+	text-align: left;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 
 .password {
