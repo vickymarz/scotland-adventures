@@ -84,7 +84,7 @@ img {
 		
 }
 
-.signup-success {
+.signup-success, .login-success {
 	background-color: var(--deep-brown);
 	padding: 20px;
 	color: white;
