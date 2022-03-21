@@ -1,3 +1,5 @@
+import { userServices } from './services/userServices'
+
 const content = `
   		<section class="modal">
 			<div class="form-container">
@@ -15,7 +17,7 @@ const content = `
 					/>
 						<input
 						type="password"
-						name="Password"
+						name="password"
 						id="password"
 						autocomplete="current-password"
 						placeholder="Enter Password"
@@ -32,9 +34,37 @@ const content = `
 					</p>
 				</div>
 			</div>
+			<div class="success-login"></div>
 		</section>
   `
+
+const successMsg = `<div class="login-success">
+			<h2>Login Successful!</h2>
+			<p>You will be redirected to your dashboard shortly</p>
+		</div>`
+
 const login = () => {
 	document.querySelector('.login-section').innerHTML = content
+	document.querySelector('.success-login').innerHTML = successMsg
+	loginUser()
+}
+
+const loginUser = () => {
+	const form = document.querySelector('#login-form')
+	const success = document.querySelector('.login-success')
+
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		const email = form.elements.email.value
+		const password = form.elements.password.value
+		const currentUser = { email, password }
+		userServices.login(currentUser)
+		success.style.display = 'block'
+		setTimeout(() => {
+			success.style.display = 'none'
+			window.location.assign('/dashboard.html')
+		}, 3000)
+		form.reset()
+	})
 }
 export default login
