@@ -672,9 +672,10 @@ form small {
 	font-size: 0.8rem;
 }
 
-.footer p a {
+.footer p span {
 	text-decoration: none;
 	color: var(--orange);
+	cursor: pointer;
 }
 
 footer {
