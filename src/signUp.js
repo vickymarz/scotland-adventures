@@ -2,7 +2,7 @@ import { validateEmail, validatePassword, passwordConfirmation } from './validat
 import { userServices } from './services/userServices'
 import capitalizeCharAt from './helpers'
 const signForm = `
-  	<div class="modal">
+  	<div class="modal" id="show-signup">
 			<div class="form-container">
 				<h2>Create a Secure Account</h2>
 	        <div class="cancel">
@@ -64,7 +64,7 @@ const signForm = `
 					<input type="submit" value="CREATE AN ACCOUNT" id="submit" />
 				</form>
 				<div class="footer">
-					<p>Already have an Account? <a href="login.html">Login</a></p>
+					<p>Already have an Account? <span class="show-login">Login</span></p>
 				</div>
 			</div>
 			</div>
