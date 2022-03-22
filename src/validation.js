@@ -8,7 +8,7 @@ const displayMsg = (input, message, status) => {
 const showError = (input, message) => {
 	setTimeout(() => {
 		input.parentElement.nextElementSibling.remove()
-	}, 5000)
+	}, 3000)
 	return displayMsg(input, message, false)
 }
 
