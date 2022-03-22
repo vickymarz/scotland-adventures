@@ -28,10 +28,10 @@ const content = `
 						<p class="login-error"></p>
 				</form>
 				<div class="footer">
-					<p>Don't have an account? <a href="sign_up.html">Sign Up</a></p>
+					<p>Don't have an account? <span class="show-signin">Sign Up</span></p>
 					<p>
 						Forgot Password?
-						<a href="./recover_password.html">Recover Password</a>
+						<span class="recover-password">Recover Password</span>
 					</p>
 				</div>
 			</div>
