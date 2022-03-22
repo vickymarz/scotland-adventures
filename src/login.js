@@ -1,7 +1,7 @@
 import { userServices } from './services/userServices'
 
 const content = `
-  		<section class="modal">
+  		<section class="modal" id="show-login">
 			<div class="form-container">
 				<h2>Login to your account</h2>
          <div class="cancel">
@@ -60,11 +60,6 @@ const loginUser = () => {
 		const password = form.elements.password.value
 		const currentUser = { email, password }
 		userServices.login(currentUser)
-		success.style.display = 'block'
-		setTimeout(() => {
-			success.style.display = 'none'
-			window.location.assign('/dashboard.html')
-		}, 3000)
 		form.reset()
 	})
 }
