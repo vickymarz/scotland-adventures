@@ -52,7 +52,6 @@ const login = () => {
 
 const loginUser = () => {
 	const form = document.querySelector('#login-form')
-	const success = document.querySelector('.login-success')
 
 	form.addEventListener('submit', e => {
 		e.preventDefault()
