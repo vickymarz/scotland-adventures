@@ -518,11 +518,12 @@ header {
 	color: white;
 	border-radius:10px;
 	text-align: center;
-	width: 300px;
+	width: 80%;
 	position: absolute;
-	right: 50px;
+	right: 10px;
 	top: 10px;
 	font-size: 0.8rem;
+	z-index: 5;
 	display: none;
 	transition: all 1s ease;
 }
@@ -863,5 +864,10 @@ footer h3 {
 
 	form {
 		padding: 5px;
+	}
+
+	.signup-success, .login-success {
+		width: 300px;
+		right: 50px;
 	}
 }
