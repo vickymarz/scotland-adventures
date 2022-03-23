@@ -3,6 +3,7 @@ import renderHomePage from './home'
 import renderViewMorePages from './viewMore'
 import signUp from './signUp.js'
 import login from './login.js'
+import recoverPassword from './recoverPassword'
 import readStories from './readStories.js'
 import interSectionObserver from './animations.js'
 
@@ -10,6 +11,7 @@ renderHomePage()
 renderViewMorePages()
 signUp()
 login()
+recoverPassword()
 readStories()
 interSectionObserver()
 
@@ -107,6 +109,30 @@ const closeModal = () => {
 	})
 }
 closeModal()
+
+const loginPopup = () => {
+	document.querySelector('.show-login').addEventListener('click', () => {
+		document.querySelector('#show-signup').style.display = 'none'
+		document.querySelector('#show-login').style.display = 'block'
+	})
+}
+loginPopup()
+
+const signupPopup = () => {
+	document.querySelector('.show-signin').addEventListener('click', () => {
+		document.querySelector('#show-signup').style.display = 'block'
+		document.querySelector('#show-login').style.display = 'none'
+	})
+}
+signupPopup()
+
+const passwordRecoveryPopup = () => {
+	document.querySelector('.recover-password').addEventListener('click', () => {
+		document.querySelector('#recover-password').style.display = 'block'
+		document.querySelector('#show-login').style.display = 'none'
+	})
+}
+passwordRecoveryPopup()
 
 const password = document.querySelector('#password')
 const confirmPassword = document.querySelector('#confirm_password')
