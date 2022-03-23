@@ -10,13 +10,16 @@
 	</head>
 	<body>
 		<header>
-				<div class="main-header">
+			<div class="main-header">
 				<div class="main-header-logo"></div>
-        <div class="search">
-				<input type="search" name="search" id="search" placeholder="Search" />
-				<span> <i class="fas fa-search"></i> </span>
-			</div>
-			<div class="main-header-avatar"></div>
+				<div class="search">
+					<input type="search" name="search" id="search" placeholder="Search" />
+					<span> <i class="fas fa-search"></i> </span>
+				</div>
+				<div class="main-header-avatar"></div>
+				<div class="main-header-logout">
+					<p class="exit">Logout</p>
+				</div>
 			</div>
 			<div id="header"></div>
 		</header>
@@ -56,7 +59,6 @@
 		</aside>
 
 		<section class="main">
-			
 			<h2 class="section-title">Recommended</h2>
 			<div id="stories-container"> </div>
 		</section>
@@ -80,29 +82,56 @@
 			</ul>
 			<div id="content"></div>
 			<div class="drafts my-stories">
-				<p>You have no drafts</p>
+				<p class="show-drafts"></p>
 			</div>
 			<div class="published my-stories">
 				<p class="published-stories"></p>
 			</div>
 		</section>
 		<section class="write-story">
-			<h2 class="title">Write your story</h2>
 			<div class="write-story-header">
-				<button type="button" id="preview-btn"> Preview </button>
-				<button type="button"> Publish </button>
+				<h2 class="title">Write your story</h2>
+				<div class="write-story-action">
+					<button type="button" id="preview-btn"> Preview </button>
+					<button type="button" id="submit-story"> Publish </button>
+				</div>
 			</div>
 			<div class="publish-section">
-				<div class="publish-story">
-					<input type="file" name="file" id="file" value="Add Image" accept="image/*" />
-					<label for="file"
-						>Upload Image
-						<i class="fas fa-image"></i>
-					</label>
+				<div class="action-btns">
+					<div class="publish-story">
+						<input type="file" name="file" id="file" value="Add Image" accept="image/*" />
+						<label for="file">
+							<span>Upload Image</span>
+							<i class="fas fa-image"></i>
+						</label>
+					</div>
+					<div class="dropdown">
+						<label for="location">Select location</label>
+						<select name="location" id="location">
+							<option value="Inverness">Inverness</option>
+							<option value="Alberdeen">Alberdeen</option>
+							<option value="Dundee">Dundee</option>
+							<option value="Glascow">Glascow</option>
+							<option value="volvo">Perth</option>
+							<option value="saab">Edinburgh</option>
+							<option value="mercedes">Stirling</option>
+						</select>
+					</div>
+				</div>
+				<div class="story-title">
+					<input
+						type="text"
+						id="input-title"
+						name="title"
+						placeholder="Enter title of story"
+						required
+					/>
 				</div>
 				<div class="text-area" contenteditable="true"> </div>
 			</div>
+			<button type="button" id="save-draft"> Save as draft </button>
 			<div class="preview-section toggle-preview">
+				<h2 id="story-title"></h2>
 				<div id="img-browser">
 					<img src="" alt="" class="text-img" />
 					<div id="text"></div>
