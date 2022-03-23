@@ -23,7 +23,6 @@ const getToken = () => {
 
 getToken()
 
-
 const showStories = () => {
 	document.querySelectorAll('section').forEach(section => {
 		section.style.display = 'none'
@@ -78,7 +77,7 @@ const displayStory = () => {
 						activeStoryBtn[0].style.color = '#ce6a10'
 					})
 					activeStory.style.color = '#ce6a10'
-          	activeStoryBtn[0].style.color = '#ce6a10'
+					activeStoryBtn[0].style.color = '#ce6a10'
 				}
 			})
 		})
@@ -184,7 +183,7 @@ const submitStory = () => {
 		const storyText = document.querySelector('#text').innerHTML
 		const location = document.querySelector('#location').value
 		const image = document.querySelector('.text-img').getAttribute('src')
-		const category = "General";
+		const category = 'General'
 		const storyObj = { title, storyText, image, location, category }
 		userServices.publishStory(storyObj)
 	})
@@ -200,7 +199,7 @@ const showDrafts = () => {
 		const storyText = document.querySelector('#text').innerHTML
 		const location = document.querySelector('#location').value
 		const image = document.querySelector('.text-img').getAttribute('src')
-		const category = 'General';
+		const category = 'General'
 		const storyObj = { title, storyText, image, location, category }
 		userServices.createStory(storyObj)
 	})
@@ -212,6 +211,6 @@ const logout = () => {
 	document.querySelector('.exit').addEventListener('click', () => {
 		localStorage.clear()
 		window.location.assign('/index.html')
-})
+	})
 }
 logout()

@@ -22,12 +22,15 @@ const navigations = `
 				</ul>
         	<div class="avatar"> 
           	<img src=${avatarIcon} alt="logo" />
-        </div>
+          </div>
+					<div class="logout">
+          <p class="exit">Logout</p>
+					</div>
 			</nav>
 `
 
 const renderNav = () => {
-  document.querySelector('#header').innerHTML = navigations
+	document.querySelector('#header').innerHTML = navigations
 }
 
-export default renderNav;
+export default renderNav
