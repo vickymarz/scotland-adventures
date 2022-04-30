@@ -1,0 +1,272 @@
+:root {
+	/* primary colors */
+	--black: #000;
+	--white: #fff;
+	--deep-brown: #373928;
+	--gray: #d3d3d3;
+	--orange: #ce6a10;
+	--brown: #4f4e43;
+	--light-gray: rgb(80, 78, 78);
+}
+
+/* global styling  */
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html {
+	font-size: 1rem;
+	font-family: 'poppins', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	background-image: url(../images/homepage.jpg);
+	background-color: rgb(231, 223, 223);
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+	background-size: cover;
+	padding: 20px 0;
+	height: 100vh;
+	width: 100%;
+	overflow-x: hidden;
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* admin login section styling starts here */
+
+.admin-signup-section {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	backdrop-filter: blur(5px);
+	text-align: center;
+	color: var(--white);
+	padding-top: 20px;
+}
+
+.form-container {
+	border: 1px solid #dfe1e6;
+	border-radius: 16px;
+	max-width: 80%;
+	margin: 20px auto;
+	position: relative;
+	display: flex;
+	text-align: center;
+	padding: 25px 10px;
+	flex-direction: column;
+	color: var(--white);
+	justify-content: center;
+	align-items: center;
+	background-color: var(--deep-brown);
+		
+}
+
+.signup-success, .login-success {
+	background-color: var(--deep-brown);
+	padding: 20px;
+	color: white;
+	border-radius:10px;
+	text-align: center;
+	width: 300px;
+	position: absolute;
+	right: 50px;
+	top: 10px;
+	font-size: 0.8rem;
+	display: none;
+	transition: all 1s ease;
+}
+
+.signup-section .form-container {
+	position: relative;
+}
+
+.signup-success h2, .login-success h2 {
+	padding-bottom: 20px;
+	color: var(--orange);
+}
+
+form {
+	margin: auto;
+	padding: 10px 15px;
+	justify-content: center;
+	justify-items: center;
+	border-radius: 1.5%;
+}
+
+.form-container p,
+.form-container h2 {
+	padding-bottom: 20px;
+}
+
+.form-container p {
+	color: var(--white);
+	text-align: center;
+}
+
+.form-container h2 {
+	text-align: center;
+	font-size: 1.3rem;
+}
+
+form input {
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	background-color: var(--white);
+	margin: 10px 0 20px 0;
+	border-radius: 5px;
+	border: none;
+}
+
+form input::placeholder {
+	color: var(--brown);
+	font-weight: lighter;
+}
+
+form input:focus {
+	outline: none;
+	border: 2px solid var(--orange);
+}
+
+input:hover {
+	cursor: text;
+}
+
+.login-error {
+	display: none;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+#submit {
+	background-color: var(--orange);
+	margin: 20px 0 0 0;
+	font-size: 14px;
+	align-items: center;
+	justify-items: center;
+	border-radius: 10px 0px;
+	color: var(--white);
+	font-weight: bold;
+}
+
+#submit:hover {
+	cursor: pointer;
+}
+
+/* input error */
+input.error {
+	border: 1px solid var(--red);
+}
+
+/* input success */
+input.success {
+	border: 1px solid var(--green);
+}
+
+form ul li {
+	list-style-type: none;
+	width: 100%;
+	display: inline;
+}
+
+form ul {
+	width: 100%;
+}
+
+form small {
+	color: var(--white);
+	display: block;
+	z-index: 2;
+	margin-top: -10px;
+	font-weight: 500;
+}
+
+.password {
+	position: relative;
+	display: flex;
+}
+
+.eye {
+	position: absolute;
+	right: 20px;
+	top: 25px;
+	z-index: 2;
+	color: var(--orange);
+}
+.footer {
+	margin-top: 15px;
+}
+
+.footer p {
+	color: white;
+	font-size: 0.8rem;
+}
+
+.footer p a {
+	text-decoration: none;
+	color: var(--orange);
+}
+
+footer {
+	background-color: var(--white);
+	padding: 20px;
+}
+
+footer h3 {
+	color: var(--orange);
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+.footer-container ul li {
+	list-style-type: none;
+	padding: 10px 0;
+	color: var(--orange);
+}
+
+.link-icons {
+	display: flex;
+	gap: 15px;
+}
+
+.footer-container ul li a {
+	color: var(--brown);
+}
+
+.footer-container ul li a:hover {
+	color: var(--orange);
+}
+
+@media only screen and (min-width: 768px) {
+	.form-container {
+		max-width: 400px;
+		margin: 100px auto;
+		padding: 25px;
+	}
+}

@@ -1,25 +1,28 @@
 import './style.css'
-import * as home from './home.js'
-import * as more from './viewMore.js'
 import signUp from './signUp.js'
 import login from './login.js'
-import readStories from './readStories.js'
+import recoverPassword from './recoverPassword'
+import renderHomePage from './home'
+import readStories from './readStories'
+import popularStories from './popularStories'
+import morePopularStories from './morePopularStories'
+import popularStoriesPopup from './popularStoriesPopup'
+import renderViewMorePages from './viewMore'
+import interSectionObserver from './animations.js'
+import { userServices } from './services/userServices'
 
-document.querySelector('.stories-container').innerHTML = home.stories()
-document.querySelector('.adventures').innerHTML = home.adventures()
-document.querySelector('.adventure-ideas').innerHTML = home.adventureIdeas()
+userServices.getAllStoriesPublic()
+signUp()
+login()
+recoverPassword()
+renderHomePage()
+readStories()
+morePopularStories()
+popularStoriesPopup()
+renderViewMorePages()
+interSectionObserver()
+popularStories()
 
-document.querySelector('#more-stories').innerHTML = more.moreStories()
-
-document.querySelector('#more-history').innerHTML = more.moreHistory()
-
-document.querySelector('#more-adventures').innerHTML = more.moreAdventures()
-
-document.querySelector('.signup-section').innerHTML = signUp()
-document.querySelector('.login-section').innerHTML = login()
-document.querySelector('.more-stories-popup').innerHTML = readStories()
-
-window.addEventListener('load', home.createElement)
 
 const moreStories = () => {
 	const viewMore = document.querySelector('#more-stories')
@@ -92,12 +95,21 @@ function toggleMenu() {
 toggleMenu()
 
 const openModal = () => {
+	
 	const modalButtons = Array.from(document.querySelectorAll('.popup'))
+	const moreBtn = Array.from(document.querySelectorAll('.open'))
 	const modals = Array.from(document.querySelectorAll('.modal'))
-
+	const popups = Array.from(document.querySelectorAll('.modal-popups'))
 	const modalButtonZip = modalButtons.map((button, i) => [button, modals[i]])
 
+	const moreBtnZip = moreBtn.map((button, i) => [button, popups[i]])
 	modalButtonZip.forEach(pair => {
+		pair[0].addEventListener('click', () => {
+			pair[1].style.display = 'block'
+		})
+	})
+
+	moreBtnZip.forEach(pair => {
 		pair[0].addEventListener('click', () => {
 			pair[1].style.display = 'block'
 		})
@@ -113,5 +125,56 @@ const closeModal = () => {
 			})
 		})
 	})
+
+	document.querySelectorAll('.cancelled').forEach(close => {
+		close.addEventListener('click', () => {
+			document.querySelectorAll('.modal-popups').forEach(modal => {
+				modal.style.display = 'none'
+			})
+		})
+	})
+
+	document.querySelector('#close-recovery').addEventListener('click', () => {
+		document.querySelector('.modals').style.display = "none"
+	 })
 }
 closeModal()
+
+const loginPopup = () => {
+	document.querySelector('.show-login').addEventListener('click', () => {
+		document.querySelector('#show-signup').style.display = 'none'
+		document.querySelector('#show-login').style.display = 'block'
+	})
+}
+loginPopup()
+
+const signupPopup = () => {
+	document.querySelector('.show-signin').addEventListener('click', () => {
+		document.querySelector('#show-signup').style.display = 'block'
+		document.querySelector('#show-login').style.display = 'none'
+	})
+}
+signupPopup()
+
+const passwordRecoveryPopup = () => {
+	document.querySelector('.recover-password').addEventListener('click', () => {
+		document.querySelector('#recover-password').style.display = 'block'
+		document.querySelector('#show-login').style.display = 'none'
+	})
+}
+passwordRecoveryPopup()
+
+const password = document.querySelector('#password')
+const confirmPassword = document.querySelector('#confirm_password')
+
+const eye = Array.from(document.querySelectorAll('.eye'))
+eye[0].addEventListener('click', () => hideOrShow(password))
+eye[1].addEventListener('click', () => hideOrShow(confirmPassword))
+
+const hideOrShow = inputField => {
+	if (inputField.getAttribute('type') === 'password') {
+		inputField.setAttribute('type', 'text')
+	} else {
+		inputField.setAttribute('type', 'password')
+	}
+}

@@ -8,15 +8,18 @@ module.exports = {
 	devtool: 'source-map',
 	entry: {
 		index: './src/index.js',
-		users: './src/users.js',
+		users: './src/dashboard/users.js',
+		admin: './src/admin/admin.js',
+		adminDashboard: './src/admin/dashboard.js',
+		newAdmin: './src/admin/newAdmin.js',
 	},
 	devServer: {
-		static: './dist',
+		static: 'dist',
+		historyApiFallback: true,
 	},
 	output: {
 		filename: '[name].[fullhash].js',
 		path: buildPath,
-
 	},
 	module: {
 		rules: [
@@ -43,10 +46,28 @@ module.exports = {
 			filename: 'index.html',
 		}),
 		new HtmlWebpackPlugin({
-			template: './src/users.html',
+			template: './src/dashboard/users.html',
 			inject: 'body',
 			chunks: ['users'],
 			filename: 'users.html',
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/admin/admin.html',
+			inject: 'body',
+			chunks: ['admin'],
+			filename: 'admin.html',
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/admin/dashboard.html',
+			inject: 'body',
+			chunks: ['adminDashboard'],
+			filename: 'dashboard.html',
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/admin/admin-register.html',
+			inject: 'body',
+			chunks: ['newAdmin'],
+			filename: 'admin-register.html',
 		}),
 	],
 }

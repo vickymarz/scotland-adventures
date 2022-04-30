@@ -1,4 +1,3 @@
-import avatarIcon from '../images/avatar.png'
 import logoIcon from '../images/logo.png'
 
 const navigations = `
@@ -20,9 +19,12 @@ const navigations = `
 					<span class="line"></span>
 					<li class="list"><i class="fa fa-edit" id="write-story"></i><span>Write</span></li>
 				</ul>
-        	<div class="avatar"> 
-          	<img src=${avatarIcon} alt="logo" />
-        </div>
+        	<div class="avatar show-profile" id="nav-profile"> 
+						<span>Profile</span>
+          </div>
+					<div class="logout">
+          <p class="exit">Logout</p>
+					</div>
 			</nav>
 `
 

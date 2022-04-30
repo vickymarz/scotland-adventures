@@ -12,7 +12,7 @@ This is a story telling web application that provides a platform for story telle
 
 ## Live Demo
 
-[Live Demo Link](https://vickymarz.github.io/scotland-adventures/dist/)
+[Live Demo Link]()
 
 ## Getting Started
 
@@ -28,8 +28,8 @@ To get a local copy up and running follow these simple example steps.
 
 ## Setup
 
-- git clone https://github.com/vickymarz/scotland-adventures.git
-- cd scotland-adventures/
+- git clone https://github.com/fflishia/TouristsStoriesApp_Frontend.git
+- cd TouristsStoriesApp_Frontend/
 - Setup webpack configuration to bundle up your javascript modules. Follow the instructions from the [getting started guide](https://webpack.js.org/guides/getting-started/#basic-setup) to set up the basics
 
 
@@ -40,26 +40,17 @@ To get a local copy up and running follow these simple example steps.
 
 ## Author
 
-👤 **Okoroji Victor aka Vickymarz**
+👤 **Felicia Onyenagubom**
 
-- GitHub: [@githubhandle](https://github.com/vickymarz)
+- GitHub: [@githubhandle](https://github.com/fflishia)
 
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/okoroji-victor-ebube-8791741a0)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
-
+- LinkedIn: [LinkedIn]()
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Emmanuel Orji
-- Felicia
 
 
 

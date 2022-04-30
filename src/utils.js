@@ -1,6 +1,5 @@
 const openModal = () => {
 	const modalButtons = Array.from(document.querySelectorAll('.popup'))
-  console.log(modalButtons)
 	const modals = Array.from(document.querySelectorAll('.modal'))
 
 	const modalButtonZip = modalButtons.map((button, i) => [button, modals[i]])

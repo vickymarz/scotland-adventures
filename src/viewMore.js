@@ -8,23 +8,14 @@ import train from './images/train.jpg'
 import georgeHiles from './images/george-hiles.jpg'
 import mountain from './images/mountain.jpg'
 
-const moreStories = () => {
-	return `
-	      <div class="stories-title id="stories-title">
-
-					<h2>SEE ALL INTERESTING STORIES</h2>
-          <span id="span">
-          Go back	<i class="fa fa-arrow-left" id="arrow-back"></i>
-          </span>
-				</div>
-				<div class="my-stories">
+const moreStories = `
 					<div class="story more-story">
 						<img src=${river} alt="" />
 						<div class="more-story-desc">
 						<h3>ISLE LAKE</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error at modi placeat impedit eveniet, illum iste sapiente corrupti! Animi laudantium laborum velit consequatur architecto provident odit mollitia eligendi. Animi dolorem sed, quos, reiciendis doloribus officia fuga mollitia, corporis odit similique ipsam? Mollitia eligendi nihil fugit quia ipsam voluptatibus vitae quaerat neque est /p>
-            <div class="description ">
-             <button type="button" >Description</button>
+						<p class="text-mobile">Admired the views of native Caledonian pine forests, glistening lochs and open moorlands as you drive through the Great Glen on your way from Inverness to Glenfinnan.</p>
+            <div class="description">
+             <button type="button" class="open">Description</button>
              </div>
 						 </div>
 					</div>
@@ -32,9 +23,9 @@ const moreStories = () => {
 						<img src=${walkWay} alt="" />
 							<div class="more-story-desc">
 						<h3>LILLE VALLEY</h3>
-						<p>LLorem ipsum dolor sit amet consectetur adipisicing elit. Error at modi placeat impedit eveniet, illum iste sapiente corrupti! Animi laudantium laborum velit consequatur architecto provident odit mollitia eligendi. Animi dolorem sed, quos, reiciendis doloribus officia fuga mollitia, corporis odit similique ipsam? Mollitia eligendi nihil fugit quia ipsam voluptatibus vitae quaerat neque est</p>
+						<p class="text-mobile">Another lovely stop on your journey from Edinburgh (or on your way back) is South Queensferry, where you can see the iconic Forth Bridges up close.</p>
              <div class="description">
-             <button type="button">Description</button>
+             <button type="button" class="open">Description</button>
              </div>
 						 </div>
 					</div>
@@ -42,28 +33,25 @@ const moreStories = () => {
 						<img src=${isle}  alt="" />
 							<div class="more-story-desc">
 						<h3>ICE LAND</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error at modi placeat impedit eveniet, illum iste sapiente corrupti! Animi laudantium laborum velit consequatur architecto provident odit mollitia eligendi. Animi dolorem sed, quos, reiciendis doloribus officia fuga mollitia, corporis odit similique ipsam? Mollitia eligendi nihil fugit quia ipsam voluptatibus vitae quaerat neque est</p>
-            <div class="description">
-             <button type="button">Description</button>
+						<p class="text-mobile">The beautiful Drummond Castle Gardens is one of Europe's finest formal gardens. In Outlander the gardens are shown as the ornate park and orchard of the Palace of Versailles in France.</p>
+            <div class="description ">
+             <button type="button" class="open">Description</button>
              </div>
 						 </div>
 					</div>
 					<div class="story more-story">
 						<img src=${pasture}  alt="" />
 							<div class="more-story-desc">
-						<h3>GREEN FIELD</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error at modi placeat impedit eveniet, illum iste sapiente corrupti! Animi laudantium laborum velit consequatur architecto provident odit mollitia eligendi. Animi dolorem sed, quos, reiciendis doloribus officia fuga mollitia, corporis odit similique ipsam? Mollitia eligendi nihil fugit quia ipsam voluptatibus vitae quaerat neque est</p>
+						<h3>HOGWARTS EXPRESS</h3>
+						<p class="text-mobile">From rugged coastlines to rolling countrysides, charming villages to valleys dotted with sheep, experience Ireland’s natural beauty and local culture.</p>
             <div class="description">
-             <button type="button">Description</button>
+             <button type="button" class="open">Description</button>
              </div>
 						 </div>
 					</div>
-				</div>
 	`
-}
 
-const moreHistory = () => {
-	return `
+const moreHistory = `
   	<div class="adventure-title">
 					<h2>HISTORICAL ATTRACTIONS</h2>
 					<ul class="adventure-btns">
@@ -123,10 +111,8 @@ const moreHistory = () => {
 				<button type="button" id="back">Go Back</button>
 				</div>
 	`
-}
 
-const moreAdventures = () => {
-	return `
+const moreAdventures = `
 					<h2>ADVENTURE IDEAS</h2>
 				<div class="my-stories">
 					<div class="story more-story">
@@ -206,6 +192,11 @@ const moreAdventures = () => {
              </div>
 				</div>
 	`
+
+const renderViewMorePages = () => {
+	document.querySelector('#more').innerHTML = moreStories
+	document.querySelector('#more-history').innerHTML = moreHistory
+	document.querySelector('#more-adventures').innerHTML = moreAdventures
 }
 
-export { moreStories, moreHistory, moreAdventures }
+export default renderViewMorePages

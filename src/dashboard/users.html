@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- fontawesome font kit -->
+		<script src="https://kit.fontawesome.com/d31edfa6bf.js" crossorigin="anonymous"></script>
+		<title>My Dashboard</title>
+	</head>
+	<body>
+		<header>
+			<div class="main-header">
+				<div class="main-header-logo"></div>
+				<div class="search">
+					<input type="search" name="search" id="search" placeholder="Search" />
+					<span> <i class="fas fa-search"></i> </span>
+				</div>
+				<div class="main-header-avatar show-profile"></div>
+				<div class="main-header-logout">
+					<p class="exit">Logout</p>
+				</div>
+			</div>
+			<div id="header"></div>
+		</header>
+		<aside>
+			<div class="search">
+				<input type="search" name="search" id="search" placeholder="Search" />
+				<span> <i class="fas fa-search"></i> </span>
+			</div>
+			<h2>Recommended Stories</h2>
+			<ul class="recommended">
+				<li>Isle</li>
+				<li>Scotland Lake</li>
+				<li>Stories to add</li>
+				<li>Stories</li>
+				<li>Lorem, ipsum dolor. </li></ul
+			>
+
+			<div class="reading-list">
+				<h3>Reading List</h3>
+				<p
+					>Click the
+
+					<i class="fa fa-bookmark"></i>
+					on any story to easily add it to your reading list or a custom list that you can share.</p
+				>
+			</div>
+			<div class="aside-footer">
+				<ul>
+					<li> Help</li>
+					<li>Writers</li>
+					<li>Privacy</li>
+					<li>Terms</li>
+					<li>About</li>
+					<li>Blog</li>
+				</ul>
+			</div>
+		</aside>
+
+		<section class="main">
+			<h2 class="section-title">Recommended</h2>
+			<div class="stories-container-dashboard"> </div>
+		</section>
+		<section class="notifications">
+			<h2 class="section-title">Notifications</h2>
+			<div class="view-notification"> </div>
+			<small>See all nofifications</small>
+		</section>
+		<section class="saved-stories">
+			<h2 class="section-title">Favourite Stories</h2>
+			<div class="favourites">
+			<p class="notify-center">You do not have any bookmark yet.<br> Your bookmarked stories will appear here.</p>	</div>
+		</section>
+		<section class="created-stories">
+			<div class="created-stories-title">
+				<h2 id="created-stories-title">Your Stories</h2>
+				<button type="button" id="write"> Write a story </button>
+			</div>
+			<ul class="story-list">
+				<li id="drafts" class="view-stories active">Drafts</li>
+				<li id="published" class="view-stories">Published</li>
+			</ul>
+			<div id="content"></div>
+			<div class="drafts my-stories">
+				<div class="show-drafts">
+						<p class="notify-center">You do not have any draft yet.<br> Your draft stories will appear here.</p>
+				</div>
+			</div>
+			<div class="published my-stories">
+				<div class="published-stories">
+					<p class="notify-center">You have not published any story yet.<br> Your published stories will appear here.</p>
+				</div>
+			</div>
+		</section>
+		<section class="write-story">
+			<div class="write-story-header">
+				<h2 class="title">Write your story</h2>
+				<div class="write-story-action">
+					<button type="button" id="preview-btn"> Preview </button>
+					<button type="button" id="submit-story"> Publish </button>
+				</div>
+			</div>
+			<div class="publish-section">
+				<div class="action-btns">
+					<div class="publish-story">
+						<input type="file" name="file" id="file" value="Add Image" accept="image/*" />
+						<label for="file">
+							<span>Upload Image</span>
+							<i class="fas fa-image"></i>
+						</label>
+					</div>
+					<div class="dropdown">
+						<label for="location">Select location</label>
+						<select name="location" id="location">
+							<option value="Inverness">Inverness</option>
+							<option value="Alberdeen">Alberdeen</option>
+							<option value="Dundee">Dundee</option>
+							<option value="Glascow">Glascow</option>
+							<option value="volvo">Perth</option>
+							<option value="saab">Edinburgh</option>
+							<option value="mercedes">Stirling</option>
+						</select>
+					</div>
+				</div>
+				<div class="story-title">
+					<input
+						type="text"
+						id="input-title"
+						name="title"
+						placeholder="Enter title of story"
+						required
+					/>
+				</div>
+				<div class="text-area" contenteditable="true"> </div>
+			</div>
+			<button type="button" id="save-draft"> Save as new draft </button>
+			<button type="button" id="update-draft"> Update draft </button>
+			<div class="preview-section toggle-preview">
+				<h2 id="story-title"></h2>
+				<div id="img-browser">
+					<img src="" alt="" class="text-img" />
+					<div id="text"></div>
+				</div>
+			</div>
+		</section>
+		<div class="profile"></div>
+		<div class="users-stories-popup"></div>
+		<div class="favourite-stories-popup"></div>
+	</body>
+</html>
