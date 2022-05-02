@@ -541,14 +541,14 @@ header {
 .signup-success,
 .login-success,
 .recovery-success {
+	background-color: var(--deep-brown);
 	padding: 20px;
 	color: white;
 	border-radius: 10px;
-}
-
-.signup-success, .login-success {
-	background-color: var(--deep-brown);
-	padding: 20px;
+	text-align: center;
+	width: 80%;
+	position: absolute;
+	right: 10px;
 	top: 10px;
 	font-size: 0.8rem;
 	z-index: 5;
@@ -574,15 +574,6 @@ header {
 	top: -30px;
 	z-index: 2;
 	cursor: pointer;
-}
-
-#read-stories {
-	display: block;
-}
-
-#read-stories img {
-	width: 100%;
-	height: 80vh;
 }
 
 #read-stories {

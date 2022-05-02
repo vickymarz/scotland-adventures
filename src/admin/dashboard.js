@@ -147,6 +147,7 @@ const manageStory = () => {
 		})
 	})
 }
+
 manageStory()
 
 document.querySelector('#write').addEventListener('click', () => {

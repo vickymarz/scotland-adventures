@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import jwt_decode from 'jwt-decode'
-=======
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 import { fetchApi } from './fetchApi'
 import {
 	BASE_URL,
@@ -9,7 +6,6 @@ import {
 	ADMIN_SIGNUP_URL,
 	ADMIN_LOGIN_URL,
 	LOGIN_URL,
-<<<<<<< HEAD
 	RESET_PASSWORD_URL,
 	CREATE_STORY,
 	UPDATE_DRAFT,
@@ -24,10 +20,6 @@ import {
 	GET_USER,
 	UPDATE_PROFILE,
 	LOGOUT,
-=======
-	FORGOT_PASSWORD_URL,
-	RESET_PASSWORD_URL,
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 } from './rootEndpoints'
 
 const register = async params => {
@@ -41,11 +33,7 @@ const register = async params => {
 		error.textContent = 'This email already exists'
 		setTimeout(() => {
 			error.style.display = 'none'
-<<<<<<< HEAD
 		}, 5000)
-=======
-		}, 3000)
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 		return result
 	}
 	if (result.code === 200) {
@@ -61,11 +49,7 @@ const register = async params => {
 			'Your email has been verified. You already have an account. Kindly login with your admin email and password'
 		setTimeout(() => {
 			container.style.display = 'none'
-<<<<<<< HEAD
 		}, 7000)
-=======
-		}, 5000)
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	}
 
 	if (result.code === 208) {
@@ -73,21 +57,14 @@ const register = async params => {
 		success.textContent = 'You are already a basic User!'
 		setTimeout(() => {
 			container.style.display = 'none'
-<<<<<<< HEAD
 		}, 7000)
-=======
-		}, 5000)
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	}
 }
 
 const adminRegister = async params => {
 	const result = await fetchApi.post(`${BASE_URL}/${ADMIN_SIGNUP_URL}`, params)
 	const success = document.querySelector('.success-text')
-<<<<<<< HEAD
 	const successTitle = document.querySelector('.success-title')
-=======
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	const container = document.querySelector('.signup-success')
 
 	if (result.code === 200) {
@@ -113,7 +90,6 @@ const adminRegister = async params => {
 			container.style.display = 'none'
 		}, 5000)
 	}
-<<<<<<< HEAD
 
 	if (result.code === 401) {
 		container.style.display = 'block'
@@ -123,8 +99,6 @@ const adminRegister = async params => {
 			container.style.display = 'none'
 		}, 5000)
 	}
-=======
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	return result
 }
 
@@ -133,22 +107,14 @@ const login = async params => {
 
 	const container = document.querySelector('.login-success')
 
-<<<<<<< HEAD
 	if (result.code === 200) {
-=======
-	if (result.accessToken) {
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 		container.style.display = 'block'
 		localStorage.setItem('jwt-token', result.accessToken)
 
 		setTimeout(() => {
 			window.location.assign('/users.html')
 			container.style.display = 'none'
-<<<<<<< HEAD
 		}, 2000)
-=======
-		}, 5000)
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	}
 
 	if (result.code === 401) {
@@ -165,11 +131,7 @@ const login = async params => {
 		container.innerHTML = 'Kindly verify your email'
 		setTimeout(() => {
 			container.style.display = 'none'
-<<<<<<< HEAD
 		}, 3000)
-=======
-		}, 5000)
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	}
 
 	return result
@@ -180,11 +142,7 @@ const adminLogin = async params => {
 
 	const container = document.querySelector('.login-success')
 
-<<<<<<< HEAD
 	if (result.code === 200) {
-=======
-	if (result.accessToken) {
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 		container.style.display = 'block'
 		localStorage.setItem('jwt-token', result.accessToken)
 
@@ -213,7 +171,6 @@ const adminLogin = async params => {
 	return result
 }
 
-<<<<<<< HEAD
 const forgotPassword = async (params) => {
 	await fetchApi.post(`${BASE_URL}/${RESET_PASSWORD_URL}`, params)
 }
@@ -292,22 +249,6 @@ const getUser = async () => {
 
 const logout = async () => {
 	await fetchApi.post(`${BASE_URL}/${LOGOUT}`)
-=======
-const forgotPassword = async email => {
-	await fetchApi.post(`${BASE_URL}/${FORGOT_PASSWORD_URL}`, { email })
-}
-
-const resetPassword = async ({ token, password, confirmPassword }) => {
-	await fetchApi.post(`${BASE_URL}/${RESET_PASSWORD_URL}`, { token, password, confirmPassword })
-}
-
-const getAll = async () => {
-	return await fetchApi.get(BASE_URL)
-}
-
-const getById = async () => {
-	return await fetchApi.get(`${BASE_URL}/${id}`)
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 }
 
 export const userServices = {
@@ -316,7 +257,6 @@ export const userServices = {
 	login,
 	adminLogin,
 	forgotPassword,
-<<<<<<< HEAD
 	createStory,
 	updateDraft,
 	publishStory,
@@ -331,9 +271,4 @@ export const userServices = {
 	getStory,
 	updateProfile,
 	logout,
-=======
-	resetPassword,
-	getAll,
-	getById,
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 }
