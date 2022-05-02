@@ -351,6 +351,21 @@ header {
 
 .my-stories {
 	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-flow: row;
+	justify-content: center;
+	align-content: center;
+}
+
+#ideas {
+	display: flex;
+	flex-direction: column;
+}
+
+#ideas .more-story {
+	display: flex;
+	flex-direction: row;
 }
 
 .adventure-btn {
@@ -860,7 +875,6 @@ footer h3 {
 	}
 
 	.more-story {
-		flex-direction: row;
 		gap: 80px;
 	}
 
