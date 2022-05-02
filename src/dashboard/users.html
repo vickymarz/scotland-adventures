@@ -16,7 +16,7 @@
 					<input type="search" name="search" id="search" placeholder="Search" />
 					<span> <i class="fas fa-search"></i> </span>
 				</div>
-				<div class="main-header-avatar"></div>
+				<div class="main-header-avatar show-profile"></div>
 				<div class="main-header-logout">
 					<p class="exit">Logout</p>
 				</div>
@@ -60,7 +60,7 @@
 
 		<section class="main">
 			<h2 class="section-title">Recommended</h2>
-			<div id="stories-container"> </div>
+			<div class="stories-container-dashboard"> </div>
 		</section>
 		<section class="notifications">
 			<h2 class="section-title">Notifications</h2>
@@ -69,11 +69,12 @@
 		</section>
 		<section class="saved-stories">
 			<h2 class="section-title">Favourite Stories</h2>
-			<div class="favourites"></div>
+			<div class="favourites">
+			<p class="notify-center">You do not have any bookmark yet.<br> Your bookmarked stories will appear here.</p>	</div>
 		</section>
 		<section class="created-stories">
 			<div class="created-stories-title">
-				<h2>Your Stories</h2>
+				<h2 id="created-stories-title">Your Stories</h2>
 				<button type="button" id="write"> Write a story </button>
 			</div>
 			<ul class="story-list">
@@ -82,10 +83,14 @@
 			</ul>
 			<div id="content"></div>
 			<div class="drafts my-stories">
-				<p class="show-drafts"></p>
+				<div class="show-drafts">
+						<p class="notify-center">You do not have any draft yet.<br> Your draft stories will appear here.</p>
+				</div>
 			</div>
 			<div class="published my-stories">
-				<p class="published-stories"></p>
+				<div class="published-stories">
+					<p class="notify-center">You have not published any story yet.<br> Your published stories will appear here.</p>
+				</div>
 			</div>
 		</section>
 		<section class="write-story">
@@ -129,7 +134,8 @@
 				</div>
 				<div class="text-area" contenteditable="true"> </div>
 			</div>
-			<button type="button" id="save-draft"> Save as draft </button>
+			<button type="button" id="save-draft"> Save as new draft </button>
+			<button type="button" id="update-draft"> Update draft </button>
 			<div class="preview-section toggle-preview">
 				<h2 id="story-title"></h2>
 				<div id="img-browser">
@@ -138,6 +144,7 @@
 				</div>
 			</div>
 		</section>
+		<div class="profile"></div>
 		<div class="users-stories-popup"></div>
 		<div class="favourite-stories-popup"></div>
 	</body>

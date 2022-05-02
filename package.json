@@ -6,31 +6,38 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"watch": "webpack --watch",
-		"start": "webpack serve --open",
+		"heroku-prebuild": "npm install --dev",
+		"dev": "webpack serve --open",
+		"start": "node server.js",
 		"build": "webpack"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/vickymarz/scotland-adventures.git"
+		"url": "git+https://github.com/fflishia/TouristsStoriesApp_Frontend.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/vickymarz/scotland-adventures/issues"
+		"url": "https://github.com/fflishia/TouristsStoriesApp_Frontend/issues"
 	},
-	"homepage": "https://github.com/vickymarz/scotland-adventures#readme",
+	"homepage": "https://github.com/fflishia/TouristsStoriesApp_Frontend#readme",
 	"devDependencies": {
 		"clean-webpack-plugin": "^4.0.0",
 		"css-loader": "^6.6.0",
 		"file-loader": "^6.2.0",
 		"html-loader": "^3.1.0",
+		"html-webpack-plugin": "^5.5.0",
 		"http-server": "^14.1.0",
 		"mini-css-extract-plugin": "^2.5.3",
 		"optimize-css-assets-webpack-plugin": "^6.0.1",
 		"style-loader": "^3.3.1",
-		"webpack": "^5.69.1",
+		"webpack": "^5.70.0",
 		"webpack-cli": "^4.9.2",
 		"webpack-dev-server": "^4.7.4"
+	},
+	"dependencies": {
+		"express": "^4.17.3",
+		"jwt-decode": "^3.1.2"
 	}
 }

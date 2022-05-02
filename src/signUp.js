@@ -2,14 +2,14 @@ import { validateEmail, validatePassword, passwordConfirmation } from './validat
 import { userServices } from './services/userServices'
 import capitalizeCharAt from './helpers'
 const signForm = `
-  	<div class="modal" id="show-signup">
-			<div class="form-container">
-				<h2>Create a Secure Account</h2>
-	        <div class="cancel">
-  <i class="fa fa-times fa-2x"></i>
+<div class="modal" id="show-signup">
+	<div class="form-container">
+		<h2>Create a Secure Account</h2>
+	  <div class="cancel">
+      <i class="fa fa-times fa-2x"></i>
     </div>
-				<form action="" id="signup-form">
-				<ul>
+		<form action="" id="signup-form">
+		  <ul>
 				<li>
 					<input
 						type="text"
@@ -19,8 +19,8 @@ const signForm = `
 						placeholder="Your First Name"
 						required
 					/>
-					</li>
-					<li>
+				</li>
+				<li>
 					<input
 						type="text"
 						name="lastName"
@@ -29,8 +29,8 @@ const signForm = `
 						placeholder="Your Last Name"
 						required
 					/>
-					</li>
-					<li>
+				</li>
+				<li>
 					<input
 						type="email"
 						name="email"
@@ -38,37 +38,37 @@ const signForm = `
 						placeholder="Enter Your Email Address"
 						required
 					/>
-				   </li>
-					 	<small class="verify-email"></small>
-					 <li class="password">
-						<input
+				</li>
+				<small class="verify-email"></small>
+				<li class="password">
+					<input
 						type="password"
 						name="password"
 						id="password"
 						placeholder="Choose a Password"
 						required
 						/>
-						<i class="fas fa-eye-slash eye" ></i>
-						</li>
-					<li class="password">
-								<input
+					<i class="fas fa-eye-slash eye" ></i>
+				</li>
+				<li class="password">
+					<input
 						type="password"
 						name="confirmPassword"
 						id="confirm_password"
 						autocomplete="new-password"
 						placeholder="Confirm Your Password"
 						required />
-						<i class="fas fa-eye-slash eye"></i>
-						</li>
-						<ul>
-					<input type="submit" value="CREATE AN ACCOUNT" id="submit" />
-				</form>
-				<div class="footer">
-					<p>Already have an Account? <span class="show-login">Login</span></p>
-				</div>
-			</div>
-			</div>
-			<div class="success-container"></div>
+					<i class="fas fa-eye-slash eye"></i>
+				</li>
+			<ul>
+			<input type="submit" value="CREATE AN ACCOUNT" id="submit" />
+		</form>
+		<div class="footer">
+			<p>Already have an Account? <span class="show-login">Login</span></p>
+		</div>
+		</div>
+		<div class="success-container"></div>
+	</div>
   `
 
 const successMsg = `<div class="signup-success">

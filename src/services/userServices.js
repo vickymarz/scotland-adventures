@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import jwt_decode from 'jwt-decode'
+=======
+>>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 import { fetchApi } from './fetchApi'
 import {
 	BASE_URL,
@@ -5,8 +9,25 @@ import {
 	ADMIN_SIGNUP_URL,
 	ADMIN_LOGIN_URL,
 	LOGIN_URL,
+<<<<<<< HEAD
+	RESET_PASSWORD_URL,
+	CREATE_STORY,
+	UPDATE_DRAFT,
+	PUBLISH_STORY,
+	GET_STORIES_ADMIN,
+	GET_STORIES_PUBLIC,
+	MANAGE_STORY,
+	BOOKMARK_STORY,
+	GET_BOOKMARKED_STORIES,
+	GET_STORY,
+	DELETE_STORY,
+	GET_USER,
+	UPDATE_PROFILE,
+	LOGOUT,
+=======
 	FORGOT_PASSWORD_URL,
 	RESET_PASSWORD_URL,
+>>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 } from './rootEndpoints'
 
 const register = async params => {
@@ -20,7 +41,11 @@ const register = async params => {
 		error.textContent = 'This email already exists'
 		setTimeout(() => {
 			error.style.display = 'none'
+<<<<<<< HEAD
+		}, 5000)
+=======
 		}, 3000)
+>>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 		return result
 	}
 	if (result.code === 200) {
@@ -36,7 +61,11 @@ const register = async params => {
 			'Your email has been verified. You already have an account. Kindly login with your admin email and password'
 		setTimeout(() => {
 			container.style.display = 'none'
+<<<<<<< HEAD
+		}, 7000)
+=======
 		}, 5000)
+>>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	}
 
 	if (result.code === 208) {
@@ -44,13 +73,21 @@ const register = async params => {
 		success.textContent = 'You are already a basic User!'
 		setTimeout(() => {
 			container.style.display = 'none'
+<<<<<<< HEAD
+		}, 7000)
+=======
 		}, 5000)
+>>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	}
 }
 
 const adminRegister = async params => {
 	const result = await fetchApi.post(`${BASE_URL}/${ADMIN_SIGNUP_URL}`, params)
 	const success = document.querySelector('.success-text')
+<<<<<<< HEAD
+	const successTitle = document.querySelector('.success-title')
+=======
+>>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	const container = document.querySelector('.signup-success')
 
 	if (result.code === 200) {
@@ -76,6 +113,18 @@ const adminRegister = async params => {
 			container.style.display = 'none'
 		}, 5000)
 	}
+<<<<<<< HEAD
+
+	if (result.code === 401) {
+		container.style.display = 'block'
+		successTitle.textContent = 'Signup Failed!'
+		success.textContent = 'Invalid super admin credentials!'
+		setTimeout(() => {
+			container.style.display = 'none'
+		}, 5000)
+	}
+=======
+>>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	return result
 }
 
@@ -84,14 +133,22 @@ const login = async params => {
 
 	const container = document.querySelector('.login-success')
 
+<<<<<<< HEAD
+	if (result.code === 200) {
+=======
 	if (result.accessToken) {
+>>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 		container.style.display = 'block'
 		localStorage.setItem('jwt-token', result.accessToken)
 
 		setTimeout(() => {
 			window.location.assign('/users.html')
 			container.style.display = 'none'
+<<<<<<< HEAD
+		}, 2000)
+=======
 		}, 5000)
+>>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	}
 
 	if (result.code === 401) {
@@ -108,7 +165,11 @@ const login = async params => {
 		container.innerHTML = 'Kindly verify your email'
 		setTimeout(() => {
 			container.style.display = 'none'
+<<<<<<< HEAD
+		}, 3000)
+=======
 		}, 5000)
+>>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	}
 
 	return result
@@ -119,7 +180,11 @@ const adminLogin = async params => {
 
 	const container = document.querySelector('.login-success')
 
+<<<<<<< HEAD
+	if (result.code === 200) {
+=======
 	if (result.accessToken) {
+>>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 		container.style.display = 'block'
 		localStorage.setItem('jwt-token', result.accessToken)
 
@@ -148,6 +213,86 @@ const adminLogin = async params => {
 	return result
 }
 
+<<<<<<< HEAD
+const forgotPassword = async (params) => {
+	await fetchApi.post(`${BASE_URL}/${RESET_PASSWORD_URL}`, params)
+}
+
+const createStory = async params => {
+	await fetchApi.post(`${BASE_URL}/${CREATE_STORY}`, params)
+}
+
+const updateDraft = async (params, id) => {
+	await fetchApi.put(`${BASE_URL}/${UPDATE_DRAFT}/${id}`, params)
+}
+
+const publishStory = async params => {
+	await fetchApi.post(`${BASE_URL}/${PUBLISH_STORY}`, params)
+}
+
+const getAllStoriesAdmin = async () => {
+	const dataObj = await fetchApi.get(`${BASE_URL}/${GET_STORIES_ADMIN}`)
+	const datas = await dataObj.data
+	return datas
+}
+
+const getAllStoriesPublic = async () => {
+	const dataObj = await fetchApi.get(`${BASE_URL}/${GET_STORIES_PUBLIC}`)
+	const datas = await dataObj.data
+	return datas
+}
+
+const manageStory = async params => {
+	await fetchApi.post(`${BASE_URL}/${MANAGE_STORY}`, params)
+}
+
+const postBookmarkedStories = async id => {
+	await fetchApi.post(`${BASE_URL}/${BOOKMARK_STORY}/${id}`)
+}
+
+const getBookmarkedStories = async () => {
+	const dataObj = await fetchApi.get(`${BASE_URL}/${GET_BOOKMARKED_STORIES}`)
+	const datas = await dataObj.data
+	return datas
+}
+
+const getAuthorStories = async () => {
+	const token = localStorage.getItem('jwt-token')
+	const decoded = jwt_decode(token)
+
+	const dataObj = await fetchApi.get(`${BASE_URL}/${GET_STORIES_ADMIN}/${decoded.id}`)
+	const datas = await dataObj.data
+	return datas
+}
+
+const getStory = async (id) => {
+	const dataObj = await fetchApi.get(`${BASE_URL}/${GET_STORY}/${id}`)
+	const datas = await dataObj.data
+	return datas
+}
+
+const deleteStory = async id => {
+	await fetchApi._delete(`${BASE_URL}/${DELETE_STORY}/${id}`)
+}
+
+const updateProfile = async (params) => {
+	const token = localStorage.getItem('jwt-token')
+	const decoded = jwt_decode(token)
+	const result = await fetchApi.post(`${BASE_URL}/${UPDATE_PROFILE}/${decoded.id}`, params)
+	return result
+}
+
+const getUser = async () => {
+	const token = localStorage.getItem('jwt-token')
+	const decoded = jwt_decode(token)
+
+	const datas = await fetchApi.get(`${BASE_URL}/${GET_USER}/${decoded.id}`)
+	return datas
+}
+
+const logout = async () => {
+	await fetchApi.post(`${BASE_URL}/${LOGOUT}`)
+=======
 const forgotPassword = async email => {
 	await fetchApi.post(`${BASE_URL}/${FORGOT_PASSWORD_URL}`, { email })
 }
@@ -162,6 +307,7 @@ const getAll = async () => {
 
 const getById = async () => {
 	return await fetchApi.get(`${BASE_URL}/${id}`)
+>>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 }
 
 export const userServices = {
@@ -170,7 +316,24 @@ export const userServices = {
 	login,
 	adminLogin,
 	forgotPassword,
+<<<<<<< HEAD
+	createStory,
+	updateDraft,
+	publishStory,
+	getAllStoriesAdmin,
+	getAllStoriesPublic,
+	manageStory,
+	postBookmarkedStories,
+	getBookmarkedStories,
+	getAuthorStories,
+	deleteStory,
+	getUser,
+	getStory,
+	updateProfile,
+	logout,
+=======
 	resetPassword,
 	getAll,
 	getById,
+>>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 }

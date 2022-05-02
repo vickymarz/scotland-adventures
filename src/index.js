@@ -1,19 +1,28 @@
 import './style.css'
-import renderHomePage from './home'
-import renderViewMorePages from './viewMore'
 import signUp from './signUp.js'
 import login from './login.js'
 import recoverPassword from './recoverPassword'
-import readStories from './readStories.js'
+import renderHomePage from './home'
+import readStories from './readStories'
+import popularStories from './popularStories'
+import morePopularStories from './morePopularStories'
+import popularStoriesPopup from './popularStoriesPopup'
+import renderViewMorePages from './viewMore'
 import interSectionObserver from './animations.js'
+import { userServices } from './services/userServices'
 
-renderHomePage()
-renderViewMorePages()
+userServices.getAllStoriesPublic()
 signUp()
 login()
 recoverPassword()
+renderHomePage()
 readStories()
+morePopularStories()
+popularStoriesPopup()
+renderViewMorePages()
 interSectionObserver()
+popularStories()
+
 
 const moreStories = () => {
 	const viewMore = document.querySelector('#more-stories')
@@ -86,12 +95,21 @@ function toggleMenu() {
 toggleMenu()
 
 const openModal = () => {
+	
 	const modalButtons = Array.from(document.querySelectorAll('.popup'))
+	const moreBtn = Array.from(document.querySelectorAll('.open'))
 	const modals = Array.from(document.querySelectorAll('.modal'))
-
+	const popups = Array.from(document.querySelectorAll('.modal-popups'))
 	const modalButtonZip = modalButtons.map((button, i) => [button, modals[i]])
 
+	const moreBtnZip = moreBtn.map((button, i) => [button, popups[i]])
 	modalButtonZip.forEach(pair => {
+		pair[0].addEventListener('click', () => {
+			pair[1].style.display = 'block'
+		})
+	})
+
+	moreBtnZip.forEach(pair => {
 		pair[0].addEventListener('click', () => {
 			pair[1].style.display = 'block'
 		})
@@ -107,6 +125,18 @@ const closeModal = () => {
 			})
 		})
 	})
+
+	document.querySelectorAll('.cancelled').forEach(close => {
+		close.addEventListener('click', () => {
+			document.querySelectorAll('.modal-popups').forEach(modal => {
+				modal.style.display = 'none'
+			})
+		})
+	})
+
+	document.querySelector('#close-recovery').addEventListener('click', () => {
+		document.querySelector('.modals').style.display = "none"
+	 })
 }
 closeModal()
 

@@ -1,6 +1,6 @@
 import './admin.css'
 
-import { validateEmail, validatePassword } from '../validation'
+import { validateEmail, validatePassword} from '../validation'
 import { userServices } from '../services/userServices'
 import capitalizeCharAt from '../helpers'
 
@@ -20,12 +20,11 @@ const signUpValidation = () => {
 			const lastName = capitalizeCharAt(form.elements.lastName.value, 0)
 			const email = form.elements.email.value.toLowerCase()
 			const password = form.elements.password.value
-			const superAdminUser = form.elements.superAdminUser.value
-
-			const superAdminPass = form.elements.superAdminPass.value
-			const currentUser = { firstName, lastName, email, password, superAdminUser, superAdminPass }
-
-			userServices.adminRegister(currentUser)
+      const superAdminUser = form.elements.superAdminUser.value
+      const superAdminPass = form.elements.superAdminPass.value
+      const currentUser = { firstName, lastName, email, password, superAdminUser, superAdminPass }
+      
+      userServices.adminRegister(currentUser)
 			form.reset()
 		}
 	})
