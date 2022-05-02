@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-=======
-import jwt_decode from 'jwt-decode'
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 
 const authHeader = () => {
 	const token = localStorage.getItem('jwt-token')
 	if (token) {
-<<<<<<< HEAD
 		return { authorization: token }
-=======
-		const decoded = jwt_decode(token)
-		return { authorization: decoded }
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	} else {
 		return {}
 	}
@@ -41,7 +32,6 @@ const get = async url => {
 		method: 'GET',
 		headers: authHeader(url),
 	}
-<<<<<<< HEAD
 	try {
 		const response = await fetch(url, config)
 		const datas = await response.json()
@@ -60,8 +50,6 @@ const _delete = async (url, data) => {
 		},
 		body: JSON.stringify(data),
 	}
-=======
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 
 	try {
 		const response = await fetch(url, config)
@@ -94,9 +82,6 @@ const put = async (url, data) => {
 export const fetchApi = {
 	post,
 	get,
-<<<<<<< HEAD
 	_delete,
-=======
->>>>>>> d9e10d90dbb1cac7fda6dfa2031a591ed9966479
 	put,
 }
