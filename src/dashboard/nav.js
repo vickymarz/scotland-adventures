@@ -29,7 +29,7 @@ const navigations = `
 `
 
 const renderNav = () => {
-  document.querySelector('#header').innerHTML = navigations
+	document.querySelector('#header').innerHTML = navigations
 }
 
-export default renderNav;
+export default renderNav
